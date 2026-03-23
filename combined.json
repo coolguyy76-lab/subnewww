@@ -1024,6 +1024,265 @@
     }
   },
   {
+    "remarks": "тест",
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "8.8.8.8",
+        "8.8.4.4",
+        {
+          "address": "77.88.8.8",
+          "domains": [
+            "geosite:category-ru"
+          ]
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "tag": "proxy-keen-1",
+        "settings": {
+          "vnext": [
+            {
+              "address": "first.keen.sbrf-cdn342.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "7cc22142-1810-028e-8bb9-5e89cc3ef87c",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "random",
+            "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
+            "shortId": "111111"
+          }
+        }
+      },
+      {
+        "protocol": "vless",
+        "tag": "proxy-keen-2",
+        "settings": {
+          "vnext": [
+            {
+              "address": "second.keen.sbrf-cdn342.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "7cc22142-1810-028e-8bb9-5e89cc3ef87c",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "random",
+            "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
+            "shortId": "111111"
+          }
+        }
+      },
+      {
+        "protocol": "vless",
+        "tag": "proxy-keen-3",
+        "settings": {
+          "vnext": [
+            {
+              "address": "third.keen.sbrf-cdn342.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "7cc22142-1810-028e-8bb9-5e89cc3ef87c",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "random",
+            "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
+            "shortId": "111111"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "observatory": {
+      "enableConcurrency": true,
+      "probeInterval": "1m",
+      "probeUrl": "https://gstatic.com/generate_204",
+      "subjectSelector": [
+        "proxy-keen-1",
+        "proxy-keen-2",
+        "proxy-keen-3"
+      ]
+    },
+    "routing": {
+      "balancers": [
+        {
+          "tag": "bal_client",
+          "selector": [
+            "proxy-keen-1",
+            "proxy-keen-2",
+            "proxy-keen-3"
+          ],
+          "strategy": {
+            "type": "leastPing",
+            "settings": {
+              "expected": 1,
+              "maxRTT": "2s",
+              "baselines": [
+                "2s"
+              ]
+            }
+          },
+          "fallbackTag": "proxy-keen-1"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "ip": [
+            "87.240.128.0/18",
+            "95.213.0.0/17",
+            "93.186.224.0/21",
+            "185.32.248.0/22",
+            "217.20.144.0/20",
+            "5.61.16.0/21",
+            "185.16.244.0/22",
+            "185.16.148.0/22"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "port": 5223,
+          "outboundTag": "bal_client"
+        },
+        {
+          "type": "field",
+          "domain": [
+            "vk.com",
+            "vk.ru",
+            "mail.ru",
+            "ok.ru",
+            "yandex.ru",
+            "gosuslugi.ru",
+            "ozon.ru",
+            "wildberries.ru",
+            "alfabank.ru",
+            "vtb.ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "domain": [
+            "mtalk.google.com",
+            "push.apple.com",
+            "*.push.apple.com",
+            "identity.apple.com"
+          ],
+          "outboundTag": "bal_client"
+        },
+        {
+          "type": "field",
+          "ip": [
+            "17.0.0.0/8",
+            "193.200.10.0/23",
+            "91.223.63.0/24"
+          ],
+          "outboundTag": "bal_client"
+        },
+        {
+          "type": "field",
+          "balancerTag": "bal_client",
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "network": "tcp,udp"
+        }
+      ]
+    }
+  },
+  {
     "dns": {
       "queryStrategy": "UseIPv4",
       "servers": [
