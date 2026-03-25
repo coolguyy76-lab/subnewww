@@ -1347,7 +1347,10 @@
         "ya-04",
         "ya-05",
         "ya-06",
-        "ya-07"
+        "ya-07",
+        "ya-08",
+        "ya-09",
+        "ya-10"
       ]
     },
     "outbounds": [
@@ -1373,7 +1376,7 @@
           "realitySettings": {
             "fingerprint": "qq",
             "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
-            "serverName": "sbrf-cdn342.ru",
+            "serverName": "5post-gate.x5.ru",
             "shortId": "111111",
             "show": false
           },
@@ -1593,6 +1596,96 @@
         "tag": "ya-07"
       },
       {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "212.233.90.103",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
+            "serverName": "5post-gate.x5.ru",
+            "shortId": "111111",
+            "show": false
+          },
+          "security": "reality"
+        },
+        "tag": "ya-08"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "87.239.105.4",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
+            "serverName": "5post-gate.x5.ru",
+            "shortId": "111111",
+            "show": false
+          },
+          "security": "reality"
+        },
+        "tag": "ya-09"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "146.185.243.197",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
+            "serverName": "5post-gate.x5.ru",
+            "shortId": "111111",
+            "show": false
+          },
+          "security": "reality"
+        },
+        "tag": "ya-10"
+      },
+      {
         "protocol": "freedom",
         "streamSettings": {
           "socopt": {
@@ -1618,7 +1711,10 @@
             "ya-04",
             "ya-05",
             "ya-06",
-            "ya-07"
+            "ya-07",
+            "ya-08",
+            "ya-09",
+            "ya-10"
           ],
           "strategy": {
             "settings": {
@@ -2143,10 +2239,13 @@
         {
           "domain": [
             "domain:mtalk.google.com",
-            "domain:push.apple.com",
-            "domain:api.push.apple.com",
             "domain:push-apple.com.akadns.net",
-            "domain:*-courier.push.apple.com"
+            "domain:apple.com",
+            "domain:icloud.com",
+            "domain:mzstatic.com",
+            "regexp:.*\\.apple\\.com$",
+            "regexp:.*\\.icloud\\.com$",
+            "regexp:.*\\.push\\.apple\\.com$"
           ],
           "outboundTag": "bal_client"
         },
@@ -2162,8 +2261,7 @@
             "193.200.10.0/23",
             "91.223.63.0/24"
           ],
-          "outboundTag": "direct",
-          "type": "field"
+          "outboundTag": "bal_client"
         },
         {
           "ip": [
@@ -3685,7 +3783,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "89.208.223.111",
+              "address": "89.208.222.119",
               "port": 443,
               "users": [
                 {
@@ -3795,7 +3893,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "185.130.112.31",
+              "address": "217.16.31.164",
               "port": 443,
               "users": [
                 {
@@ -4128,15 +4226,17 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "http/1.1"
+            ],
             "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -4238,15 +4338,17 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "http/1.1"
+            ],
             "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -4348,14 +4450,13 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -4369,116 +4470,6 @@
       }
     ],
     "remarks": "🇫🇷 Франция",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIPv4",
-      "servers": [
-        "8.8.8.8",
-        "8.8.4.4",
-        {
-          "address": "77.88.8.8",
-          "domains": [
-            "geosite:category-ru"
-          ]
-        }
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "meta": null,
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "germ-bridge.sbrf-cdn342.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
-            "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇩🇪 Германия",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -4567,15 +4558,17 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "http/1.1"
+            ],
             "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -4663,7 +4656,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "90.156.219.231",
+              "address": "212.92.101.163",
               "port": 443,
               "users": [
                 {
@@ -4677,15 +4670,17 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "http/1.1"
+            ],
             "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "stackoverflow.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -4897,15 +4892,18 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
             "fingerprint": "random",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
@@ -5103,7 +5101,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "90.156.216.122",
+              "address": "5.182.5.140",
               "port": 443,
               "users": [
                 {
@@ -5117,15 +5115,17 @@
         },
         "streamSettings": {
           "network": "tcp",
-          "realitySettings": {
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "http/1.1"
+            ],
             "fingerprint": "random",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "stackoverflow.com",
-            "shortId": "21342134",
+            "serverName": "sub.sbrf-cdn342.ru",
             "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
+          }
         },
         "tag": "proxy"
       },
