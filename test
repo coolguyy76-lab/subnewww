@@ -1,5 +1,10 @@
 {
-  "remarks": "🚀 tes",
+  "log": {
+    "loglevel": "warning",
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log"
+  },
+  "remarks": "🚀 w",
   "dns": {
     "queryStrategy": "UseIPv4",
     "servers": [
@@ -46,34 +51,9 @@
     "enableConcurrency": true,
     "probeInterval": "1m",
     "probeUrl": "https://gstatic.com/generate_204",
-    "subjectSelector": ["nl-", "vk-", "ya-", "s-", "game-"]
+    "subjectSelector": ["nl-", "vk-", "ya-", "s-", "game-", "vk2-", "vk3-"]
   },
   "outbounds": [
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "185.130.113.8",
-          "port": 443,
-          "users": [{
-            "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
-          "serverName": "5ka-cdn.x5static.net",
-          "shortId": "111111",
-          "show": false
-        }
-      },
-      "tag": "proxy"
-    },
     {
       "protocol": "vless",
       "settings": {
@@ -1218,6 +1198,19 @@
       "tag": "s-03"
     },
     {
+      "protocol": "balancer",
+      "tag": "balance",
+      "settings": {
+        "selector": ["nl-", "vk-", "ya-", "s-", "game-", "vk2-", "vk3-"],
+        "strategy": {
+          "type": "leastPing",
+          "settings": {
+            "observerTag": "observatory"
+          }
+        }
+      }
+    },
+    {
       "protocol": "freedom",
       "tag": "direct"
     },
@@ -1258,7 +1251,7 @@
       },
       {
         "inboundTag": ["socks", "http"],
-        "outboundTag": "proxy"
+        "outboundTag": "balance"
       }
     ]
   }
