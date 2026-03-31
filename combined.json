@@ -1793,7 +1793,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "5.188.141.61",
+              "address": "217.16.21.238",
               "port": 443,
               "users": [
                 {
@@ -1823,7 +1823,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "212.233.89.75",
+              "address": "217.16.22.13",
               "port": 443,
               "users": [
                 {
@@ -1847,6 +1847,36 @@
           "security": "reality"
         },
         "tag": "s-01"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "217.16.21.122",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
+            "serverName": "5post-gate.x5.ru",
+            "shortId": "111111",
+            "show": false
+          },
+          "security": "reality"
+        },
+        "tag": "s-03"
       },
       {
         "protocol": "freedom",
@@ -2206,7 +2236,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "212.233.97.161",
+              "address": "84.23.53.29",
               "port": 443,
               "users": [
                 {
@@ -2236,7 +2266,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "212.233.97.251",
+              "address": "217.16.29.197",
               "port": 443,
               "users": [
                 {
@@ -2266,7 +2296,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "212.233.99.233",
+              "address": "217.16.29.139",
               "port": 443,
               "users": [
                 {
@@ -2296,7 +2326,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "212.233.97.125",
+              "address": "217.16.29.134",
               "port": 443,
               "users": [
                 {
@@ -3372,6 +3402,115 @@
         "settings": {
           "vnext": [
             {
+              "address": "185.130.113.8",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
+            "serverName": "5ka-cdn.x5static.net",
+            "shortId": "111111",
+            "show": false
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇳🇱 Обход 5",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "8.8.8.8",
+        "8.8.4.4",
+        {
+          "address": "77.88.8.8",
+          "domains": [
+            "geosite:category-ru"
+          ]
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
               "address": "89.208.222.204",
               "port": 443,
               "users": [
@@ -3407,7 +3546,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇷🇺 Обход 5 | 🕹 Игровой ",
+    "remarks": "🇷🇺 Обход 6 | 🕹 Игровой ",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -3517,7 +3656,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇳🇱 Обход 6 | 🕹 Игровой ",
+    "remarks": "🇳🇱 Обход 7 | 🕹 Игровой ",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -3803,7 +3942,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "fi-bridge.sbrf-cdn342.ru",
+              "address": "fi-g.sbrf-cdn342.ru",
               "port": 443,
               "users": [
                 {
@@ -3840,7 +3979,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 Финляндия (Тех. работы)",
+    "remarks": "🇫🇮 Финляндия",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -3915,7 +4054,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "205.237.107.106",
+              "address": "fr-tx.sbrf-cdn342.ru",
               "port": 443,
               "users": [
                 {
@@ -4023,7 +4162,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "de.sbrf-cdn342.ru",
+              "address": "37.49.225.189",
               "port": 443,
               "users": [
                 {
@@ -4060,7 +4199,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇩🇪 Германия",
+    "remarks": "🇳🇱 Нидерланды",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -4285,116 +4424,6 @@
       }
     ],
     "remarks": "🇸🇪 Швеция",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIPv4",
-      "servers": [
-        "8.8.8.8",
-        "8.8.4.4",
-        {
-          "address": "77.88.8.8",
-          "domains": [
-            "geosite:category-ru"
-          ]
-        }
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "meta": null,
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "nl-bridge.sbrf-cdn342.ru",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "7cc22142-1810-45fd-8bb9-5e89cc3ef87c"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "1F5YLZnYpHAPtK9h0sAENt7AuK-r2gTxdQdYn-a-dnI",
-            "serverName": "apple.com",
-            "shortId": "21342134",
-            "show": false
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇳🇱 Нидерланды (Тех. работы)",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
