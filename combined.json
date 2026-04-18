@@ -691,7 +691,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🔞🍓 Авто | Обход глушилок ⚡⚡⚡",
+    "remarks": " Авто | Обход ",
     "routing": {
       "balancers": [
         {
@@ -861,7 +861,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #6",
+    "remarks": "🇫🇮 Обход 1",
     "routing": {
       "balancers": [
         {
@@ -1076,7 +1076,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #7",
+    "remarks": "🇫🇮 Обход 2",
     "routing": {
       "balancers": [
         {
@@ -1291,7 +1291,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #8",
+    "remarks": "🇫🇮 Обход 3",
     "routing": {
       "balancers": [
         {
@@ -1506,7 +1506,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #9",
+    "remarks": "🇫🇮 Обход 4",
     "routing": {
       "balancers": [
         {
@@ -1721,7 +1721,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #10",
+    "remarks": "🇫🇮 Обход 5",
     "routing": {
       "balancers": [
         {
@@ -1933,7 +1933,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #11 (T-Mobile)",
+    "remarks": "🇫🇮 Обход 6 (T-Mobile)",
     "routing": {
       "balancers": [
         {
@@ -2148,7 +2148,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #3",
+    "remarks": "🇫🇮 Обход 7",
     "routing": {
       "balancers": [
         {
@@ -2363,7 +2363,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #4",
+    "remarks": "🇫🇮 Обход 8",
     "routing": {
       "balancers": [
         {
@@ -2578,7 +2578,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #2",
+    "remarks": "🇫🇮 Обход 9",
     "routing": {
       "balancers": [
         {
@@ -2793,7 +2793,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #5",
+    "remarks": "🇫🇮 Обход 10",
     "routing": {
       "balancers": [
         {
@@ -3104,7 +3104,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE АВТО",
+    "remarks": "🇫🇮 Обход АВТО",
     "routing": {
       "balancers": [
         {
@@ -3337,7 +3337,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 LTE #1",
+    "remarks": "🇫🇮 Обход 11",
     "routing": {
       "balancers": [
         {
@@ -4145,7 +4145,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇳🇱 🆓 #1 LTE/WIFI - NL №1",
+    "remarks": "🇳🇱  NL №1",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -4469,7 +4469,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇳🇱 🆓 #2 LTE/WIFI - NL №2",
+    "remarks": "🇳🇱 NL №2",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -4793,7 +4793,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇺🇸 🆓 #3 LTE/WIFI - US №1",
+    "remarks": "🇺🇸  US №1",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -4984,7 +4984,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇺🇸 🆓 #4 LTE/WIFI - US №2",
+    "remarks": "🇺🇸 US №2",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -5175,7 +5175,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇫🇷 🆓 #5 LTE/WIFI - FR №1",
+    "remarks": "🇫🇷 FR №1",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -5366,7 +5366,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇫🇷 🆓 #6 LTE/WIFI - FR №2",
+    "remarks": "🇫🇷  FR №2",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -5557,7 +5557,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇯🇵 🆓 #7 LTE/WIFI - JP №1",
+    "remarks": "🇯🇵 JP №1",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -5748,7 +5748,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇯🇵 🆓 #8 LTE/WIFI - JP №2",
+    "remarks": "🇯🇵  JP №2",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -5939,7 +5939,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇧🇾 🆓 #10 LTE/WIFI - BY №2",
+    "remarks": "🇧🇾  BY №2",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -6130,7 +6130,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "🇧🇾 🆓 #9 LTE/WIFI - BY №1",
+    "remarks": "🇧🇾  BY №1",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
@@ -6328,7 +6328,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "⬇️ Быстрые | до 10 Гбит/с ⬇️",
+    "remarks": "обычный авто",
     "routing": {
       "balancers": [
         {
@@ -6690,7 +6690,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇩🇪 Самый Быстрый АВТО 🇩🇪",
+    "remarks": "🇩🇪 АВТО",
     "routing": {
       "balancers": [
         {
