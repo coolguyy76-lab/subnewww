@@ -908,7 +908,7 @@
           "2606:4700:4700::1001"
         ]
       },
-      "id": "7B47A118-C87B-43BC-9B81-05E79D32928F",
+      "id": "D654DD70-A186-4734-845E-58014EBE6A2E",
       "queryStrategy": "UseIPv4",
       "servers": [
         {
@@ -929,7 +929,7 @@
         }
       ]
     },
-    "id": "DB31EA03-0EC2-4AF7-A108-6A71E8B93298",
+    "id": "8CC645C8-E708-4909-9F19-D65484C61990",
     "inbounds": [
       {
         "listen": "127.0.0.1",
@@ -964,24 +964,10 @@
           "routeOnly": true
         },
         "tag": "http"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10810,
-        "protocol": "dokodemo-door",
-        "settings": {
-          "network": "tcp,udp"
-        },
-        "sniffing": {
-          "destOverride": null,
-          "enabled": false,
-          "routeOnly": false
-        },
-        "tag": "balancer-loop-1-in"
       }
     ],
     "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
       "dnsLog": true,
       "loglevel": "Info"
     },
@@ -1000,7 +986,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1011,7 +997,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "gngRrRx0T45hibo2PI0Kj1AKx8SdwgixfPWVBBGBJyo",
-            "serverName": "queue-dialogsim-stage.x5.ru",
+            "serverName": "arenda.perekrestok.ru",
             "shortId": "c6cb2993819a9920",
             "show": false
           },
@@ -1030,7 +1016,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1041,7 +1027,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "lk.x5.ru",
+            "serverName": "gp.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1060,7 +1046,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1071,7 +1057,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "95MUnPdpWgdWBL4PhYnjD1xb4r7s4izZVNrrETq1VTA",
-            "serverName": "arenda.perekrestok.ru",
+            "serverName": "helper-test.x5.ru",
             "shortId": "45d321fd485145fc",
             "show": false
           },
@@ -1090,7 +1076,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1101,7 +1087,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "awas.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1120,7 +1106,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1131,7 +1117,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "agreements-stage.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1150,7 +1136,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1161,7 +1147,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "sfera.x5.ru",
+            "serverName": "update-rooms.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1180,7 +1166,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1191,7 +1177,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "files.perekrestok.ru",
+            "serverName": "stage-x5m.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1210,7 +1196,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1221,7 +1207,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "gw-feedbacktsx-test.x5.ru",
+            "serverName": "cdp.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1240,7 +1226,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1251,7 +1237,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "awas.x5.ru",
+            "serverName": "agreements-stage.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1270,7 +1256,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1281,7 +1267,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "stage-x5m.x5.ru",
+            "serverName": "gateway-dppb.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1300,7 +1286,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1311,7 +1297,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "95MUnPdpWgdWBL4PhYnjD1xb4r7s4izZVNrrETq1VTA",
-            "serverName": "sfera.x5.ru",
+            "serverName": "queue-dialogsim-stage.x5.ru",
             "shortId": "45d321fd485145fc",
             "show": false
           },
@@ -1330,7 +1316,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1341,7 +1327,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gk.x5.ru",
+            "serverName": "files.perekrestok.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1360,7 +1346,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1371,7 +1357,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "helper-test.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1390,7 +1376,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1401,7 +1387,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "helper-test.x5.ru",
+            "serverName": "files.perekrestok.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1420,7 +1406,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1431,7 +1417,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "agreements-stage.x5.ru",
+            "serverName": "api.food.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1450,7 +1436,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1461,7 +1447,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "gw-cft-tsk.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1480,7 +1466,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1491,7 +1477,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "95MUnPdpWgdWBL4PhYnjD1xb4r7s4izZVNrrETq1VTA",
-            "serverName": "queue-dialogsim-stage.x5.ru",
+            "serverName": "awas.x5.ru",
             "shortId": "45d321fd485145fc",
             "show": false
           },
@@ -1510,7 +1496,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1521,7 +1507,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "5post-gate-test.x5.ru",
+            "serverName": "helper-test.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1540,7 +1526,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1551,7 +1537,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "queue-dialogsim-stage.x5.ru",
+            "serverName": "update-rooms.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1570,7 +1556,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1581,7 +1567,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "gp.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -1600,7 +1586,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1611,7 +1597,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "arenda.perekrestok.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1630,7 +1616,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1641,7 +1627,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gp.x5.ru",
+            "serverName": "gateway-dppb.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1660,7 +1646,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "adc0e544-33dc-4c04-b8da-74946f5cc8ee"
+                  "id": "bf97a8cf-c621-4dd4-a084-2d95aa725b01"
                 }
               ]
             }
@@ -1671,7 +1657,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "5post-gate-test.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -1751,18 +1737,18 @@
       ],
       "domainMatcher": "",
       "domainStrategy": "IPIfNonMatch",
-      "id": "4E652A79-8B18-4804-A6A6-C09842136619",
+      "id": "B5B3A079-FB26-47DA-83A8-B2E985C6C041",
       "rules": [
         {
           "balancerTag": "proxy_balancer_1",
-          "id": "A69BBF81-F13B-46AA-BD93-A131F0F6A5B3",
+          "id": "A2FDBCBA-026F-4619-BF20-A910EF10E7BB",
           "inboundTag": [
             "balancer-loop-1-in"
           ],
           "type": "field"
         },
         {
-          "id": "BB732AD3-D99D-4CEB-BBD5-8140AD7B5DAC",
+          "id": "A287DB7B-0064-4E7E-9909-1109F4316EBA",
           "outboundTag": "direct",
           "protocol": [
             "bittorrent"
@@ -2209,7 +2195,7 @@
             "bt.poletracker.org",
             "aboutbeautifulgallopinghorsesinthegreenpasture.online"
           ],
-          "id": "D21D7772-421A-4F03-8D60-959698983FF3",
+          "id": "6B40C929-41DC-48E2-8C1F-6378778D334E",
           "outboundTag": "direct",
           "type": "field"
         },
@@ -2702,12 +2688,12 @@
             "ozon-dostavka.ru",
             "o3.ru"
           ],
-          "id": "2B03BA7D-05CD-4CC7-B34D-CBAEE5BCE66D",
+          "id": "A2D4A3C9-905F-407F-9B70-4C18007892CF",
           "outboundTag": "direct",
           "type": "field"
         },
         {
-          "id": "09F49F79-6E25-47F2-9C4A-649E0C02F5DE",
+          "id": "5D0ADC45-3E6F-4100-A9B2-3F289A2E6853",
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -2733,7 +2719,7 @@
         },
         {
           "balancerTag": "proxy_balancer_priority",
-          "id": "07B794DF-06A0-414E-BAB2-D8B8E5554D11",
+          "id": "3AE612E7-2DC8-42E7-BD75-85790BFFE6A9",
           "inboundTag": [
             "http",
             "socks"
@@ -4666,8 +4652,8 @@
       "system": {
         "statsInboundDownlink": true,
         "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
+        "statsOutboundDownload": true,
+        "statsOutboundUpload": true
       }
     },
     "remarks": "🇳🇱 NL №1",
