@@ -2094,7 +2094,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "обход 2",
+    "remarks": "🇳🇱 Автообход - sim 2",
     "routing": {
       "balancers": [
         {
