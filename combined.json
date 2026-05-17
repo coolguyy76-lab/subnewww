@@ -92,6 +92,40 @@
     }
   },
   {
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "proxy",
+      "settings": {
+        "vnext": [
+          {
+            "address": "prunesservice.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "0d6bd17d-1824-4dc2-9baa-e053cee40631",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "api.prunesservice.ru",
+          "fingerprint": "random",
+          "publicKey": "uDFqLjBpVx6M4BgSljF82_sBBYqTuMWMKJYKTlPsAmA",
+          "shortId": "ec68f47385c89d7f",
+          "spiderX": "/auDftGLhQI2FUnG"
+        }
+      }
+    }
+  ]
+},
+  {
     "burstObservatory": {
       "pingConfig": {
         "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
