@@ -1,5 +1,5 @@
 [
-  {
+{
     "burstObservatory": {
       "pingConfig": {
         "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
