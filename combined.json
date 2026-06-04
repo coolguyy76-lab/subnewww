@@ -1,5 +1,5 @@
 [
-{
+  {
     "burstObservatory": {
       "pingConfig": {
         "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
@@ -47,7 +47,7 @@
           "2606:4700:4700::1001"
         ]
       },
-      "id": "5B6DF3B0-48E1-4A99-BBD7-A625654AE347",
+      "id": "70150027-FD6B-4187-A7C8-D28B21F7A176",
       "queryStrategy": "UseIPv4",
       "servers": [
         {
@@ -68,7 +68,7 @@
         }
       ]
     },
-    "id": "AD4DAA3C-6035-4C10-A3D9-920284476D56",
+    "id": "5F1B0A11-E151-4E4A-9765-0ABDF7FA560F",
     "inbounds": [
       {
         "listen": "127.0.0.1",
@@ -105,7 +105,8 @@
         "tag": "http"
       }
     ],
-       "outbounds": [
+    "meta": {},
+    "outbounds": [
       {
         "protocol": "vless",
         "settings": {
@@ -117,7 +118,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -128,7 +129,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "gngRrRx0T45hibo2PI0Kj1AKx8SdwgixfPWVBBGBJyo",
-            "serverName": "update-rooms.x5.ru",
+            "serverName": "sfera.x5.ru",
             "shortId": "c6cb2993819a9920",
             "show": false
           },
@@ -147,7 +148,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -158,7 +159,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "update-rooms.x5.ru",
+            "serverName": "gw-cft-tsk.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -177,7 +178,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -188,7 +189,7 @@
           "realitySettings": {
             "fingerprint": "chrome",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "lk.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -207,7 +208,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -218,7 +219,7 @@
           "realitySettings": {
             "fingerprint": "chrome",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "5post-gate-test.x5.ru",
+            "serverName": "helper-test.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -237,7 +238,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -248,7 +249,7 @@
           "realitySettings": {
             "fingerprint": "chrome",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "cdp.x5.ru",
+            "serverName": "update-rooms.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -267,7 +268,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -278,7 +279,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "lk.x5.ru",
+            "serverName": "media-newportal.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -297,7 +298,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -308,7 +309,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "media-newportal.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -327,7 +328,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -338,7 +339,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "95MUnPdpWgdWBL4PhYnjD1xb4r7s4izZVNrrETq1VTA",
-            "serverName": "lk.x5.ru",
+            "serverName": "sfera.x5.ru",
             "shortId": "45d321fd485145fc",
             "show": false
           },
@@ -357,7 +358,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -368,7 +369,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "cdp.x5.ru",
+            "serverName": "agreements-stage.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -387,7 +388,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -398,7 +399,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "stage-x5m.x5.ru",
+            "serverName": "queue-dialogsim-stage.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -417,7 +418,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -428,7 +429,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gk.x5.ru",
+            "serverName": "stage-x5m.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -447,7 +448,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -458,7 +459,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "gw-cmdm.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -477,7 +478,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -488,7 +489,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "sfera.x5.ru",
+            "serverName": "gw-feedbacktsx-test.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -507,7 +508,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-47c2-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-4b25-bfff-51daeafa1262"
                 }
               ]
             }
@@ -518,7 +519,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "Hw1ONT6E1621MrKxVA7Rih8d_fK94tKFr26l7qaaAQA",
-            "serverName": "stage-x5m.x5.ru",
+            "serverName": "gw-cft-tsk.x5.ru",
             "shortId": "5bac1a71e1e66bfa",
             "show": false
           },
@@ -537,7 +538,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -548,7 +549,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "media-newportal.x5.ru",
+            "serverName": "gp.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -567,7 +568,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -578,7 +579,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gw-cmdm.x5.ru",
+            "serverName": "queue-dialogsim-stage.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -597,7 +598,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -608,7 +609,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gateway-dppb.x5.ru",
+            "serverName": "gp.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -627,7 +628,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -638,7 +639,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "api-dev-omni.x5.ru",
+            "serverName": "gateway-dppb.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -657,7 +658,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -687,7 +688,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -698,7 +699,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gp.x5.ru",
+            "serverName": "api-dev-omni.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -717,7 +718,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -728,7 +729,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gp.x5.ru",
+            "serverName": "gw-feedbacktsx-test.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -747,7 +748,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -758,7 +759,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "helper-test.x5.ru",
+            "serverName": "gw-cmdm.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -777,7 +778,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -788,7 +789,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "gw-cmdm.x5.ru",
+            "serverName": "lk.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
@@ -820,7 +821,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "Обход",
+    "remarks": "ÐÐ±ÑÐ¾Ð´",
     "routing": {
       "balancers": [
         {
@@ -868,18 +869,18 @@
       ],
       "domainMatcher": "",
       "domainStrategy": "IPIfNonMatch",
-      "id": "43D0A2F3-50C5-49EF-B608-34CC1756AD38",
+      "id": "D96C46A1-FFB6-4D26-8C20-3AEFBC52F546",
       "rules": [
         {
           "balancerTag": "proxy_balancer_1",
-          "id": "172B2F6A-EBA7-47C6-ADF3-33341180DF96",
+          "id": "17158CC2-F1AF-4D2A-96FA-47CECDF8E8DE",
           "inboundTag": [
             "balancer-loop-1-in"
           ],
           "type": "field"
         },
         {
-          "id": "443AF3D7-0132-4718-BF25-3DBD64CBCB94",
+          "id": "ED2C807A-63CF-478C-BB71-D547AAC388B9",
           "outboundTag": "direct",
           "protocol": [
             "bittorrent"
@@ -887,7 +888,944 @@
           "type": "field"
         },
         {
-          "id": "A58DB615-2A80-4FD9-B4EB-57000B1E6365",
+          "domain": [
+            "dht.aelitis.com",
+            "dht.transmissionbt.com",
+            "dht.vuze.com",
+            "router.bittorrent.com",
+            "router.utorrent.com",
+            "1.tracker.eu.org",
+            "1337.abcvg.info",
+            "2.tracker.eu.org",
+            "3.tracker.eu.org",
+            "3rt.tace.ru",
+            "47.ip-51-68-199.eu",
+            "5rt.tace.ru",
+            "61626c.net",
+            "9.rarbg.com",
+            "9.rarbg.me",
+            "9.rarbg.to",
+            "a.leopard-raws.org",
+            "aaa.army",
+            "academic-p2p.appspot.com",
+            "acg.rip",
+            "adm.category5.tv",
+            "admin.videoenpoche.info",
+            "adminion.n-blade.ru",
+            "all4nothin.net",
+            "anidex.moe",
+            "api.bitumconference.ru",
+            "aruacfilmes.com.br",
+            "asger.xyz",
+            "atrack.pow7.com",
+            "baibako.tv",
+            "bclearning.top",
+            "benouworldtrip.fr",
+            "big-boss-tracker.net",
+            "bit-hdtv.com",
+            "bithq.org",
+            "bitseduce.com",
+            "bitsparadise.info",
+            "biztorrents.com",
+            "blackcats-games.net",
+            "blackz.ro",
+            "blokas.io",
+            "bluebird-hd.org",
+            "bms-hosxp.com",
+            "bobbialbano.com",
+            "bt-club.ws",
+            "bt-tracker.gamexp.ru",
+            "bt.3dmgame.com",
+            "bt.3kb.xyz",
+            "bt.ali213.net",
+            "bt.beatrice-raws.org",
+            "bt.edwardk.info",
+            "bt.firebit.org",
+            "bt.hliang.com",
+            "bt.okmp3.ru",
+            "bt.pusacg.org",
+            "bt.zlofenix.org",
+            "bt2.54new.com",
+            "bt2.edwardk.info",
+            "bubu.mapfactor.com",
+            "camera.lei001.com",
+            "carbon-bonsai-621.appspot.com",
+            "cdn-1.gamecoast.org",
+            "cdn-2.gamecoast.org",
+            "chanchan.uchuu.co.uk",
+            "chihaya.de",
+            "chihaya.toss.li",
+            "code2chicken.nl",
+            "concen.org",
+            "cutiegirl.ru",
+            "data-bg.net",
+            "datascene.net",
+            "daveking.com",
+            "denis.stalker.upeer.me",
+            "derpyradio.net",
+            "deviloid.net",
+            "discord.heihachi.pw",
+            "dpiui.reedlan.com",
+            "drumkitx.com",
+            "eddie4.nl",
+            "edu.uifr.ru",
+            "elitezones.ro",
+            "engplus.ru",
+            "exodus.desync.com",
+            "explodie.org",
+            "fe.dealclub.de",
+            "finbytes.org",
+            "forever-tracker.zooki.xyz",
+            "free-tracker.zooki.xyz",
+            "funfile.org",
+            "git.vulnix.sh",
+            "grifon.info",
+            "h4.trakx.nibba.trade",
+            "hdreactor.org",
+            "inferno.demonoid.is",
+            "inferno.demonoid.pw",
+            "ipv4.tracker.harry.lu",
+            "ipv6.tracker.harry.lu",
+            "ipv6.tracker.zerobytes.xyz",
+            "jsb.by",
+            "kanal-4.de",
+            "kinorun.com",
+            "koli.services",
+            "learnbits.me",
+            "line-net.ru",
+            "ln.mtahost.co",
+            "loushao.net",
+            "mail.realliferpg.de",
+            "mail2.zelenaya.net",
+            "masters-tb.com",
+            "mediaclub.tv",
+            "megatorrents.kg",
+            "metal.iplay.ro",
+            "mgtracker.org",
+            "milliontorrent.pl",
+            "mixfiend.com",
+            "movies.zsw.ca",
+            "mvgroup.org",
+            "nagios.tks.sumy.ua",
+            "novaopcj.icu",
+            "ns-1.x-fins.com",
+            "ns349743.ip-91-121-106.eu",
+            "ns389251.ovh.net",
+            "nyaa.tracker.wf",
+            "omg.wtftrackr.xyz",
+            "open.acgnxtracker.com",
+            "open.acgtracker.com",
+            "open.demonii.com",
+            "open.demonii.si",
+            "open.kickasstracker.com",
+            "open.lolicon.eu",
+            "open.nyaatorrents.info",
+            "open.nyap2p.com",
+            "open.stealth.si",
+            "open.touki.ru",
+            "opentor.org",
+            "opentracker.acgnx.com",
+            "opentracker.acgnx.se",
+            "opentracker.i2p.rocks",
+            "opentracker.xyz",
+            "p4p.arenabg.com",
+            "peerfect.org",
+            "potuk.com",
+            "pow7.com",
+            "prestige.minimafia.nl",
+            "proaudiotorrents.org",
+            "public-tracker.zooki.xyz",
+            "public.popcorn-tracker.org",
+            "public.publictracker.xyz",
+            "publictracker.ch",
+            "publictracker.xyz",
+            "qg.lorzl.gq",
+            "retracker.akado-ural.ru",
+            "retracker.baikal-telecom.net",
+            "retracker.hotplug.ru",
+            "retracker.krs-ix.ru",
+            "retracker.lanta-net.ru",
+            "retracker.local.msn-net.ru",
+            "retracker.netbynet.ru",
+            "retracker.nts.su",
+            "retracker.sevstar.net",
+            "retracker.spark-rostov.ru",
+            "rt.tace.ru",
+            "rutorrent.frontline-mod.com",
+            "sd-161673.dedibox.fr",
+            "secure.pow7.com",
+            "shadowshq.eddie4.nl",
+            "shadowshq.yi.org",
+            "share.camoe.cn",
+            "shnflac.net",
+            "siambt.com",
+            "sukebei.tracker.wf",
+            "t.acg.rip",
+            "t.nyaatracker.com",
+            "t.overflow.biz",
+            "t1.leech.ie",
+            "t1.pow7.com",
+            "t2.leech.ie",
+            "t2.pow7.com",
+            "t3.leech.ie",
+            "tc-boxing.com",
+            "tehconnection.eu",
+            "thegeeks.bz",
+            "theoccult.bz",
+            "theplace.bz",
+            "thetracker.org",
+            "thetradersden.org",
+            "thevault.bz",
+            "tk.mabo.ltd",
+            "torrent-team.net",
+            "torrent.arjlover.net",
+            "torrent.mp3quran.net",
+            "torrent.nwps.ws",
+            "torrent.resonatingmedia.com",
+            "torrent.tdjs.tech",
+            "torrentclub.tech",
+            "torrents-nn.cn",
+            "torrentsmd.com",
+            "torrenttracker.nwc.acsalaska.net",
+            "torrentzilla.org",
+            "tp.m-team.cc",
+            "tr.bangumi.moe",
+            "tr.cili001.com",
+            "tr.kxmp.cf",
+            "tr.ready4.icu",
+            "tr2.ysagin.top",
+            "tracker-udp.gbitt.info",
+            "tracker-v6.zooki.xyz",
+            "tracker.0o.is",
+            "tracker.0x.tf",
+            "tracker.36dm.com",
+            "tracker.acgnx.se",
+            "tracker.aletorrenty.pl",
+            "tracker.ali213.net",
+            "tracker.altrosky.nl",
+            "tracker.anirena.com",
+            "tracker.anonwebz.xyz",
+            "tracker.army",
+            "tracker.baltracker.net",
+            "tracker.beeimg.com",
+            "tracker.birkenwald.de",
+            "tracker.bittor.pw",
+            "tracker.bittorrent.am",
+            "tracker.blacksparrowmedia.net",
+            "tracker.bt-hash.com",
+            "tracker.bt4g.com",
+            "tracker.btnext.com",
+            "tracker.btsync.gq",
+            "tracker.bz",
+            "tracker.coppersurfer.tk",
+            "tracker.corpscorp.online",
+            "tracker.cyber-hub.net",
+            "tracker.cyberia.is",
+            "tracker.dler.org",
+            "tracker.ds.is",
+            "tracker.dutchtracking.nl",
+            "tracker.dyne.org",
+            "tracker.e-utp.net",
+            "tracker.eddie4.nl",
+            "tracker.electro-torrent.pl",
+            "tracker.etree.org",
+            "tracker.ex.ua",
+            "tracker.filemail.com",
+            "tracker.filepit.to",
+            "tracker.files.fm",
+            "tracker.flashtorrents.org",
+            "tracker.fortu.io",
+            "tracker.frozen-layer.net",
+            "tracker.funfile.org",
+            "tracker.gbitt.info",
+            "tracker.gigatorrents.ws",
+            "tracker.grepler.com",
+            "tracker.halfchub.club",
+            "tracker.hama3.net",
+            "tracker.iamhansen.xyz",
+            "tracker.imgoingto.icu",
+            "tracker.internetwarriors.net",
+            "tracker.ipv6tracker.ru",
+            "tracker.kali.org",
+            "tracker.kamigami.org",
+            "tracker.kuroy.me",
+            "tracker.leechers-paradise.org",
+            "tracker.lelux.fi",
+            "tracker.minglong.org",
+            "tracker.mininova.org",
+            "tracker.moeking.me",
+            "tracker.msm8916.com",
+            "tracker.nanoha.org",
+            "tracker.nextrp.ru",
+            "tracker.nitrix.me",
+            "tracker.noobsubs.net",
+            "tracker.nyaa.uk",
+            "tracker.nyap2p.com",
+            "tracker.open-internet.nl",
+            "tracker.openbittorrent.com",
+            "tracker.opentracker.se",
+            "tracker.opentrackr.org",
+            "tracker.parrotlinux.org",
+            "tracker.parrotsec.org",
+            "tracker.pirateparty.gr",
+            "tracker.piratepublic.com",
+            "tracker.pomf.se",
+            "tracker.publicbt.com",
+            "tracker.publictracker.xyz",
+            "tracker.pussytorrents.org",
+            "tracker.sbsub.com",
+            "tracker.shkinev.me",
+            "tracker.skynetcloud.site",
+            "tracker.skyts.net",
+            "tracker.sloppyta.co",
+            "tracker.swateam.org.uk",
+            "tracker.tambovnet.org",
+            "tracker.tamersunion.org",
+            "tracker.tasvideos.org",
+            "tracker.teambelgium.net",
+            "tracker.theempire.bz",
+            "tracker.tiny-vps.com",
+            "tracker.tntvillage.scambioetico.org",
+            "tracker.torrent.eu.org",
+            "tracker.torrentbay.to",
+            "tracker.torrentbytes.net",
+            "tracker.torrentleech.org",
+            "tracker.torrentsnows.com",
+            "tracker.torrenty.org",
+            "tracker.torrentyorg.pl",
+            "tracker.trackerfix.com",
+            "tracker.trackton.ga",
+            "tracker.tricitytorrents.com",
+            "tracker.tvunderground.org.ru",
+            "tracker.uw0.xyz",
+            "tracker.v6speed.org",
+            "tracker.vectahosting.eu",
+            "tracker.vulnix.sh",
+            "tracker.ygsub.com",
+            "tracker.yoshi210.com",
+            "tracker.zemoj.com",
+            "tracker.zerobytes.xyz",
+            "tracker.zum.bi",
+            "tracker0.ufibox.com",
+            "tracker01.loveapp.com",
+            "tracker1.itzmx.com",
+            "tracker2.christianbro.pw",
+            "tracker2.dler.org",
+            "tracker2.indowebster.com",
+            "tracker2.itzmx.com",
+            "tracker3.itzmx.com",
+            "tracker4.itzmx.com",
+            "tracker6.dler.org",
+            "tracker6.lelux.fi",
+            "trakx.herokuapp.com",
+            "tribalmixes.com",
+            "trun.tom.ru",
+            "tsundere.pw",
+            "u.wwwww.wtf",
+            "uatracker.net",
+            "ultra.zt.ua",
+            "us-tracker.publictracker.xyz",
+            "valakas.rollo.dnsabr.com",
+            "vibe.community",
+            "vpn.flying-datacenter.de",
+            "vps02.net.orel.ru",
+            "w.wwwww.wtf",
+            "wareztorrent.com",
+            "wassermann.online",
+            "worldboxingvideoarchive.com",
+            "loushao.net",
+            "midea123.z-media.com.cn",
+            "torrent.eu.org",
+            "wareztorrent.com",
+            "xwt-classics.net",
+            "xxxtor.com",
+            "yuwabits.net",
+            "z.mercax.com",
+            "zephir.monocul.us",
+            "zer0day.ch",
+            "zer0day.to",
+            "zone-torrent.net",
+            "open.demonoid.ch",
+            "wepzone.net",
+            "ttk2.nbaonlineservice.com",
+            "tracker.tryhackx.org",
+            "tracker.torrust-demo.com",
+            "tracker.srv00.com",
+            "tracker.qu.ax",
+            "tracker.gmi.gd",
+            "tr4ck3r.duckdns.org",
+            "run.publictracker.xyz",
+            "retracker01-msk-virt.corbina.net",
+            "retracker.lanta.me",
+            "opentracker.io",
+            "open.dstud.io",
+            "martin-gebhardt.eu",
+            "ipv4announce.sktorrent.eu",
+            "d40969.acod.regrucolo.ru",
+            "bt.bontal.net",
+            "bittorrent-tracker.e-n-c-r-y-p-t.net",
+            "bandito.byterunner.io",
+            "tracker.yemekyedim.com",
+            "tracker.pmman.tech",
+            "tracker.leechshield.link",
+            "tracker.ghostchu-services.top",
+            "tracker.cutie.dating",
+            "tr.zukizuki.org",
+            "tr.nyacat.pw",
+            "torrent.tracker.durukanbal.com",
+            "tracker810.xyz",
+            "tracker.waaa.moe",
+            "tracker.vanitycore.co",
+            "tracker.tritan.gg",
+            "tracker.renfei.net",
+            "tracker.mywaifu.best",
+            "tracker.lintk.me",
+            "tracker.ipv6tracker.org",
+            "tracker.dmcomic.org",
+            "tracker.dhitechnical.com",
+            "tracker.darkness.services",
+            "tracker.23794.top",
+            "torrent.hificode.in",
+            "shubt.net",
+            "share.hkg-fansub.info",
+            "seeders-paradise.org",
+            "extracker.dahrkael.net",
+            "bvarf.tracker.sh",
+            "bt.rer.lol",
+            "0d.kebhana.mx",
+            "0123456789nonexistent.com",
+            "udp.tracker.projectk.org",
+            "tracker.zupix.online",
+            "tracker.therarbg.to",
+            "tracker.t-1.org",
+            "tracker.startwork.cv",
+            "tracker.plx.im",
+            "tracker.hifimarket.in",
+            "tracker.fnix.net",
+            "tracker.ducks.party",
+            "tracker.1h.is",
+            "torrentclub.online",
+            "rekcart.duckdns.org",
+            "tracker.zhuqiy.com",
+            "tracker.uraniumhexafluori.de",
+            "tracker.moeblog.cn",
+            "tracker.gcrenwp.top",
+            "tracker.belmult.online",
+            "tracker.alaskantf.com",
+            "t.213891.xyz",
+            "shahidrazi.online",
+            "torrentsnipe.info",
+            "genesis-sp.org",
+            "tracker1.bt.moack.co.kr",
+            "tracker.xiaoduola.xyz",
+            "tracker.moxing.party",
+            "servandroidkino.ru",
+            "open.trackerlist.xyz",
+            "home.yxgz.club",
+            "buny.uk",
+            "bt1.xxxxbt.cc",
+            "bt.poletracker.org",
+            "aboutbeautifulgallopinghorsesinthegreenpasture.online"
+          ],
+          "id": "C3A637B1-0841-41DF-AF99-16FCBE674DDC",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "gosuslugi.ru",
+            "vk.com",
+            "vk.ru",
+            "1c-bitrix.ru",
+            "1c.ru",
+            "1cfresh.com",
+            "1cloud.ru",
+            "1internet.tv",
+            "2gis.ae",
+            "2gis.am",
+            "2gis.az",
+            "2gis.by",
+            "2gis.com",
+            "2gis.com.cy",
+            "2gis.cz",
+            "2gis.ge",
+            "2gis.kg",
+            "2gis.kz",
+            "2gis.ru",
+            "2gis.tj",
+            "2gis.ua",
+            "2gis.uz",
+            "2ip.ru",
+            "47news.ru",
+            "4meeting.me",
+            "5ka.ru",
+            "5post.market",
+            "abr.ru",
+            "aclub.ru",
+            "adfox.ru",
+            "admetrica.ru",
+            "adygeya.ru",
+            "aeroflot.ru",
+            "alfa-bank.com",
+            "alfa-bank.ru",
+            "alfa-finance.com",
+            "alfa-fx.com",
+            "alfa-pc.com",
+            "alfa-usa.com",
+            "alfabank.com",
+            "alfabank.ru",
+            "alfafinance.biz",
+            "alfafinance.ru",
+            "alfafuture.com",
+            "alfafuture.ru",
+            "alfafx.com",
+            "alfaleasing.ru",
+            "alfaprivate.com",
+            "alformacap.com",
+            "alformacapital.com",
+            "altai.ru",
+            "amur.ru",
+            "arkhangelsk.ru",
+            "astrakhan.ru",
+            "auth-nsdi.ru",
+            "auto.ru",
+            "av.ru",
+            "avito.ru",
+            "avito.st",
+            "baltbank.ru",
+            "banka-ui.dev",
+            "banki.ru",
+            "bankline.ru",
+            "bashkiria.ru",
+            "beeline.ru",
+            "belgorod.ru",
+            "beta-bank.com",
+            "bir.ru",
+            "bitrix24.ru",
+            "boosty.to",
+            "bronevik.com",
+            "bryansk.ru",
+            "buryatia.ru",
+            "cbg.ru",
+            "cbr.ru",
+            "cdn-tinkoff.ru",
+            "cdn-vk.ru",
+            "checkip.amazonaws.com",
+            "chel.ru",
+            "chelyabinsk.ru",
+            "chita.ru",
+            "chizhik.club",
+            "chukotka.ru",
+            "chuvashia.ru",
+            "cikrf.ru",
+            "citydrive.ru",
+            "clstorage.net",
+            "credistory.ru",
+            "crimea.ru",
+            "csat.ru",
+            "cscampus.ru",
+            "dagestan.ru",
+            "dbo-dengi.online",
+            "dellin.ru",
+            "dixy.ru",
+            "dnevnik.ru",
+            "dns-shop.ru",
+            "dodopizza.ru",
+            "dom.ru",
+            "domclick.ru",
+            "donationalerts.com",
+            "drweb.ru",
+            "dzen.ru",
+            "dzeninfra.ru",
+            "e5.ru",
+            "ebs.ru",
+            "edadeal.io",
+            "edadeal.ru",
+            "edu.ru",
+            "ekburg.ru",
+            "emias.info",
+            "fastvps.ru",
+            "finuslugi.ru",
+            "fivepost.ru",
+            "fix-price.com",
+            "gazeta.ru",
+            "gazprombank.ru",
+            "gazprombank.tech",
+            "gazprompay.ru",
+            "gorodpay.ru",
+            "goskey.ru",
+            "gosuslugi.ru",
+            "gov.ru",
+            "government.ru",
+            "gpb.ru",
+            "gpmdi.ru",
+            "grfc.ru",
+            "grozny.ru",
+            "gu-st.ru",
+            "hh.ru",
+            "i-ola.ru",
+            "idx5.ru",
+            "ifconfig.me",
+            "imgsmail.ru",
+            "investalfabank.com",
+            "ipify.org",
+            "irk.ru",
+            "irkutsk.ru",
+            "ivanovo.ru",
+            "iz.ru",
+            "izbirkom.ru",
+            "izhevsk.ru",
+            "jamal.ru",
+            "jar.ru",
+            "jivo.ru",
+            "jivochat.com",
+            "jivosite.com",
+            "jx5.ru",
+            "kalmykia.ru",
+            "kaluga.ru",
+            "kamchatka.ru",
+            "karelia.ru",
+            "kaspersky.com",
+            "kaspersky.ru",
+            "kazan.ru",
+            "kazanexpress.ru",
+            "kchr.ru",
+            "kemerovo.ru",
+            "khabarovsk.ru",
+            "khakassia.ru",
+            "khv.ru",
+            "kinopoisk.ru",
+            "kirov.ru",
+            "koenig.ru",
+            "kommersant.ru",
+            "kostroma.ru",
+            "kp.ru",
+            "krasnodar.su",
+            "krasnoyarsk.ru",
+            "krasyar.ru",
+            "krd.ru",
+            "kremlin.ru",
+            "kuban.ru",
+            "kuper.ru",
+            "kurgan.ru",
+            "kursk.ru",
+            "lead-pro2023.online",
+            "lemanapro.ru",
+            "lenta.com",
+            "lenta.ru",
+            "lipetsk.ru",
+            "lmru.tech",
+            "magadan.ru",
+            "magnit.ru",
+            "mail.ru",
+            "mari-el.ru",
+            "mari.ru",
+            "marine.ru",
+            "max.ru",
+            "megafon.ru",
+            "megamarket.ru",
+            "megamarket.tech",
+            "memealerts.com",
+            "mgfoms.ru",
+            "mil.ru",
+            "mirpayonline.ru",
+            "miya-news.online",
+            "mm.ru",
+            "mnogolososya.ru",
+            "moex.com",
+            "mordovia.ru",
+            "mos.ru",
+            "mosreg.ru",
+            "mradx.net",
+            "mts.ru",
+            "mtsdengi.ru",
+            "murmansk.ru",
+            "mvk.com",
+            "myapelsin.ru",
+            "mycdn.me",
+            "mymts.ru",
+            "nalchik.ru",
+            "nalog.ru",
+            "naydex.net",
+            "nbki.ru",
+            "netmonet.co",
+            "nn.ru",
+            "nov.ru",
+            "novosibirsk.ru",
+            "nsk.ru",
+            "nspk.ru",
+            "ok.ru",
+            "okcdn.ru",
+            "okko.sport",
+            "okko.tv",
+            "okolo.app",
+            "omsk.ru",
+            "oneme.ru",
+            "orb.ru",
+            "oryol.ru",
+            "ozon.ru",
+            "ozone.ru",
+            "ozonusercontent.com",
+            "penza.ru",
+            "perekrestok.ru",
+            "perm.ru",
+            "pochta.ru",
+            "psbank.ru",
+            "psblog.ru",
+            "psk",
+            "psk.ru",
+            "pskov.ru",
+            "ptz.ru",
+            "qms.ru",
+            "rambler.ru",
+            "rbc.ru",
+            "res-nsdi.ru",
+            "rkomi.ru",
+            "rnd.ru",
+            "rostaxi.org",
+            "rostelecom.ru",
+            "rshb.ru",
+            "rt.ru",
+            "rtbcdn.ru",
+            "russiacalling.com",
+            "rutube.ru",
+            "rutubelist.ru",
+            "ryazan.ru",
+            "rzd-bonus.ru",
+            "rzd.ru",
+            "sakhalin.ru",
+            "samara.ru",
+            "saratov.ru",
+            "sbermarket.ru",
+            "sbermegamarket.ru",
+            "sbpgpb.ru",
+            "sev.ru",
+            "sevastopol.ru",
+            "simbirsk.ru",
+            "sistema-capital.com",
+            "smolensk.ru",
+            "spb.ru",
+            "spvb.ru",
+            "static-storage.net",
+            "stavropol.ru",
+            "stv.ru",
+            "surgut.ru",
+            "svoy.academy",
+            "t2.ru",
+            "tambov.ru",
+            "tamtam.chat",
+            "tatarstan.ru",
+            "taximaxim.ru",
+            "taxsee.com",
+            "tbank-online.com",
+            "tele2.ru",
+            "timeweb.cloud",
+            "timeweb.com",
+            "tips.tips",
+            "tnt-online.ru",
+            "tochka-tech.com",
+            "tochka.com",
+            "tom.ru",
+            "tomsk.ru",
+            "topdelivery.ru",
+            "trbcdn.net",
+            "tsaritsyn.ru",
+            "tsk.ru",
+            "tsx.x5static.net",
+            "tu-tu.ru",
+            "tula.ru",
+            "turbopages.org",
+            "tutu.ru",
+            "tuva.ru",
+            "tver.ru",
+            "tyumen.ru",
+            "udm.ru",
+            "udmurtia.ru",
+            "ulan-ude.ru",
+            "usedesk.ru",
+            "userapi.com",
+            "uxfeedback.ru",
+            "vgtrk.ru",
+            "victoria-group.ru",
+            "vk-analytics.ru",
+            "vk-apps.com",
+            "vk-apps.ru",
+            "vk-cdn.me",
+            "vk-cdn.net",
+            "vk-portal.net",
+            "vk.cc",
+            "vk.com",
+            "vk.company",
+            "vk.design",
+            "vk.link",
+            "vk.me",
+            "vk.ru",
+            "vk.team",
+            "vkcache.com",
+            "vkcloud-static.ru",
+            "vkgo.app",
+            "vklive.app",
+            "vkmessenger.app",
+            "vkmessenger.com",
+            "vkontakte.ru",
+            "vkuser.net",
+            "vkuseraudio.com",
+            "vkuseraudio.net",
+            "vkuseraudio.ru",
+            "vkusercdn.ru",
+            "vkuserlive.net",
+            "vkuserphoto.ru",
+            "vkuservideo.com",
+            "vkuservideo.net",
+            "vkuservideo.ru",
+            "vkusnoitochka.ru",
+            "vkusvill.ru",
+            "vkvideo.ru",
+            "vl.ru",
+            "vladikavkaz.ru",
+            "vladimir.ru",
+            "vladivostok.ru",
+            "vlg.ru",
+            "volgograd.ru",
+            "vologda.ru",
+            "voronezh.ru",
+            "vrn.ru",
+            "vtb-grants.fut.ru",
+            "vtb-liga.fut.ru",
+            "vtb-russia.com",
+            "vtb.bank.in",
+            "vtb.com",
+            "vtb.corp.ru",
+            "vtb.digital",
+            "vtb.fut.ru",
+            "vtb.promo",
+            "vtb.ru",
+            "vtb24.com",
+            "vtb24.ru",
+            "vtbcareer.com",
+            "vtbfamily.ru",
+            "vtbindia.com",
+            "vtbkep.site",
+            "vtbpartners.com",
+            "vtbrussia.com",
+            "vtbrussia.ru",
+            "vtbstrana.ru",
+            "vyatka.ru",
+            "wb.ru",
+            "webvisor.com",
+            "webvisor.org",
+            "whoosh.bike",
+            "wildberries.ru",
+            "windsurf.com",
+            "wink.ru",
+            "x5.ru",
+            "x5.tech",
+            "x5club.ru",
+            "x5id.ru",
+            "x5l.ru",
+            "x5paket.ru",
+            "x5q.ru",
+            "xn----7sb7akeedqd.xn--p1ai",
+            "xn--80aacoonefzg3am8b1fsb.xn--p1ai",
+            "xn--80acgfbsl1azdqr.xn--p1ai",
+            "xn--80ajghhoc2aj1c8b.xn--p1ai",
+            "xn--90ab2c.xn--p1ai",
+            "xn--90aifd0aza.site",
+            "xn--b1aew.xn--p1ai",
+            "xn--d1acpjx3f.xn--p1ai",
+            "ya.ru",
+            "yads.tech",
+            "yakutia.ru",
+            "yamal.ru",
+            "yandex",
+            "yandex-bank.net",
+            "yandex-team.ru",
+            "yandex.aero",
+            "yandex.az",
+            "yandex.by",
+            "yandex.cloud",
+            "yandex.co.il",
+            "yandex.com",
+            "yandex.com.am",
+            "yandex.com.ge",
+            "yandex.com.ru",
+            "yandex.com.tr",
+            "yandex.com.ua",
+            "yandex.de",
+            "yandex.ee",
+            "yandex.eu",
+            "yandex.fi",
+            "yandex.fr",
+            "yandex.jobs",
+            "yandex.kg",
+            "yandex.kz",
+            "yandex.lt",
+            "yandex.lv",
+            "yandex.md",
+            "yandex.net",
+            "yandex.org",
+            "yandex.pl",
+            "yandex.ru",
+            "yandex.st",
+            "yandex.sx",
+            "yandex.tj",
+            "yandex.tm",
+            "yandex.tr",
+            "yandex.ua",
+            "yandex.uz",
+            "yandexadexchange.net",
+            "yandexcloud.net",
+            "yandexcom.net",
+            "yandexmetrica.com",
+            "yandexwebcache.net",
+            "yandexwebcache.org",
+            "yaroslavl.ru",
+            "yastat.net",
+            "yastatic-net.ru",
+            "yastatic.net",
+            "yota.ru",
+            "youla-web-static.mrgcdn.ru",
+            "youla.io",
+            "youla.ru",
+            "yuzhno-sakhalinsk.ru",
+            "zdrav10.ru",
+            "zentotem.net",
+            "sferum-dev.ru",
+            "vkontakte.com",
+            "vkuserlive.com",
+            "vkpay.io",
+            "vkpay.com",
+            "vkpay.app",
+            "vkcs.cloud",
+            "odkl.ru",
+            "apiok.ru",
+            "apptracer.ru",
+            "tech-mail.ru",
+            "vmailru.net",
+            "smailru.net",
+            "appsmail.ru",
+            "cxhub.ru",
+            "vkplay.ru",
+            "my.games",
+            "algoritmika.org",
+            "yaklass.ru",
+            "umschool.net",
+            "code-class.ru",
+            "summerstage.ru",
+            "vk-stadium.ru",
+            "tetrika-school.ru",
+            "finance.ozon.ru",
+            "o3t.ru",
+            "o3team.ru",
+            "ozon-dostavka.ru",
+            "o3.ru"
+          ],
+          "id": "85F3E093-B42D-4128-A59E-8CAF8915BCC2",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "id": "ADBD4B2B-AE13-401D-8703-D3C943FEFC27",
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -913,7 +1851,7 @@
         },
         {
           "balancerTag": "proxy_balancer_priority",
-          "id": "58328953-B3EC-4A55-A577-AB6763BEA5CD",
+          "id": "97032228-BE56-4104-89F5-58D3021CAB80",
           "inboundTag": [
             "http",
             "socks"
@@ -957,7 +1895,7 @@
           "2606:4700:4700::1001"
         ]
       },
-      "id": "B4D31CA4-F6D8-4497-B278-4E27BFEAB4A5",
+      "id": "26485D05-D137-4E1A-AF73-AA32463F11D5",
       "queryStrategy": "UseIPv4",
       "servers": [
         {
@@ -978,7 +1916,7 @@
         }
       ]
     },
-    "id": "D94FECEA-E4F5-41F0-96C3-30064DF4DD7A",
+    "id": "FDFAC896-9922-4417-8928-409933AC78AE",
     "inbounds": [
       {
         "listen": "127.0.0.1",
@@ -1015,7 +1953,8 @@
         "tag": "http"
       }
     ],
-       "outbounds": [
+    "meta": {},
+    "outbounds": [
       {
         "protocol": "vless",
         "settings": {
@@ -1027,7 +1966,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1062,7 +2001,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1097,7 +2036,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1132,7 +2071,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1167,7 +2106,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1183,7 +2122,7 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ",
-            "serverName": "agreements-stage.x5.ru",
+            "serverName": "5post-gate-test.x5.ru",
             "shortId": "3722621913893e97",
             "show": false
           },
@@ -1202,7 +2141,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1237,7 +2176,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1272,7 +2211,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1307,7 +2246,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1348,7 +2287,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": " Обход 2",
+    "remarks": "ÐÐ±ÑÐ¾Ð´ (Ð ÐµÐ·ÐµÑÐ² 1)",
     "routing": {
       "balancers": [
         {
@@ -1372,10 +2311,10 @@
       ],
       "domainMatcher": "",
       "domainStrategy": "IPIfNonMatch",
-      "id": "611B1B8D-05B7-4294-B1A3-2D5E5AAD4264",
+      "id": "60B86714-2D7C-4F9D-BD87-83AAF76F7A9C",
       "rules": [
         {
-          "id": "4E44FFF2-90B1-4B6E-8F43-4C01C201CD32",
+          "id": "EBB31D94-0CF8-4ECB-A44D-8407C638CE49",
           "outboundTag": "direct",
           "protocol": [
             "bittorrent"
@@ -1383,7 +2322,944 @@
           "type": "field"
         },
         {
-          "id": "5D250F80-3BB2-437C-9415-2FDEA466E194",
+          "domain": [
+            "dht.aelitis.com",
+            "dht.transmissionbt.com",
+            "dht.vuze.com",
+            "router.bittorrent.com",
+            "router.utorrent.com",
+            "1.tracker.eu.org",
+            "1337.abcvg.info",
+            "2.tracker.eu.org",
+            "3.tracker.eu.org",
+            "3rt.tace.ru",
+            "47.ip-51-68-199.eu",
+            "5rt.tace.ru",
+            "61626c.net",
+            "9.rarbg.com",
+            "9.rarbg.me",
+            "9.rarbg.to",
+            "a.leopard-raws.org",
+            "aaa.army",
+            "academic-p2p.appspot.com",
+            "acg.rip",
+            "adm.category5.tv",
+            "admin.videoenpoche.info",
+            "adminion.n-blade.ru",
+            "all4nothin.net",
+            "anidex.moe",
+            "api.bitumconference.ru",
+            "aruacfilmes.com.br",
+            "asger.xyz",
+            "atrack.pow7.com",
+            "baibako.tv",
+            "bclearning.top",
+            "benouworldtrip.fr",
+            "big-boss-tracker.net",
+            "bit-hdtv.com",
+            "bithq.org",
+            "bitseduce.com",
+            "bitsparadise.info",
+            "biztorrents.com",
+            "blackcats-games.net",
+            "blackz.ro",
+            "blokas.io",
+            "bluebird-hd.org",
+            "bms-hosxp.com",
+            "bobbialbano.com",
+            "bt-club.ws",
+            "bt-tracker.gamexp.ru",
+            "bt.3dmgame.com",
+            "bt.3kb.xyz",
+            "bt.ali213.net",
+            "bt.beatrice-raws.org",
+            "bt.edwardk.info",
+            "bt.firebit.org",
+            "bt.hliang.com",
+            "bt.okmp3.ru",
+            "bt.pusacg.org",
+            "bt.zlofenix.org",
+            "bt2.54new.com",
+            "bt2.edwardk.info",
+            "bubu.mapfactor.com",
+            "camera.lei001.com",
+            "carbon-bonsai-621.appspot.com",
+            "cdn-1.gamecoast.org",
+            "cdn-2.gamecoast.org",
+            "chanchan.uchuu.co.uk",
+            "chihaya.de",
+            "chihaya.toss.li",
+            "code2chicken.nl",
+            "concen.org",
+            "cutiegirl.ru",
+            "data-bg.net",
+            "datascene.net",
+            "daveking.com",
+            "denis.stalker.upeer.me",
+            "derpyradio.net",
+            "deviloid.net",
+            "discord.heihachi.pw",
+            "dpiui.reedlan.com",
+            "drumkitx.com",
+            "eddie4.nl",
+            "edu.uifr.ru",
+            "elitezones.ro",
+            "engplus.ru",
+            "exodus.desync.com",
+            "explodie.org",
+            "fe.dealclub.de",
+            "finbytes.org",
+            "forever-tracker.zooki.xyz",
+            "free-tracker.zooki.xyz",
+            "funfile.org",
+            "git.vulnix.sh",
+            "grifon.info",
+            "h4.trakx.nibba.trade",
+            "hdreactor.org",
+            "inferno.demonoid.is",
+            "inferno.demonoid.pw",
+            "ipv4.tracker.harry.lu",
+            "ipv6.tracker.harry.lu",
+            "ipv6.tracker.zerobytes.xyz",
+            "jsb.by",
+            "kanal-4.de",
+            "kinorun.com",
+            "koli.services",
+            "learnbits.me",
+            "line-net.ru",
+            "ln.mtahost.co",
+            "loushao.net",
+            "mail.realliferpg.de",
+            "mail2.zelenaya.net",
+            "masters-tb.com",
+            "mediaclub.tv",
+            "megatorrents.kg",
+            "metal.iplay.ro",
+            "mgtracker.org",
+            "milliontorrent.pl",
+            "mixfiend.com",
+            "movies.zsw.ca",
+            "mvgroup.org",
+            "nagios.tks.sumy.ua",
+            "novaopcj.icu",
+            "ns-1.x-fins.com",
+            "ns349743.ip-91-121-106.eu",
+            "ns389251.ovh.net",
+            "nyaa.tracker.wf",
+            "omg.wtftrackr.xyz",
+            "open.acgnxtracker.com",
+            "open.acgtracker.com",
+            "open.demonii.com",
+            "open.demonii.si",
+            "open.kickasstracker.com",
+            "open.lolicon.eu",
+            "open.nyaatorrents.info",
+            "open.nyap2p.com",
+            "open.stealth.si",
+            "open.touki.ru",
+            "opentor.org",
+            "opentracker.acgnx.com",
+            "opentracker.acgnx.se",
+            "opentracker.i2p.rocks",
+            "opentracker.xyz",
+            "p4p.arenabg.com",
+            "peerfect.org",
+            "potuk.com",
+            "pow7.com",
+            "prestige.minimafia.nl",
+            "proaudiotorrents.org",
+            "public-tracker.zooki.xyz",
+            "public.popcorn-tracker.org",
+            "public.publictracker.xyz",
+            "publictracker.ch",
+            "publictracker.xyz",
+            "qg.lorzl.gq",
+            "retracker.akado-ural.ru",
+            "retracker.baikal-telecom.net",
+            "retracker.hotplug.ru",
+            "retracker.krs-ix.ru",
+            "retracker.lanta-net.ru",
+            "retracker.local.msn-net.ru",
+            "retracker.netbynet.ru",
+            "retracker.nts.su",
+            "retracker.sevstar.net",
+            "retracker.spark-rostov.ru",
+            "rt.tace.ru",
+            "rutorrent.frontline-mod.com",
+            "sd-161673.dedibox.fr",
+            "secure.pow7.com",
+            "shadowshq.eddie4.nl",
+            "shadowshq.yi.org",
+            "share.camoe.cn",
+            "shnflac.net",
+            "siambt.com",
+            "sukebei.tracker.wf",
+            "t.acg.rip",
+            "t.nyaatracker.com",
+            "t.overflow.biz",
+            "t1.leech.ie",
+            "t1.pow7.com",
+            "t2.leech.ie",
+            "t2.pow7.com",
+            "t3.leech.ie",
+            "tc-boxing.com",
+            "tehconnection.eu",
+            "thegeeks.bz",
+            "theoccult.bz",
+            "theplace.bz",
+            "thetracker.org",
+            "thetradersden.org",
+            "thevault.bz",
+            "tk.mabo.ltd",
+            "torrent-team.net",
+            "torrent.arjlover.net",
+            "torrent.mp3quran.net",
+            "torrent.nwps.ws",
+            "torrent.resonatingmedia.com",
+            "torrent.tdjs.tech",
+            "torrentclub.tech",
+            "torrents-nn.cn",
+            "torrentsmd.com",
+            "torrenttracker.nwc.acsalaska.net",
+            "torrentzilla.org",
+            "tp.m-team.cc",
+            "tr.bangumi.moe",
+            "tr.cili001.com",
+            "tr.kxmp.cf",
+            "tr.ready4.icu",
+            "tr2.ysagin.top",
+            "tracker-udp.gbitt.info",
+            "tracker-v6.zooki.xyz",
+            "tracker.0o.is",
+            "tracker.0x.tf",
+            "tracker.36dm.com",
+            "tracker.acgnx.se",
+            "tracker.aletorrenty.pl",
+            "tracker.ali213.net",
+            "tracker.altrosky.nl",
+            "tracker.anirena.com",
+            "tracker.anonwebz.xyz",
+            "tracker.army",
+            "tracker.baltracker.net",
+            "tracker.beeimg.com",
+            "tracker.birkenwald.de",
+            "tracker.bittor.pw",
+            "tracker.bittorrent.am",
+            "tracker.blacksparrowmedia.net",
+            "tracker.bt-hash.com",
+            "tracker.bt4g.com",
+            "tracker.btnext.com",
+            "tracker.btsync.gq",
+            "tracker.bz",
+            "tracker.coppersurfer.tk",
+            "tracker.corpscorp.online",
+            "tracker.cyber-hub.net",
+            "tracker.cyberia.is",
+            "tracker.dler.org",
+            "tracker.ds.is",
+            "tracker.dutchtracking.nl",
+            "tracker.dyne.org",
+            "tracker.e-utp.net",
+            "tracker.eddie4.nl",
+            "tracker.electro-torrent.pl",
+            "tracker.etree.org",
+            "tracker.ex.ua",
+            "tracker.filemail.com",
+            "tracker.filepit.to",
+            "tracker.files.fm",
+            "tracker.flashtorrents.org",
+            "tracker.fortu.io",
+            "tracker.frozen-layer.net",
+            "tracker.funfile.org",
+            "tracker.gbitt.info",
+            "tracker.gigatorrents.ws",
+            "tracker.grepler.com",
+            "tracker.halfchub.club",
+            "tracker.hama3.net",
+            "tracker.iamhansen.xyz",
+            "tracker.imgoingto.icu",
+            "tracker.internetwarriors.net",
+            "tracker.ipv6tracker.ru",
+            "tracker.kali.org",
+            "tracker.kamigami.org",
+            "tracker.kuroy.me",
+            "tracker.leechers-paradise.org",
+            "tracker.lelux.fi",
+            "tracker.minglong.org",
+            "tracker.mininova.org",
+            "tracker.moeking.me",
+            "tracker.msm8916.com",
+            "tracker.nanoha.org",
+            "tracker.nextrp.ru",
+            "tracker.nitrix.me",
+            "tracker.noobsubs.net",
+            "tracker.nyaa.uk",
+            "tracker.nyap2p.com",
+            "tracker.open-internet.nl",
+            "tracker.openbittorrent.com",
+            "tracker.opentracker.se",
+            "tracker.opentrackr.org",
+            "tracker.parrotlinux.org",
+            "tracker.parrotsec.org",
+            "tracker.pirateparty.gr",
+            "tracker.piratepublic.com",
+            "tracker.pomf.se",
+            "tracker.publicbt.com",
+            "tracker.publictracker.xyz",
+            "tracker.pussytorrents.org",
+            "tracker.sbsub.com",
+            "tracker.shkinev.me",
+            "tracker.skynetcloud.site",
+            "tracker.skyts.net",
+            "tracker.sloppyta.co",
+            "tracker.swateam.org.uk",
+            "tracker.tambovnet.org",
+            "tracker.tamersunion.org",
+            "tracker.tasvideos.org",
+            "tracker.teambelgium.net",
+            "tracker.theempire.bz",
+            "tracker.tiny-vps.com",
+            "tracker.tntvillage.scambioetico.org",
+            "tracker.torrent.eu.org",
+            "tracker.torrentbay.to",
+            "tracker.torrentbytes.net",
+            "tracker.torrentleech.org",
+            "tracker.torrentsnows.com",
+            "tracker.torrenty.org",
+            "tracker.torrentyorg.pl",
+            "tracker.trackerfix.com",
+            "tracker.trackton.ga",
+            "tracker.tricitytorrents.com",
+            "tracker.tvunderground.org.ru",
+            "tracker.uw0.xyz",
+            "tracker.v6speed.org",
+            "tracker.vectahosting.eu",
+            "tracker.vulnix.sh",
+            "tracker.ygsub.com",
+            "tracker.yoshi210.com",
+            "tracker.zemoj.com",
+            "tracker.zerobytes.xyz",
+            "tracker.zum.bi",
+            "tracker0.ufibox.com",
+            "tracker01.loveapp.com",
+            "tracker1.itzmx.com",
+            "tracker2.christianbro.pw",
+            "tracker2.dler.org",
+            "tracker2.indowebster.com",
+            "tracker2.itzmx.com",
+            "tracker3.itzmx.com",
+            "tracker4.itzmx.com",
+            "tracker6.dler.org",
+            "tracker6.lelux.fi",
+            "trakx.herokuapp.com",
+            "tribalmixes.com",
+            "trun.tom.ru",
+            "tsundere.pw",
+            "u.wwwww.wtf",
+            "uatracker.net",
+            "ultra.zt.ua",
+            "us-tracker.publictracker.xyz",
+            "valakas.rollo.dnsabr.com",
+            "vibe.community",
+            "vpn.flying-datacenter.de",
+            "vps02.net.orel.ru",
+            "w.wwwww.wtf",
+            "wareztorrent.com",
+            "wassermann.online",
+            "worldboxingvideoarchive.com",
+            "loushao.net",
+            "midea123.z-media.com.cn",
+            "torrent.eu.org",
+            "wareztorrent.com",
+            "xwt-classics.net",
+            "xxxtor.com",
+            "yuwabits.net",
+            "z.mercax.com",
+            "zephir.monocul.us",
+            "zer0day.ch",
+            "zer0day.to",
+            "zone-torrent.net",
+            "open.demonoid.ch",
+            "wepzone.net",
+            "ttk2.nbaonlineservice.com",
+            "tracker.tryhackx.org",
+            "tracker.torrust-demo.com",
+            "tracker.srv00.com",
+            "tracker.qu.ax",
+            "tracker.gmi.gd",
+            "tr4ck3r.duckdns.org",
+            "run.publictracker.xyz",
+            "retracker01-msk-virt.corbina.net",
+            "retracker.lanta.me",
+            "opentracker.io",
+            "open.dstud.io",
+            "martin-gebhardt.eu",
+            "ipv4announce.sktorrent.eu",
+            "d40969.acod.regrucolo.ru",
+            "bt.bontal.net",
+            "bittorrent-tracker.e-n-c-r-y-p-t.net",
+            "bandito.byterunner.io",
+            "tracker.yemekyedim.com",
+            "tracker.pmman.tech",
+            "tracker.leechshield.link",
+            "tracker.ghostchu-services.top",
+            "tracker.cutie.dating",
+            "tr.zukizuki.org",
+            "tr.nyacat.pw",
+            "torrent.tracker.durukanbal.com",
+            "tracker810.xyz",
+            "tracker.waaa.moe",
+            "tracker.vanitycore.co",
+            "tracker.tritan.gg",
+            "tracker.renfei.net",
+            "tracker.mywaifu.best",
+            "tracker.lintk.me",
+            "tracker.ipv6tracker.org",
+            "tracker.dmcomic.org",
+            "tracker.dhitechnical.com",
+            "tracker.darkness.services",
+            "tracker.23794.top",
+            "torrent.hificode.in",
+            "shubt.net",
+            "share.hkg-fansub.info",
+            "seeders-paradise.org",
+            "extracker.dahrkael.net",
+            "bvarf.tracker.sh",
+            "bt.rer.lol",
+            "0d.kebhana.mx",
+            "0123456789nonexistent.com",
+            "udp.tracker.projectk.org",
+            "tracker.zupix.online",
+            "tracker.therarbg.to",
+            "tracker.t-1.org",
+            "tracker.startwork.cv",
+            "tracker.plx.im",
+            "tracker.hifimarket.in",
+            "tracker.fnix.net",
+            "tracker.ducks.party",
+            "tracker.1h.is",
+            "torrentclub.online",
+            "rekcart.duckdns.org",
+            "tracker.zhuqiy.com",
+            "tracker.uraniumhexafluori.de",
+            "tracker.moeblog.cn",
+            "tracker.gcrenwp.top",
+            "tracker.belmult.online",
+            "tracker.alaskantf.com",
+            "t.213891.xyz",
+            "shahidrazi.online",
+            "torrentsnipe.info",
+            "genesis-sp.org",
+            "tracker1.bt.moack.co.kr",
+            "tracker.xiaoduola.xyz",
+            "tracker.moxing.party",
+            "servandroidkino.ru",
+            "open.trackerlist.xyz",
+            "home.yxgz.club",
+            "buny.uk",
+            "bt1.xxxxbt.cc",
+            "bt.poletracker.org",
+            "aboutbeautifulgallopinghorsesinthegreenpasture.online"
+          ],
+          "id": "F0D15634-0997-492A-8593-429F3B916F4A",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "gosuslugi.ru",
+            "vk.com",
+            "vk.ru",
+            "1c-bitrix.ru",
+            "1c.ru",
+            "1cfresh.com",
+            "1cloud.ru",
+            "1internet.tv",
+            "2gis.ae",
+            "2gis.am",
+            "2gis.az",
+            "2gis.by",
+            "2gis.com",
+            "2gis.com.cy",
+            "2gis.cz",
+            "2gis.ge",
+            "2gis.kg",
+            "2gis.kz",
+            "2gis.ru",
+            "2gis.tj",
+            "2gis.ua",
+            "2gis.uz",
+            "2ip.ru",
+            "47news.ru",
+            "4meeting.me",
+            "5ka.ru",
+            "5post.market",
+            "abr.ru",
+            "aclub.ru",
+            "adfox.ru",
+            "admetrica.ru",
+            "adygeya.ru",
+            "aeroflot.ru",
+            "alfa-bank.com",
+            "alfa-bank.ru",
+            "alfa-finance.com",
+            "alfa-fx.com",
+            "alfa-pc.com",
+            "alfa-usa.com",
+            "alfabank.com",
+            "alfabank.ru",
+            "alfafinance.biz",
+            "alfafinance.ru",
+            "alfafuture.com",
+            "alfafuture.ru",
+            "alfafx.com",
+            "alfaleasing.ru",
+            "alfaprivate.com",
+            "alformacap.com",
+            "alformacapital.com",
+            "altai.ru",
+            "amur.ru",
+            "arkhangelsk.ru",
+            "astrakhan.ru",
+            "auth-nsdi.ru",
+            "auto.ru",
+            "av.ru",
+            "avito.ru",
+            "avito.st",
+            "baltbank.ru",
+            "banka-ui.dev",
+            "banki.ru",
+            "bankline.ru",
+            "bashkiria.ru",
+            "beeline.ru",
+            "belgorod.ru",
+            "beta-bank.com",
+            "bir.ru",
+            "bitrix24.ru",
+            "boosty.to",
+            "bronevik.com",
+            "bryansk.ru",
+            "buryatia.ru",
+            "cbg.ru",
+            "cbr.ru",
+            "cdn-tinkoff.ru",
+            "cdn-vk.ru",
+            "checkip.amazonaws.com",
+            "chel.ru",
+            "chelyabinsk.ru",
+            "chita.ru",
+            "chizhik.club",
+            "chukotka.ru",
+            "chuvashia.ru",
+            "cikrf.ru",
+            "citydrive.ru",
+            "clstorage.net",
+            "credistory.ru",
+            "crimea.ru",
+            "csat.ru",
+            "cscampus.ru",
+            "dagestan.ru",
+            "dbo-dengi.online",
+            "dellin.ru",
+            "dixy.ru",
+            "dnevnik.ru",
+            "dns-shop.ru",
+            "dodopizza.ru",
+            "dom.ru",
+            "domclick.ru",
+            "donationalerts.com",
+            "drweb.ru",
+            "dzen.ru",
+            "dzeninfra.ru",
+            "e5.ru",
+            "ebs.ru",
+            "edadeal.io",
+            "edadeal.ru",
+            "edu.ru",
+            "ekburg.ru",
+            "emias.info",
+            "fastvps.ru",
+            "finuslugi.ru",
+            "fivepost.ru",
+            "fix-price.com",
+            "gazeta.ru",
+            "gazprombank.ru",
+            "gazprombank.tech",
+            "gazprompay.ru",
+            "gorodpay.ru",
+            "goskey.ru",
+            "gosuslugi.ru",
+            "gov.ru",
+            "government.ru",
+            "gpb.ru",
+            "gpmdi.ru",
+            "grfc.ru",
+            "grozny.ru",
+            "gu-st.ru",
+            "hh.ru",
+            "i-ola.ru",
+            "idx5.ru",
+            "ifconfig.me",
+            "imgsmail.ru",
+            "investalfabank.com",
+            "ipify.org",
+            "irk.ru",
+            "irkutsk.ru",
+            "ivanovo.ru",
+            "iz.ru",
+            "izbirkom.ru",
+            "izhevsk.ru",
+            "jamal.ru",
+            "jar.ru",
+            "jivo.ru",
+            "jivochat.com",
+            "jivosite.com",
+            "jx5.ru",
+            "kalmykia.ru",
+            "kaluga.ru",
+            "kamchatka.ru",
+            "karelia.ru",
+            "kaspersky.com",
+            "kaspersky.ru",
+            "kazan.ru",
+            "kazanexpress.ru",
+            "kchr.ru",
+            "kemerovo.ru",
+            "khabarovsk.ru",
+            "khakassia.ru",
+            "khv.ru",
+            "kinopoisk.ru",
+            "kirov.ru",
+            "koenig.ru",
+            "kommersant.ru",
+            "kostroma.ru",
+            "kp.ru",
+            "krasnodar.su",
+            "krasnoyarsk.ru",
+            "krasyar.ru",
+            "krd.ru",
+            "kremlin.ru",
+            "kuban.ru",
+            "kuper.ru",
+            "kurgan.ru",
+            "kursk.ru",
+            "lead-pro2023.online",
+            "lemanapro.ru",
+            "lenta.com",
+            "lenta.ru",
+            "lipetsk.ru",
+            "lmru.tech",
+            "magadan.ru",
+            "magnit.ru",
+            "mail.ru",
+            "mari-el.ru",
+            "mari.ru",
+            "marine.ru",
+            "max.ru",
+            "megafon.ru",
+            "megamarket.ru",
+            "megamarket.tech",
+            "memealerts.com",
+            "mgfoms.ru",
+            "mil.ru",
+            "mirpayonline.ru",
+            "miya-news.online",
+            "mm.ru",
+            "mnogolososya.ru",
+            "moex.com",
+            "mordovia.ru",
+            "mos.ru",
+            "mosreg.ru",
+            "mradx.net",
+            "mts.ru",
+            "mtsdengi.ru",
+            "murmansk.ru",
+            "mvk.com",
+            "myapelsin.ru",
+            "mycdn.me",
+            "mymts.ru",
+            "nalchik.ru",
+            "nalog.ru",
+            "naydex.net",
+            "nbki.ru",
+            "netmonet.co",
+            "nn.ru",
+            "nov.ru",
+            "novosibirsk.ru",
+            "nsk.ru",
+            "nspk.ru",
+            "ok.ru",
+            "okcdn.ru",
+            "okko.sport",
+            "okko.tv",
+            "okolo.app",
+            "omsk.ru",
+            "oneme.ru",
+            "orb.ru",
+            "oryol.ru",
+            "ozon.ru",
+            "ozone.ru",
+            "ozonusercontent.com",
+            "penza.ru",
+            "perekrestok.ru",
+            "perm.ru",
+            "pochta.ru",
+            "psbank.ru",
+            "psblog.ru",
+            "psk",
+            "psk.ru",
+            "pskov.ru",
+            "ptz.ru",
+            "qms.ru",
+            "rambler.ru",
+            "rbc.ru",
+            "res-nsdi.ru",
+            "rkomi.ru",
+            "rnd.ru",
+            "rostaxi.org",
+            "rostelecom.ru",
+            "rshb.ru",
+            "rt.ru",
+            "rtbcdn.ru",
+            "russiacalling.com",
+            "rutube.ru",
+            "rutubelist.ru",
+            "ryazan.ru",
+            "rzd-bonus.ru",
+            "rzd.ru",
+            "sakhalin.ru",
+            "samara.ru",
+            "saratov.ru",
+            "sbermarket.ru",
+            "sbermegamarket.ru",
+            "sbpgpb.ru",
+            "sev.ru",
+            "sevastopol.ru",
+            "simbirsk.ru",
+            "sistema-capital.com",
+            "smolensk.ru",
+            "spb.ru",
+            "spvb.ru",
+            "static-storage.net",
+            "stavropol.ru",
+            "stv.ru",
+            "surgut.ru",
+            "svoy.academy",
+            "t2.ru",
+            "tambov.ru",
+            "tamtam.chat",
+            "tatarstan.ru",
+            "taximaxim.ru",
+            "taxsee.com",
+            "tbank-online.com",
+            "tele2.ru",
+            "timeweb.cloud",
+            "timeweb.com",
+            "tips.tips",
+            "tnt-online.ru",
+            "tochka-tech.com",
+            "tochka.com",
+            "tom.ru",
+            "tomsk.ru",
+            "topdelivery.ru",
+            "trbcdn.net",
+            "tsaritsyn.ru",
+            "tsk.ru",
+            "tsx.x5static.net",
+            "tu-tu.ru",
+            "tula.ru",
+            "turbopages.org",
+            "tutu.ru",
+            "tuva.ru",
+            "tver.ru",
+            "tyumen.ru",
+            "udm.ru",
+            "udmurtia.ru",
+            "ulan-ude.ru",
+            "usedesk.ru",
+            "userapi.com",
+            "uxfeedback.ru",
+            "vgtrk.ru",
+            "victoria-group.ru",
+            "vk-analytics.ru",
+            "vk-apps.com",
+            "vk-apps.ru",
+            "vk-cdn.me",
+            "vk-cdn.net",
+            "vk-portal.net",
+            "vk.cc",
+            "vk.com",
+            "vk.company",
+            "vk.design",
+            "vk.link",
+            "vk.me",
+            "vk.ru",
+            "vk.team",
+            "vkcache.com",
+            "vkcloud-static.ru",
+            "vkgo.app",
+            "vklive.app",
+            "vkmessenger.app",
+            "vkmessenger.com",
+            "vkontakte.ru",
+            "vkuser.net",
+            "vkuseraudio.com",
+            "vkuseraudio.net",
+            "vkuseraudio.ru",
+            "vkusercdn.ru",
+            "vkuserlive.net",
+            "vkuserphoto.ru",
+            "vkuservideo.com",
+            "vkuservideo.net",
+            "vkuservideo.ru",
+            "vkusnoitochka.ru",
+            "vkusvill.ru",
+            "vkvideo.ru",
+            "vl.ru",
+            "vladikavkaz.ru",
+            "vladimir.ru",
+            "vladivostok.ru",
+            "vlg.ru",
+            "volgograd.ru",
+            "vologda.ru",
+            "voronezh.ru",
+            "vrn.ru",
+            "vtb-grants.fut.ru",
+            "vtb-liga.fut.ru",
+            "vtb-russia.com",
+            "vtb.bank.in",
+            "vtb.com",
+            "vtb.corp.ru",
+            "vtb.digital",
+            "vtb.fut.ru",
+            "vtb.promo",
+            "vtb.ru",
+            "vtb24.com",
+            "vtb24.ru",
+            "vtbcareer.com",
+            "vtbfamily.ru",
+            "vtbindia.com",
+            "vtbkep.site",
+            "vtbpartners.com",
+            "vtbrussia.com",
+            "vtbrussia.ru",
+            "vtbstrana.ru",
+            "vyatka.ru",
+            "wb.ru",
+            "webvisor.com",
+            "webvisor.org",
+            "whoosh.bike",
+            "wildberries.ru",
+            "windsurf.com",
+            "wink.ru",
+            "x5.ru",
+            "x5.tech",
+            "x5club.ru",
+            "x5id.ru",
+            "x5l.ru",
+            "x5paket.ru",
+            "x5q.ru",
+            "xn----7sb7akeedqd.xn--p1ai",
+            "xn--80aacoonefzg3am8b1fsb.xn--p1ai",
+            "xn--80acgfbsl1azdqr.xn--p1ai",
+            "xn--80ajghhoc2aj1c8b.xn--p1ai",
+            "xn--90ab2c.xn--p1ai",
+            "xn--90aifd0aza.site",
+            "xn--b1aew.xn--p1ai",
+            "xn--d1acpjx3f.xn--p1ai",
+            "ya.ru",
+            "yads.tech",
+            "yakutia.ru",
+            "yamal.ru",
+            "yandex",
+            "yandex-bank.net",
+            "yandex-team.ru",
+            "yandex.aero",
+            "yandex.az",
+            "yandex.by",
+            "yandex.cloud",
+            "yandex.co.il",
+            "yandex.com",
+            "yandex.com.am",
+            "yandex.com.ge",
+            "yandex.com.ru",
+            "yandex.com.tr",
+            "yandex.com.ua",
+            "yandex.de",
+            "yandex.ee",
+            "yandex.eu",
+            "yandex.fi",
+            "yandex.fr",
+            "yandex.jobs",
+            "yandex.kg",
+            "yandex.kz",
+            "yandex.lt",
+            "yandex.lv",
+            "yandex.md",
+            "yandex.net",
+            "yandex.org",
+            "yandex.pl",
+            "yandex.ru",
+            "yandex.st",
+            "yandex.sx",
+            "yandex.tj",
+            "yandex.tm",
+            "yandex.tr",
+            "yandex.ua",
+            "yandex.uz",
+            "yandexadexchange.net",
+            "yandexcloud.net",
+            "yandexcom.net",
+            "yandexmetrica.com",
+            "yandexwebcache.net",
+            "yandexwebcache.org",
+            "yaroslavl.ru",
+            "yastat.net",
+            "yastatic-net.ru",
+            "yastatic.net",
+            "yota.ru",
+            "youla-web-static.mrgcdn.ru",
+            "youla.io",
+            "youla.ru",
+            "yuzhno-sakhalinsk.ru",
+            "zdrav10.ru",
+            "zentotem.net",
+            "sferum-dev.ru",
+            "vkontakte.com",
+            "vkuserlive.com",
+            "vkpay.io",
+            "vkpay.com",
+            "vkpay.app",
+            "vkcs.cloud",
+            "odkl.ru",
+            "apiok.ru",
+            "apptracer.ru",
+            "tech-mail.ru",
+            "vmailru.net",
+            "smailru.net",
+            "appsmail.ru",
+            "cxhub.ru",
+            "vkplay.ru",
+            "my.games",
+            "algoritmika.org",
+            "yaklass.ru",
+            "umschool.net",
+            "code-class.ru",
+            "summerstage.ru",
+            "vk-stadium.ru",
+            "tetrika-school.ru",
+            "finance.ozon.ru",
+            "o3t.ru",
+            "o3team.ru",
+            "ozon-dostavka.ru",
+            "o3.ru"
+          ],
+          "id": "99D7DBA6-93AA-4185-B12E-FA0B7C3A8D1D",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "id": "E5BB5E75-0283-4793-A07D-3CDE4A7AAFDF",
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -1409,7 +3285,7 @@
         },
         {
           "balancerTag": "proxy_balancer_priority",
-          "id": "4BA6FF43-C774-4BEF-9956-DA0185B8C315",
+          "id": "40DB090D-B0FD-4800-A27C-DDADCADFD6CC",
           "inboundTag": [
             "http",
             "socks"
@@ -1453,7 +3329,7 @@
           "2606:4700:4700::1001"
         ]
       },
-      "id": "252DB979-3857-4452-A2F0-F4DBA0632481",
+      "id": "06B6C5DF-584A-4F99-B1CB-EB19A03D2D99",
       "queryStrategy": "UseIPv4",
       "servers": [
         {
@@ -1474,7 +3350,7 @@
         }
       ]
     },
-    "id": "457055CF-77B9-42B3-8422-A958A395A59E",
+    "id": "745EDA8F-203B-4809-9861-B69E823A64B7",
     "inbounds": [
       {
         "listen": "127.0.0.1",
@@ -1511,7 +3387,8 @@
         "tag": "http"
       }
     ],
-        "outbounds": [
+    "meta": {},
+    "outbounds": [
       {
         "protocol": "vless",
         "settings": {
@@ -1523,7 +3400,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1573,7 +3450,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1623,7 +3500,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1673,7 +3550,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1723,7 +3600,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1773,7 +3650,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1823,7 +3700,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1873,7 +3750,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1923,7 +3800,7 @@
                 {
                   "encryption": "none",
                   "flow": "",
-                  "id": "c0edf524-8d5c-0012-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0012-bfff-51daeafa1262"
                 }
               ]
             }
@@ -1979,7 +3856,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "Обход 3",
+    "remarks": "ÐÐ±ÑÐ¾Ð´ (Ð ÐµÐ·ÐµÑÐ² 2)",
     "routing": {
       "balancers": [
         {
@@ -2003,10 +3880,10 @@
       ],
       "domainMatcher": "",
       "domainStrategy": "IPIfNonMatch",
-      "id": "88FBE707-396B-4AFA-93B0-4B6EDB55058F",
+      "id": "986F44C0-FE61-44FD-A5A1-62CEAFB85F58",
       "rules": [
         {
-          "id": "B66060A1-2C5C-4A2E-9198-A0D519C0F526",
+          "id": "E4FEC612-0B76-42BF-86CD-43F59974506A",
           "outboundTag": "direct",
           "protocol": [
             "bittorrent"
@@ -2014,7 +3891,944 @@
           "type": "field"
         },
         {
-          "id": "598019C9-7458-434D-A6E2-FC649D7094E2",
+          "domain": [
+            "dht.aelitis.com",
+            "dht.transmissionbt.com",
+            "dht.vuze.com",
+            "router.bittorrent.com",
+            "router.utorrent.com",
+            "1.tracker.eu.org",
+            "1337.abcvg.info",
+            "2.tracker.eu.org",
+            "3.tracker.eu.org",
+            "3rt.tace.ru",
+            "47.ip-51-68-199.eu",
+            "5rt.tace.ru",
+            "61626c.net",
+            "9.rarbg.com",
+            "9.rarbg.me",
+            "9.rarbg.to",
+            "a.leopard-raws.org",
+            "aaa.army",
+            "academic-p2p.appspot.com",
+            "acg.rip",
+            "adm.category5.tv",
+            "admin.videoenpoche.info",
+            "adminion.n-blade.ru",
+            "all4nothin.net",
+            "anidex.moe",
+            "api.bitumconference.ru",
+            "aruacfilmes.com.br",
+            "asger.xyz",
+            "atrack.pow7.com",
+            "baibako.tv",
+            "bclearning.top",
+            "benouworldtrip.fr",
+            "big-boss-tracker.net",
+            "bit-hdtv.com",
+            "bithq.org",
+            "bitseduce.com",
+            "bitsparadise.info",
+            "biztorrents.com",
+            "blackcats-games.net",
+            "blackz.ro",
+            "blokas.io",
+            "bluebird-hd.org",
+            "bms-hosxp.com",
+            "bobbialbano.com",
+            "bt-club.ws",
+            "bt-tracker.gamexp.ru",
+            "bt.3dmgame.com",
+            "bt.3kb.xyz",
+            "bt.ali213.net",
+            "bt.beatrice-raws.org",
+            "bt.edwardk.info",
+            "bt.firebit.org",
+            "bt.hliang.com",
+            "bt.okmp3.ru",
+            "bt.pusacg.org",
+            "bt.zlofenix.org",
+            "bt2.54new.com",
+            "bt2.edwardk.info",
+            "bubu.mapfactor.com",
+            "camera.lei001.com",
+            "carbon-bonsai-621.appspot.com",
+            "cdn-1.gamecoast.org",
+            "cdn-2.gamecoast.org",
+            "chanchan.uchuu.co.uk",
+            "chihaya.de",
+            "chihaya.toss.li",
+            "code2chicken.nl",
+            "concen.org",
+            "cutiegirl.ru",
+            "data-bg.net",
+            "datascene.net",
+            "daveking.com",
+            "denis.stalker.upeer.me",
+            "derpyradio.net",
+            "deviloid.net",
+            "discord.heihachi.pw",
+            "dpiui.reedlan.com",
+            "drumkitx.com",
+            "eddie4.nl",
+            "edu.uifr.ru",
+            "elitezones.ro",
+            "engplus.ru",
+            "exodus.desync.com",
+            "explodie.org",
+            "fe.dealclub.de",
+            "finbytes.org",
+            "forever-tracker.zooki.xyz",
+            "free-tracker.zooki.xyz",
+            "funfile.org",
+            "git.vulnix.sh",
+            "grifon.info",
+            "h4.trakx.nibba.trade",
+            "hdreactor.org",
+            "inferno.demonoid.is",
+            "inferno.demonoid.pw",
+            "ipv4.tracker.harry.lu",
+            "ipv6.tracker.harry.lu",
+            "ipv6.tracker.zerobytes.xyz",
+            "jsb.by",
+            "kanal-4.de",
+            "kinorun.com",
+            "koli.services",
+            "learnbits.me",
+            "line-net.ru",
+            "ln.mtahost.co",
+            "loushao.net",
+            "mail.realliferpg.de",
+            "mail2.zelenaya.net",
+            "masters-tb.com",
+            "mediaclub.tv",
+            "megatorrents.kg",
+            "metal.iplay.ro",
+            "mgtracker.org",
+            "milliontorrent.pl",
+            "mixfiend.com",
+            "movies.zsw.ca",
+            "mvgroup.org",
+            "nagios.tks.sumy.ua",
+            "novaopcj.icu",
+            "ns-1.x-fins.com",
+            "ns349743.ip-91-121-106.eu",
+            "ns389251.ovh.net",
+            "nyaa.tracker.wf",
+            "omg.wtftrackr.xyz",
+            "open.acgnxtracker.com",
+            "open.acgtracker.com",
+            "open.demonii.com",
+            "open.demonii.si",
+            "open.kickasstracker.com",
+            "open.lolicon.eu",
+            "open.nyaatorrents.info",
+            "open.nyap2p.com",
+            "open.stealth.si",
+            "open.touki.ru",
+            "opentor.org",
+            "opentracker.acgnx.com",
+            "opentracker.acgnx.se",
+            "opentracker.i2p.rocks",
+            "opentracker.xyz",
+            "p4p.arenabg.com",
+            "peerfect.org",
+            "potuk.com",
+            "pow7.com",
+            "prestige.minimafia.nl",
+            "proaudiotorrents.org",
+            "public-tracker.zooki.xyz",
+            "public.popcorn-tracker.org",
+            "public.publictracker.xyz",
+            "publictracker.ch",
+            "publictracker.xyz",
+            "qg.lorzl.gq",
+            "retracker.akado-ural.ru",
+            "retracker.baikal-telecom.net",
+            "retracker.hotplug.ru",
+            "retracker.krs-ix.ru",
+            "retracker.lanta-net.ru",
+            "retracker.local.msn-net.ru",
+            "retracker.netbynet.ru",
+            "retracker.nts.su",
+            "retracker.sevstar.net",
+            "retracker.spark-rostov.ru",
+            "rt.tace.ru",
+            "rutorrent.frontline-mod.com",
+            "sd-161673.dedibox.fr",
+            "secure.pow7.com",
+            "shadowshq.eddie4.nl",
+            "shadowshq.yi.org",
+            "share.camoe.cn",
+            "shnflac.net",
+            "siambt.com",
+            "sukebei.tracker.wf",
+            "t.acg.rip",
+            "t.nyaatracker.com",
+            "t.overflow.biz",
+            "t1.leech.ie",
+            "t1.pow7.com",
+            "t2.leech.ie",
+            "t2.pow7.com",
+            "t3.leech.ie",
+            "tc-boxing.com",
+            "tehconnection.eu",
+            "thegeeks.bz",
+            "theoccult.bz",
+            "theplace.bz",
+            "thetracker.org",
+            "thetradersden.org",
+            "thevault.bz",
+            "tk.mabo.ltd",
+            "torrent-team.net",
+            "torrent.arjlover.net",
+            "torrent.mp3quran.net",
+            "torrent.nwps.ws",
+            "torrent.resonatingmedia.com",
+            "torrent.tdjs.tech",
+            "torrentclub.tech",
+            "torrents-nn.cn",
+            "torrentsmd.com",
+            "torrenttracker.nwc.acsalaska.net",
+            "torrentzilla.org",
+            "tp.m-team.cc",
+            "tr.bangumi.moe",
+            "tr.cili001.com",
+            "tr.kxmp.cf",
+            "tr.ready4.icu",
+            "tr2.ysagin.top",
+            "tracker-udp.gbitt.info",
+            "tracker-v6.zooki.xyz",
+            "tracker.0o.is",
+            "tracker.0x.tf",
+            "tracker.36dm.com",
+            "tracker.acgnx.se",
+            "tracker.aletorrenty.pl",
+            "tracker.ali213.net",
+            "tracker.altrosky.nl",
+            "tracker.anirena.com",
+            "tracker.anonwebz.xyz",
+            "tracker.army",
+            "tracker.baltracker.net",
+            "tracker.beeimg.com",
+            "tracker.birkenwald.de",
+            "tracker.bittor.pw",
+            "tracker.bittorrent.am",
+            "tracker.blacksparrowmedia.net",
+            "tracker.bt-hash.com",
+            "tracker.bt4g.com",
+            "tracker.btnext.com",
+            "tracker.btsync.gq",
+            "tracker.bz",
+            "tracker.coppersurfer.tk",
+            "tracker.corpscorp.online",
+            "tracker.cyber-hub.net",
+            "tracker.cyberia.is",
+            "tracker.dler.org",
+            "tracker.ds.is",
+            "tracker.dutchtracking.nl",
+            "tracker.dyne.org",
+            "tracker.e-utp.net",
+            "tracker.eddie4.nl",
+            "tracker.electro-torrent.pl",
+            "tracker.etree.org",
+            "tracker.ex.ua",
+            "tracker.filemail.com",
+            "tracker.filepit.to",
+            "tracker.files.fm",
+            "tracker.flashtorrents.org",
+            "tracker.fortu.io",
+            "tracker.frozen-layer.net",
+            "tracker.funfile.org",
+            "tracker.gbitt.info",
+            "tracker.gigatorrents.ws",
+            "tracker.grepler.com",
+            "tracker.halfchub.club",
+            "tracker.hama3.net",
+            "tracker.iamhansen.xyz",
+            "tracker.imgoingto.icu",
+            "tracker.internetwarriors.net",
+            "tracker.ipv6tracker.ru",
+            "tracker.kali.org",
+            "tracker.kamigami.org",
+            "tracker.kuroy.me",
+            "tracker.leechers-paradise.org",
+            "tracker.lelux.fi",
+            "tracker.minglong.org",
+            "tracker.mininova.org",
+            "tracker.moeking.me",
+            "tracker.msm8916.com",
+            "tracker.nanoha.org",
+            "tracker.nextrp.ru",
+            "tracker.nitrix.me",
+            "tracker.noobsubs.net",
+            "tracker.nyaa.uk",
+            "tracker.nyap2p.com",
+            "tracker.open-internet.nl",
+            "tracker.openbittorrent.com",
+            "tracker.opentracker.se",
+            "tracker.opentrackr.org",
+            "tracker.parrotlinux.org",
+            "tracker.parrotsec.org",
+            "tracker.pirateparty.gr",
+            "tracker.piratepublic.com",
+            "tracker.pomf.se",
+            "tracker.publicbt.com",
+            "tracker.publictracker.xyz",
+            "tracker.pussytorrents.org",
+            "tracker.sbsub.com",
+            "tracker.shkinev.me",
+            "tracker.skynetcloud.site",
+            "tracker.skyts.net",
+            "tracker.sloppyta.co",
+            "tracker.swateam.org.uk",
+            "tracker.tambovnet.org",
+            "tracker.tamersunion.org",
+            "tracker.tasvideos.org",
+            "tracker.teambelgium.net",
+            "tracker.theempire.bz",
+            "tracker.tiny-vps.com",
+            "tracker.tntvillage.scambioetico.org",
+            "tracker.torrent.eu.org",
+            "tracker.torrentbay.to",
+            "tracker.torrentbytes.net",
+            "tracker.torrentleech.org",
+            "tracker.torrentsnows.com",
+            "tracker.torrenty.org",
+            "tracker.torrentyorg.pl",
+            "tracker.trackerfix.com",
+            "tracker.trackton.ga",
+            "tracker.tricitytorrents.com",
+            "tracker.tvunderground.org.ru",
+            "tracker.uw0.xyz",
+            "tracker.v6speed.org",
+            "tracker.vectahosting.eu",
+            "tracker.vulnix.sh",
+            "tracker.ygsub.com",
+            "tracker.yoshi210.com",
+            "tracker.zemoj.com",
+            "tracker.zerobytes.xyz",
+            "tracker.zum.bi",
+            "tracker0.ufibox.com",
+            "tracker01.loveapp.com",
+            "tracker1.itzmx.com",
+            "tracker2.christianbro.pw",
+            "tracker2.dler.org",
+            "tracker2.indowebster.com",
+            "tracker2.itzmx.com",
+            "tracker3.itzmx.com",
+            "tracker4.itzmx.com",
+            "tracker6.dler.org",
+            "tracker6.lelux.fi",
+            "trakx.herokuapp.com",
+            "tribalmixes.com",
+            "trun.tom.ru",
+            "tsundere.pw",
+            "u.wwwww.wtf",
+            "uatracker.net",
+            "ultra.zt.ua",
+            "us-tracker.publictracker.xyz",
+            "valakas.rollo.dnsabr.com",
+            "vibe.community",
+            "vpn.flying-datacenter.de",
+            "vps02.net.orel.ru",
+            "w.wwwww.wtf",
+            "wareztorrent.com",
+            "wassermann.online",
+            "worldboxingvideoarchive.com",
+            "loushao.net",
+            "midea123.z-media.com.cn",
+            "torrent.eu.org",
+            "wareztorrent.com",
+            "xwt-classics.net",
+            "xxxtor.com",
+            "yuwabits.net",
+            "z.mercax.com",
+            "zephir.monocul.us",
+            "zer0day.ch",
+            "zer0day.to",
+            "zone-torrent.net",
+            "open.demonoid.ch",
+            "wepzone.net",
+            "ttk2.nbaonlineservice.com",
+            "tracker.tryhackx.org",
+            "tracker.torrust-demo.com",
+            "tracker.srv00.com",
+            "tracker.qu.ax",
+            "tracker.gmi.gd",
+            "tr4ck3r.duckdns.org",
+            "run.publictracker.xyz",
+            "retracker01-msk-virt.corbina.net",
+            "retracker.lanta.me",
+            "opentracker.io",
+            "open.dstud.io",
+            "martin-gebhardt.eu",
+            "ipv4announce.sktorrent.eu",
+            "d40969.acod.regrucolo.ru",
+            "bt.bontal.net",
+            "bittorrent-tracker.e-n-c-r-y-p-t.net",
+            "bandito.byterunner.io",
+            "tracker.yemekyedim.com",
+            "tracker.pmman.tech",
+            "tracker.leechshield.link",
+            "tracker.ghostchu-services.top",
+            "tracker.cutie.dating",
+            "tr.zukizuki.org",
+            "tr.nyacat.pw",
+            "torrent.tracker.durukanbal.com",
+            "tracker810.xyz",
+            "tracker.waaa.moe",
+            "tracker.vanitycore.co",
+            "tracker.tritan.gg",
+            "tracker.renfei.net",
+            "tracker.mywaifu.best",
+            "tracker.lintk.me",
+            "tracker.ipv6tracker.org",
+            "tracker.dmcomic.org",
+            "tracker.dhitechnical.com",
+            "tracker.darkness.services",
+            "tracker.23794.top",
+            "torrent.hificode.in",
+            "shubt.net",
+            "share.hkg-fansub.info",
+            "seeders-paradise.org",
+            "extracker.dahrkael.net",
+            "bvarf.tracker.sh",
+            "bt.rer.lol",
+            "0d.kebhana.mx",
+            "0123456789nonexistent.com",
+            "udp.tracker.projectk.org",
+            "tracker.zupix.online",
+            "tracker.therarbg.to",
+            "tracker.t-1.org",
+            "tracker.startwork.cv",
+            "tracker.plx.im",
+            "tracker.hifimarket.in",
+            "tracker.fnix.net",
+            "tracker.ducks.party",
+            "tracker.1h.is",
+            "torrentclub.online",
+            "rekcart.duckdns.org",
+            "tracker.zhuqiy.com",
+            "tracker.uraniumhexafluori.de",
+            "tracker.moeblog.cn",
+            "tracker.gcrenwp.top",
+            "tracker.belmult.online",
+            "tracker.alaskantf.com",
+            "t.213891.xyz",
+            "shahidrazi.online",
+            "torrentsnipe.info",
+            "genesis-sp.org",
+            "tracker1.bt.moack.co.kr",
+            "tracker.xiaoduola.xyz",
+            "tracker.moxing.party",
+            "servandroidkino.ru",
+            "open.trackerlist.xyz",
+            "home.yxgz.club",
+            "buny.uk",
+            "bt1.xxxxbt.cc",
+            "bt.poletracker.org",
+            "aboutbeautifulgallopinghorsesinthegreenpasture.online"
+          ],
+          "id": "D33A6B0E-E1C5-4601-B8B5-7B2A784D4948",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
+            "gosuslugi.ru",
+            "vk.com",
+            "vk.ru",
+            "1c-bitrix.ru",
+            "1c.ru",
+            "1cfresh.com",
+            "1cloud.ru",
+            "1internet.tv",
+            "2gis.ae",
+            "2gis.am",
+            "2gis.az",
+            "2gis.by",
+            "2gis.com",
+            "2gis.com.cy",
+            "2gis.cz",
+            "2gis.ge",
+            "2gis.kg",
+            "2gis.kz",
+            "2gis.ru",
+            "2gis.tj",
+            "2gis.ua",
+            "2gis.uz",
+            "2ip.ru",
+            "47news.ru",
+            "4meeting.me",
+            "5ka.ru",
+            "5post.market",
+            "abr.ru",
+            "aclub.ru",
+            "adfox.ru",
+            "admetrica.ru",
+            "adygeya.ru",
+            "aeroflot.ru",
+            "alfa-bank.com",
+            "alfa-bank.ru",
+            "alfa-finance.com",
+            "alfa-fx.com",
+            "alfa-pc.com",
+            "alfa-usa.com",
+            "alfabank.com",
+            "alfabank.ru",
+            "alfafinance.biz",
+            "alfafinance.ru",
+            "alfafuture.com",
+            "alfafuture.ru",
+            "alfafx.com",
+            "alfaleasing.ru",
+            "alfaprivate.com",
+            "alformacap.com",
+            "alformacapital.com",
+            "altai.ru",
+            "amur.ru",
+            "arkhangelsk.ru",
+            "astrakhan.ru",
+            "auth-nsdi.ru",
+            "auto.ru",
+            "av.ru",
+            "avito.ru",
+            "avito.st",
+            "baltbank.ru",
+            "banka-ui.dev",
+            "banki.ru",
+            "bankline.ru",
+            "bashkiria.ru",
+            "beeline.ru",
+            "belgorod.ru",
+            "beta-bank.com",
+            "bir.ru",
+            "bitrix24.ru",
+            "boosty.to",
+            "bronevik.com",
+            "bryansk.ru",
+            "buryatia.ru",
+            "cbg.ru",
+            "cbr.ru",
+            "cdn-tinkoff.ru",
+            "cdn-vk.ru",
+            "checkip.amazonaws.com",
+            "chel.ru",
+            "chelyabinsk.ru",
+            "chita.ru",
+            "chizhik.club",
+            "chukotka.ru",
+            "chuvashia.ru",
+            "cikrf.ru",
+            "citydrive.ru",
+            "clstorage.net",
+            "credistory.ru",
+            "crimea.ru",
+            "csat.ru",
+            "cscampus.ru",
+            "dagestan.ru",
+            "dbo-dengi.online",
+            "dellin.ru",
+            "dixy.ru",
+            "dnevnik.ru",
+            "dns-shop.ru",
+            "dodopizza.ru",
+            "dom.ru",
+            "domclick.ru",
+            "donationalerts.com",
+            "drweb.ru",
+            "dzen.ru",
+            "dzeninfra.ru",
+            "e5.ru",
+            "ebs.ru",
+            "edadeal.io",
+            "edadeal.ru",
+            "edu.ru",
+            "ekburg.ru",
+            "emias.info",
+            "fastvps.ru",
+            "finuslugi.ru",
+            "fivepost.ru",
+            "fix-price.com",
+            "gazeta.ru",
+            "gazprombank.ru",
+            "gazprombank.tech",
+            "gazprompay.ru",
+            "gorodpay.ru",
+            "goskey.ru",
+            "gosuslugi.ru",
+            "gov.ru",
+            "government.ru",
+            "gpb.ru",
+            "gpmdi.ru",
+            "grfc.ru",
+            "grozny.ru",
+            "gu-st.ru",
+            "hh.ru",
+            "i-ola.ru",
+            "idx5.ru",
+            "ifconfig.me",
+            "imgsmail.ru",
+            "investalfabank.com",
+            "ipify.org",
+            "irk.ru",
+            "irkutsk.ru",
+            "ivanovo.ru",
+            "iz.ru",
+            "izbirkom.ru",
+            "izhevsk.ru",
+            "jamal.ru",
+            "jar.ru",
+            "jivo.ru",
+            "jivochat.com",
+            "jivosite.com",
+            "jx5.ru",
+            "kalmykia.ru",
+            "kaluga.ru",
+            "kamchatka.ru",
+            "karelia.ru",
+            "kaspersky.com",
+            "kaspersky.ru",
+            "kazan.ru",
+            "kazanexpress.ru",
+            "kchr.ru",
+            "kemerovo.ru",
+            "khabarovsk.ru",
+            "khakassia.ru",
+            "khv.ru",
+            "kinopoisk.ru",
+            "kirov.ru",
+            "koenig.ru",
+            "kommersant.ru",
+            "kostroma.ru",
+            "kp.ru",
+            "krasnodar.su",
+            "krasnoyarsk.ru",
+            "krasyar.ru",
+            "krd.ru",
+            "kremlin.ru",
+            "kuban.ru",
+            "kuper.ru",
+            "kurgan.ru",
+            "kursk.ru",
+            "lead-pro2023.online",
+            "lemanapro.ru",
+            "lenta.com",
+            "lenta.ru",
+            "lipetsk.ru",
+            "lmru.tech",
+            "magadan.ru",
+            "magnit.ru",
+            "mail.ru",
+            "mari-el.ru",
+            "mari.ru",
+            "marine.ru",
+            "max.ru",
+            "megafon.ru",
+            "megamarket.ru",
+            "megamarket.tech",
+            "memealerts.com",
+            "mgfoms.ru",
+            "mil.ru",
+            "mirpayonline.ru",
+            "miya-news.online",
+            "mm.ru",
+            "mnogolososya.ru",
+            "moex.com",
+            "mordovia.ru",
+            "mos.ru",
+            "mosreg.ru",
+            "mradx.net",
+            "mts.ru",
+            "mtsdengi.ru",
+            "murmansk.ru",
+            "mvk.com",
+            "myapelsin.ru",
+            "mycdn.me",
+            "mymts.ru",
+            "nalchik.ru",
+            "nalog.ru",
+            "naydex.net",
+            "nbki.ru",
+            "netmonet.co",
+            "nn.ru",
+            "nov.ru",
+            "novosibirsk.ru",
+            "nsk.ru",
+            "nspk.ru",
+            "ok.ru",
+            "okcdn.ru",
+            "okko.sport",
+            "okko.tv",
+            "okolo.app",
+            "omsk.ru",
+            "oneme.ru",
+            "orb.ru",
+            "oryol.ru",
+            "ozon.ru",
+            "ozone.ru",
+            "ozonusercontent.com",
+            "penza.ru",
+            "perekrestok.ru",
+            "perm.ru",
+            "pochta.ru",
+            "psbank.ru",
+            "psblog.ru",
+            "psk",
+            "psk.ru",
+            "pskov.ru",
+            "ptz.ru",
+            "qms.ru",
+            "rambler.ru",
+            "rbc.ru",
+            "res-nsdi.ru",
+            "rkomi.ru",
+            "rnd.ru",
+            "rostaxi.org",
+            "rostelecom.ru",
+            "rshb.ru",
+            "rt.ru",
+            "rtbcdn.ru",
+            "russiacalling.com",
+            "rutube.ru",
+            "rutubelist.ru",
+            "ryazan.ru",
+            "rzd-bonus.ru",
+            "rzd.ru",
+            "sakhalin.ru",
+            "samara.ru",
+            "saratov.ru",
+            "sbermarket.ru",
+            "sbermegamarket.ru",
+            "sbpgpb.ru",
+            "sev.ru",
+            "sevastopol.ru",
+            "simbirsk.ru",
+            "sistema-capital.com",
+            "smolensk.ru",
+            "spb.ru",
+            "spvb.ru",
+            "static-storage.net",
+            "stavropol.ru",
+            "stv.ru",
+            "surgut.ru",
+            "svoy.academy",
+            "t2.ru",
+            "tambov.ru",
+            "tamtam.chat",
+            "tatarstan.ru",
+            "taximaxim.ru",
+            "taxsee.com",
+            "tbank-online.com",
+            "tele2.ru",
+            "timeweb.cloud",
+            "timeweb.com",
+            "tips.tips",
+            "tnt-online.ru",
+            "tochka-tech.com",
+            "tochka.com",
+            "tom.ru",
+            "tomsk.ru",
+            "topdelivery.ru",
+            "trbcdn.net",
+            "tsaritsyn.ru",
+            "tsk.ru",
+            "tsx.x5static.net",
+            "tu-tu.ru",
+            "tula.ru",
+            "turbopages.org",
+            "tutu.ru",
+            "tuva.ru",
+            "tver.ru",
+            "tyumen.ru",
+            "udm.ru",
+            "udmurtia.ru",
+            "ulan-ude.ru",
+            "usedesk.ru",
+            "userapi.com",
+            "uxfeedback.ru",
+            "vgtrk.ru",
+            "victoria-group.ru",
+            "vk-analytics.ru",
+            "vk-apps.com",
+            "vk-apps.ru",
+            "vk-cdn.me",
+            "vk-cdn.net",
+            "vk-portal.net",
+            "vk.cc",
+            "vk.com",
+            "vk.company",
+            "vk.design",
+            "vk.link",
+            "vk.me",
+            "vk.ru",
+            "vk.team",
+            "vkcache.com",
+            "vkcloud-static.ru",
+            "vkgo.app",
+            "vklive.app",
+            "vkmessenger.app",
+            "vkmessenger.com",
+            "vkontakte.ru",
+            "vkuser.net",
+            "vkuseraudio.com",
+            "vkuseraudio.net",
+            "vkuseraudio.ru",
+            "vkusercdn.ru",
+            "vkuserlive.net",
+            "vkuserphoto.ru",
+            "vkuservideo.com",
+            "vkuservideo.net",
+            "vkuservideo.ru",
+            "vkusnoitochka.ru",
+            "vkusvill.ru",
+            "vkvideo.ru",
+            "vl.ru",
+            "vladikavkaz.ru",
+            "vladimir.ru",
+            "vladivostok.ru",
+            "vlg.ru",
+            "volgograd.ru",
+            "vologda.ru",
+            "voronezh.ru",
+            "vrn.ru",
+            "vtb-grants.fut.ru",
+            "vtb-liga.fut.ru",
+            "vtb-russia.com",
+            "vtb.bank.in",
+            "vtb.com",
+            "vtb.corp.ru",
+            "vtb.digital",
+            "vtb.fut.ru",
+            "vtb.promo",
+            "vtb.ru",
+            "vtb24.com",
+            "vtb24.ru",
+            "vtbcareer.com",
+            "vtbfamily.ru",
+            "vtbindia.com",
+            "vtbkep.site",
+            "vtbpartners.com",
+            "vtbrussia.com",
+            "vtbrussia.ru",
+            "vtbstrana.ru",
+            "vyatka.ru",
+            "wb.ru",
+            "webvisor.com",
+            "webvisor.org",
+            "whoosh.bike",
+            "wildberries.ru",
+            "windsurf.com",
+            "wink.ru",
+            "x5.ru",
+            "x5.tech",
+            "x5club.ru",
+            "x5id.ru",
+            "x5l.ru",
+            "x5paket.ru",
+            "x5q.ru",
+            "xn----7sb7akeedqd.xn--p1ai",
+            "xn--80aacoonefzg3am8b1fsb.xn--p1ai",
+            "xn--80acgfbsl1azdqr.xn--p1ai",
+            "xn--80ajghhoc2aj1c8b.xn--p1ai",
+            "xn--90ab2c.xn--p1ai",
+            "xn--90aifd0aza.site",
+            "xn--b1aew.xn--p1ai",
+            "xn--d1acpjx3f.xn--p1ai",
+            "ya.ru",
+            "yads.tech",
+            "yakutia.ru",
+            "yamal.ru",
+            "yandex",
+            "yandex-bank.net",
+            "yandex-team.ru",
+            "yandex.aero",
+            "yandex.az",
+            "yandex.by",
+            "yandex.cloud",
+            "yandex.co.il",
+            "yandex.com",
+            "yandex.com.am",
+            "yandex.com.ge",
+            "yandex.com.ru",
+            "yandex.com.tr",
+            "yandex.com.ua",
+            "yandex.de",
+            "yandex.ee",
+            "yandex.eu",
+            "yandex.fi",
+            "yandex.fr",
+            "yandex.jobs",
+            "yandex.kg",
+            "yandex.kz",
+            "yandex.lt",
+            "yandex.lv",
+            "yandex.md",
+            "yandex.net",
+            "yandex.org",
+            "yandex.pl",
+            "yandex.ru",
+            "yandex.st",
+            "yandex.sx",
+            "yandex.tj",
+            "yandex.tm",
+            "yandex.tr",
+            "yandex.ua",
+            "yandex.uz",
+            "yandexadexchange.net",
+            "yandexcloud.net",
+            "yandexcom.net",
+            "yandexmetrica.com",
+            "yandexwebcache.net",
+            "yandexwebcache.org",
+            "yaroslavl.ru",
+            "yastat.net",
+            "yastatic-net.ru",
+            "yastatic.net",
+            "yota.ru",
+            "youla-web-static.mrgcdn.ru",
+            "youla.io",
+            "youla.ru",
+            "yuzhno-sakhalinsk.ru",
+            "zdrav10.ru",
+            "zentotem.net",
+            "sferum-dev.ru",
+            "vkontakte.com",
+            "vkuserlive.com",
+            "vkpay.io",
+            "vkpay.com",
+            "vkpay.app",
+            "vkcs.cloud",
+            "odkl.ru",
+            "apiok.ru",
+            "apptracer.ru",
+            "tech-mail.ru",
+            "vmailru.net",
+            "smailru.net",
+            "appsmail.ru",
+            "cxhub.ru",
+            "vkplay.ru",
+            "my.games",
+            "algoritmika.org",
+            "yaklass.ru",
+            "umschool.net",
+            "code-class.ru",
+            "summerstage.ru",
+            "vk-stadium.ru",
+            "tetrika-school.ru",
+            "finance.ozon.ru",
+            "o3t.ru",
+            "o3team.ru",
+            "ozon-dostavka.ru",
+            "o3.ru"
+          ],
+          "id": "3FC656DC-7F2E-4D3D-B320-A084CA2B9D9A",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "id": "6ECDE6ED-8121-45DC-91F0-2DA12EF41784",
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -2040,7 +4854,7 @@
         },
         {
           "balancerTag": "proxy_balancer_priority",
-          "id": "85FC6038-C68B-46BF-BC16-4934CCB62AD2",
+          "id": "7364A656-DB36-45AE-82C1-E23DB32AC582",
           "inboundTag": [
             "http",
             "socks"
@@ -2060,7 +4874,7 @@
         "timeout": "5s"
       },
       "subjectSelector": [
-        "proxy-47"
+        "proxy-49"
       ]
     },
     "dns": {
@@ -2072,7 +4886,7 @@
           "1.1.1.1"
         ]
       },
-      "id": "15AA737F-09D4-4F30-A0FB-79FBC2B4E848",
+      "id": "B92B3B74-851C-47AB-9F18-A9C5AFFE3A0D",
       "queryStrategy": "UseIPv4",
       "servers": [
         {
@@ -2081,7 +4895,7 @@
         }
       ]
     },
-    "id": "A93994E9-DB6A-4ECD-8A75-A95FD6A91F27",
+    "id": "3BF83EF9-907C-4424-9F2E-AF2725A93B55",
     "inbounds": [
       {
         "listen": "127.0.0.1",
@@ -2118,7 +4932,8 @@
         "tag": "http"
       }
     ],
-        "outbounds": [
+    "meta": {},
+    "outbounds": [
       {
         "protocol": "vless",
         "settings": {
@@ -2130,7 +4945,7 @@
                 {
                   "encryption": "none",
                   "flow": "xtls-rprx-vision",
-                  "id": "c0edf524-8d5c-0010-bfde-e7f86e14eab2"
+                  "id": "cd05ee0c-6bb2-0010-bfff-51daeafa1262"
                 }
               ]
             }
@@ -2141,13 +4956,13 @@
           "realitySettings": {
             "fingerprint": "firefox",
             "publicKey": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
-            "serverName": "lk.x5.ru",
+            "serverName": "gateway-dppb.x5.ru",
             "shortId": "79ed76c157977111",
             "show": false
           },
           "security": "reality"
         },
-        "tag": "proxy-47"
+        "tag": "proxy-49"
       },
       {
         "protocol": "freedom",
@@ -2166,13 +4981,13 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "Эстония обычный впн",
+    "remarks": "Ð­ÑÑÐ¾Ð½Ð¸Ñ",
     "routing": {
       "balancers": [
         {
           "__name__": "Estonia - Dedic",
           "selector": [
-            "proxy-47"
+            "proxy-49"
           ],
           "strategy": {
             "type": "leastPing"
@@ -2182,10 +4997,10 @@
       ],
       "domainMatcher": "",
       "domainStrategy": "IPIfNonMatch",
-      "id": "0CEA1BFC-8D55-458F-9FCE-0F2A48065564",
+      "id": "329E713F-2337-41EE-8FAD-88C663ADB9EE",
       "rules": [
         {
-          "id": "215D7571-CF84-4E60-946F-6BD5A82EDAA4",
+          "id": "61BDC7DE-2587-4FB5-9C89-4A8BCC23A537",
           "outboundTag": "direct",
           "protocol": [
             "bittorrent"
@@ -2194,11 +5009,455 @@
         },
         {
           "domain": [
+            "dht.aelitis.com",
+            "dht.transmissionbt.com",
+            "dht.vuze.com",
+            "router.bittorrent.com",
+            "router.utorrent.com",
+            "1.tracker.eu.org",
+            "1337.abcvg.info",
+            "2.tracker.eu.org",
+            "3.tracker.eu.org",
+            "3rt.tace.ru",
+            "47.ip-51-68-199.eu",
+            "5rt.tace.ru",
+            "61626c.net",
+            "9.rarbg.com",
+            "9.rarbg.me",
+            "9.rarbg.to",
+            "a.leopard-raws.org",
+            "aaa.army",
+            "academic-p2p.appspot.com",
+            "acg.rip",
+            "adm.category5.tv",
+            "admin.videoenpoche.info",
+            "adminion.n-blade.ru",
+            "all4nothin.net",
+            "anidex.moe",
+            "api.bitumconference.ru",
+            "aruacfilmes.com.br",
+            "asger.xyz",
+            "atrack.pow7.com",
+            "baibako.tv",
+            "bclearning.top",
+            "benouworldtrip.fr",
+            "big-boss-tracker.net",
+            "bit-hdtv.com",
+            "bithq.org",
+            "bitseduce.com",
+            "bitsparadise.info",
+            "biztorrents.com",
+            "blackcats-games.net",
+            "blackz.ro",
+            "blokas.io",
+            "bluebird-hd.org",
+            "bms-hosxp.com",
+            "bobbialbano.com",
+            "bt-club.ws",
+            "bt-tracker.gamexp.ru",
+            "bt.3dmgame.com",
+            "bt.3kb.xyz",
+            "bt.ali213.net",
+            "bt.beatrice-raws.org",
+            "bt.edwardk.info",
+            "bt.firebit.org",
+            "bt.hliang.com",
+            "bt.okmp3.ru",
+            "bt.pusacg.org",
+            "bt.zlofenix.org",
+            "bt2.54new.com",
+            "bt2.edwardk.info",
+            "bubu.mapfactor.com",
+            "camera.lei001.com",
+            "carbon-bonsai-621.appspot.com",
+            "cdn-1.gamecoast.org",
+            "cdn-2.gamecoast.org",
+            "chanchan.uchuu.co.uk",
+            "chihaya.de",
+            "chihaya.toss.li",
+            "code2chicken.nl",
+            "concen.org",
+            "cutiegirl.ru",
+            "data-bg.net",
+            "datascene.net",
+            "daveking.com",
+            "denis.stalker.upeer.me",
+            "derpyradio.net",
+            "deviloid.net",
+            "discord.heihachi.pw",
+            "dpiui.reedlan.com",
+            "drumkitx.com",
+            "eddie4.nl",
+            "edu.uifr.ru",
+            "elitezones.ro",
+            "engplus.ru",
+            "exodus.desync.com",
+            "explodie.org",
+            "fe.dealclub.de",
+            "finbytes.org",
+            "forever-tracker.zooki.xyz",
+            "free-tracker.zooki.xyz",
+            "funfile.org",
+            "git.vulnix.sh",
+            "grifon.info",
+            "h4.trakx.nibba.trade",
+            "hdreactor.org",
+            "inferno.demonoid.is",
+            "inferno.demonoid.pw",
+            "ipv4.tracker.harry.lu",
+            "ipv6.tracker.harry.lu",
+            "ipv6.tracker.zerobytes.xyz",
+            "jsb.by",
+            "kanal-4.de",
+            "kinorun.com",
+            "koli.services",
+            "learnbits.me",
+            "line-net.ru",
+            "ln.mtahost.co",
+            "loushao.net",
+            "mail.realliferpg.de",
+            "mail2.zelenaya.net",
+            "masters-tb.com",
+            "mediaclub.tv",
+            "megatorrents.kg",
+            "metal.iplay.ro",
+            "mgtracker.org",
+            "milliontorrent.pl",
+            "mixfiend.com",
+            "movies.zsw.ca",
+            "mvgroup.org",
+            "nagios.tks.sumy.ua",
+            "novaopcj.icu",
+            "ns-1.x-fins.com",
+            "ns349743.ip-91-121-106.eu",
+            "ns389251.ovh.net",
+            "nyaa.tracker.wf",
+            "omg.wtftrackr.xyz",
+            "open.acgnxtracker.com",
+            "open.acgtracker.com",
+            "open.demonii.com",
+            "open.demonii.si",
+            "open.kickasstracker.com",
+            "open.lolicon.eu",
+            "open.nyaatorrents.info",
+            "open.nyap2p.com",
+            "open.stealth.si",
+            "open.touki.ru",
+            "opentor.org",
+            "opentracker.acgnx.com",
+            "opentracker.acgnx.se",
+            "opentracker.i2p.rocks",
+            "opentracker.xyz",
+            "p4p.arenabg.com",
+            "peerfect.org",
+            "potuk.com",
+            "pow7.com",
+            "prestige.minimafia.nl",
+            "proaudiotorrents.org",
+            "public-tracker.zooki.xyz",
+            "public.popcorn-tracker.org",
+            "public.publictracker.xyz",
+            "publictracker.ch",
+            "publictracker.xyz",
+            "qg.lorzl.gq",
+            "retracker.akado-ural.ru",
+            "retracker.baikal-telecom.net",
+            "retracker.hotplug.ru",
+            "retracker.krs-ix.ru",
+            "retracker.lanta-net.ru",
+            "retracker.local.msn-net.ru",
+            "retracker.netbynet.ru",
+            "retracker.nts.su",
+            "retracker.sevstar.net",
+            "retracker.spark-rostov.ru",
+            "rt.tace.ru",
+            "rutorrent.frontline-mod.com",
+            "sd-161673.dedibox.fr",
+            "secure.pow7.com",
+            "shadowshq.eddie4.nl",
+            "shadowshq.yi.org",
+            "share.camoe.cn",
+            "shnflac.net",
+            "siambt.com",
+            "sukebei.tracker.wf",
+            "t.acg.rip",
+            "t.nyaatracker.com",
+            "t.overflow.biz",
+            "t1.leech.ie",
+            "t1.pow7.com",
+            "t2.leech.ie",
+            "t2.pow7.com",
+            "t3.leech.ie",
+            "tc-boxing.com",
+            "tehconnection.eu",
+            "thegeeks.bz",
+            "theoccult.bz",
+            "theplace.bz",
+            "thetracker.org",
+            "thetradersden.org",
+            "thevault.bz",
+            "tk.mabo.ltd",
+            "torrent-team.net",
+            "torrent.arjlover.net",
+            "torrent.mp3quran.net",
+            "torrent.nwps.ws",
+            "torrent.resonatingmedia.com",
+            "torrent.tdjs.tech",
+            "torrentclub.tech",
+            "torrents-nn.cn",
+            "torrentsmd.com",
+            "torrenttracker.nwc.acsalaska.net",
+            "torrentzilla.org",
+            "tp.m-team.cc",
+            "tr.bangumi.moe",
+            "tr.cili001.com",
+            "tr.kxmp.cf",
+            "tr.ready4.icu",
+            "tr2.ysagin.top",
+            "tracker-udp.gbitt.info",
+            "tracker-v6.zooki.xyz",
+            "tracker.0o.is",
+            "tracker.0x.tf",
+            "tracker.36dm.com",
+            "tracker.acgnx.se",
+            "tracker.aletorrenty.pl",
+            "tracker.ali213.net",
+            "tracker.altrosky.nl",
+            "tracker.anirena.com",
+            "tracker.anonwebz.xyz",
+            "tracker.army",
+            "tracker.baltracker.net",
+            "tracker.beeimg.com",
+            "tracker.birkenwald.de",
+            "tracker.bittor.pw",
+            "tracker.bittorrent.am",
+            "tracker.blacksparrowmedia.net",
+            "tracker.bt-hash.com",
+            "tracker.bt4g.com",
+            "tracker.btnext.com",
+            "tracker.btsync.gq",
+            "tracker.bz",
+            "tracker.coppersurfer.tk",
+            "tracker.corpscorp.online",
+            "tracker.cyber-hub.net",
+            "tracker.cyberia.is",
+            "tracker.dler.org",
+            "tracker.ds.is",
+            "tracker.dutchtracking.nl",
+            "tracker.dyne.org",
+            "tracker.e-utp.net",
+            "tracker.eddie4.nl",
+            "tracker.electro-torrent.pl",
+            "tracker.etree.org",
+            "tracker.ex.ua",
+            "tracker.filemail.com",
+            "tracker.filepit.to",
+            "tracker.files.fm",
+            "tracker.flashtorrents.org",
+            "tracker.fortu.io",
+            "tracker.frozen-layer.net",
+            "tracker.funfile.org",
+            "tracker.gbitt.info",
+            "tracker.gigatorrents.ws",
+            "tracker.grepler.com",
+            "tracker.halfchub.club",
+            "tracker.hama3.net",
+            "tracker.iamhansen.xyz",
+            "tracker.imgoingto.icu",
+            "tracker.internetwarriors.net",
+            "tracker.ipv6tracker.ru",
+            "tracker.kali.org",
+            "tracker.kamigami.org",
+            "tracker.kuroy.me",
+            "tracker.leechers-paradise.org",
+            "tracker.lelux.fi",
+            "tracker.minglong.org",
+            "tracker.mininova.org",
+            "tracker.moeking.me",
+            "tracker.msm8916.com",
+            "tracker.nanoha.org",
+            "tracker.nextrp.ru",
+            "tracker.nitrix.me",
+            "tracker.noobsubs.net",
+            "tracker.nyaa.uk",
+            "tracker.nyap2p.com",
+            "tracker.open-internet.nl",
+            "tracker.openbittorrent.com",
+            "tracker.opentracker.se",
+            "tracker.opentrackr.org",
+            "tracker.parrotlinux.org",
+            "tracker.parrotsec.org",
+            "tracker.pirateparty.gr",
+            "tracker.piratepublic.com",
+            "tracker.pomf.se",
+            "tracker.publicbt.com",
+            "tracker.publictracker.xyz",
+            "tracker.pussytorrents.org",
+            "tracker.sbsub.com",
+            "tracker.shkinev.me",
+            "tracker.skynetcloud.site",
+            "tracker.skyts.net",
+            "tracker.sloppyta.co",
+            "tracker.swateam.org.uk",
+            "tracker.tambovnet.org",
+            "tracker.tamersunion.org",
+            "tracker.tasvideos.org",
+            "tracker.teambelgium.net",
+            "tracker.theempire.bz",
+            "tracker.tiny-vps.com",
+            "tracker.tntvillage.scambioetico.org",
+            "tracker.torrent.eu.org",
+            "tracker.torrentbay.to",
+            "tracker.torrentbytes.net",
+            "tracker.torrentleech.org",
+            "tracker.torrentsnows.com",
+            "tracker.torrenty.org",
+            "tracker.torrentyorg.pl",
+            "tracker.trackerfix.com",
+            "tracker.trackton.ga",
+            "tracker.tricitytorrents.com",
+            "tracker.tvunderground.org.ru",
+            "tracker.uw0.xyz",
+            "tracker.v6speed.org",
+            "tracker.vectahosting.eu",
+            "tracker.vulnix.sh",
+            "tracker.ygsub.com",
+            "tracker.yoshi210.com",
+            "tracker.zemoj.com",
+            "tracker.zerobytes.xyz",
+            "tracker.zum.bi",
+            "tracker0.ufibox.com",
+            "tracker01.loveapp.com",
+            "tracker1.itzmx.com",
+            "tracker2.christianbro.pw",
+            "tracker2.dler.org",
+            "tracker2.indowebster.com",
+            "tracker2.itzmx.com",
+            "tracker3.itzmx.com",
+            "tracker4.itzmx.com",
+            "tracker6.dler.org",
+            "tracker6.lelux.fi",
+            "trakx.herokuapp.com",
+            "tribalmixes.com",
+            "trun.tom.ru",
+            "tsundere.pw",
+            "u.wwwww.wtf",
+            "uatracker.net",
+            "ultra.zt.ua",
+            "us-tracker.publictracker.xyz",
+            "valakas.rollo.dnsabr.com",
+            "vibe.community",
+            "vpn.flying-datacenter.de",
+            "vps02.net.orel.ru",
+            "w.wwwww.wtf",
+            "wareztorrent.com",
+            "wassermann.online",
+            "worldboxingvideoarchive.com",
+            "loushao.net",
+            "midea123.z-media.com.cn",
+            "torrent.eu.org",
+            "wareztorrent.com",
+            "xwt-classics.net",
+            "xxxtor.com",
+            "yuwabits.net",
+            "z.mercax.com",
+            "zephir.monocul.us",
+            "zer0day.ch",
+            "zer0day.to",
+            "zone-torrent.net",
+            "open.demonoid.ch",
+            "wepzone.net",
+            "ttk2.nbaonlineservice.com",
+            "tracker.tryhackx.org",
+            "tracker.torrust-demo.com",
+            "tracker.srv00.com",
+            "tracker.qu.ax",
+            "tracker.gmi.gd",
+            "tr4ck3r.duckdns.org",
+            "run.publictracker.xyz",
+            "retracker01-msk-virt.corbina.net",
+            "retracker.lanta.me",
+            "opentracker.io",
+            "open.dstud.io",
+            "martin-gebhardt.eu",
+            "ipv4announce.sktorrent.eu",
+            "d40969.acod.regrucolo.ru",
+            "bt.bontal.net",
+            "bittorrent-tracker.e-n-c-r-y-p-t.net",
+            "bandito.byterunner.io",
+            "tracker.yemekyedim.com",
+            "tracker.pmman.tech",
+            "tracker.leechshield.link",
+            "tracker.ghostchu-services.top",
+            "tracker.cutie.dating",
+            "tr.zukizuki.org",
+            "tr.nyacat.pw",
+            "torrent.tracker.durukanbal.com",
+            "tracker810.xyz",
+            "tracker.waaa.moe",
+            "tracker.vanitycore.co",
+            "tracker.tritan.gg",
+            "tracker.renfei.net",
+            "tracker.mywaifu.best",
+            "tracker.lintk.me",
+            "tracker.ipv6tracker.org",
+            "tracker.dmcomic.org",
+            "tracker.dhitechnical.com",
+            "tracker.darkness.services",
+            "tracker.23794.top",
+            "torrent.hificode.in",
+            "shubt.net",
+            "share.hkg-fansub.info",
+            "seeders-paradise.org",
+            "extracker.dahrkael.net",
+            "bvarf.tracker.sh",
+            "bt.rer.lol",
+            "0d.kebhana.mx",
+            "0123456789nonexistent.com",
+            "udp.tracker.projectk.org",
+            "tracker.zupix.online",
+            "tracker.therarbg.to",
+            "tracker.t-1.org",
+            "tracker.startwork.cv",
+            "tracker.plx.im",
+            "tracker.hifimarket.in",
+            "tracker.fnix.net",
+            "tracker.ducks.party",
+            "tracker.1h.is",
+            "torrentclub.online",
+            "rekcart.duckdns.org",
+            "tracker.zhuqiy.com",
+            "tracker.uraniumhexafluori.de",
+            "tracker.moeblog.cn",
+            "tracker.gcrenwp.top",
+            "tracker.belmult.online",
+            "tracker.alaskantf.com",
+            "t.213891.xyz",
+            "shahidrazi.online",
+            "torrentsnipe.info",
+            "genesis-sp.org",
+            "tracker1.bt.moack.co.kr",
+            "tracker.xiaoduola.xyz",
+            "tracker.moxing.party",
+            "servandroidkino.ru",
+            "open.trackerlist.xyz",
+            "home.yxgz.club",
+            "buny.uk",
+            "bt1.xxxxbt.cc",
+            "bt.poletracker.org",
+            "aboutbeautifulgallopinghorsesinthegreenpasture.online"
+          ],
+          "id": "6BA9968A-34FD-4BCB-940A-8D37DC597F56",
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "domain": [
             "gosuslugi.ru",
             "vk.com",
             "vk.ru"
           ],
-          "id": "7566A627-85E3-44BE-B711-186C17514D53",
+          "id": "4B8AF0BD-15B9-4EC0-9E3E-E6D26E33FE85",
           "outboundTag": "direct",
           "type": "field"
         },
@@ -2206,12 +5465,12 @@
           "domain": [
             "geosite:category-ru"
           ],
-          "id": "FAF16E5A-EA55-46AF-964F-7D60C0D85E42",
+          "id": "B88A92D4-F1E4-496B-808F-EECD0E35311E",
           "outboundTag": "direct",
           "type": "field"
         },
         {
-          "id": "9BE7EB8E-856D-40FD-8A38-09E726252DE3",
+          "id": "810D70A4-4EA7-449B-911D-7B4D53E5DA67",
           "ip": [
             "geoip:ru"
           ],
@@ -2219,7 +5478,7 @@
           "type": "field"
         },
         {
-          "id": "E45BC50C-B2BE-4E27-8FC5-4209198BC516",
+          "id": "BD034AE0-B9AF-4343-99A4-26D6A74522A7",
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -2245,11 +5504,1750 @@
         },
         {
           "balancerTag": "proxy_balancer_priority",
-          "id": "F9E7EEFE-E4B1-47D6-A40E-FFBF2823B234",
+          "id": "E49EEAE4-8FE7-4D68-9376-1CAD63C247AE",
           "inboundTag": [
             "http",
             "socks"
           ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {},
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "31.76.113.80",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "cd05ee0c-6bb2-0023-bfff-51daeafa1262"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "Io3RTdOBFSDsIiaSn95-sWsXh2n6EFeZfZg0P_kKRR8",
+            "serverName": "milan.novabooster.ru",
+            "shortId": "9d7c0e2a",
+            "show": false
+          },
+          "security": "reality"
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "ÐÑÐ°Ð»Ð¸Ñ",
+    "routing": {
+      "domainMatcher": "",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": ""
+        },
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct",
+          "type": ""
+        },
+        {
+          "domain": [
+            "geosite:private"
+          ],
+          "outboundTag": "direct",
+          "type": ""
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "https://dns.google/dns-query"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "observatory": {
+      "enableConcurrency": true,
+      "probeInterval": "5m",
+      "probeUrl": "https://connectivitycheck.gstatic.com/generate_204",
+      "subjectSelector": [
+        "proxy"
+      ]
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "serv-ne-3.white.net",
+              "port": 10444,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "bea0c2a1-a82a-40e0-adfb-274f4ed2b7b0"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "praGYag8YPbz_rcd_Pa6Fqsi_IiQtO3e1AosYBcu6h4",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "378086fbdb7c61cd"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "217.16.21.116",
+              "port": 5443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7d876627-abf5-4865-8ff4-03f37d49de5d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-0"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.208.230.241",
+              "port": 5443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7d876627-abf5-4865-8ff4-03f37d49de5d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-1"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "gdg.herumhas.shop",
+              "port": 5443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7d876627-abf5-4865-8ff4-03f37d49de5d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.208.208.92",
+              "port": 9443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "alpn": [
+              "http%2F1.1"
+            ],
+            "fingerprint": "chrome",
+            "publicKey": "aVu6XB9_RKR1xLtusyQ1_YOWCs4Ofi9GEJd6oERNH2Q",
+            "serverName": "loadtest.dev.urent.ru",
+            "shortId": "689def22fcb54e86"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.103.104",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-4"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.104.246",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-5"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.106.87",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-6"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.24.222",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-7"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.24.232",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-8"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.97.18",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "8b6c18d8-2068-411c-891c-4a558451844e"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-9"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "EU Ð ÐµÐ·ÐµÑÐ² 1",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "proxy-0",
+          "selector": [
+            "proxy"
+          ],
+          "strategy": {
+            "type": "leastLoad"
+          },
+          "tag": "auto_balancer"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        },
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "auto_balancer",
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "https://dns.google/dns-query"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "observatory": {
+      "enableConcurrency": true,
+      "probeInterval": "5m",
+      "probeUrl": "https://connectivitycheck.gstatic.com/generate_204",
+      "subjectSelector": [
+        "proxy"
+      ]
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "serv-ne-4.white.net",
+              "port": 10444,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "bea0c2a1-a82a-40e0-adfb-274f4ed2b7b0"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "praGYag8YPbz_rcd_Pa6Fqsi_IiQtO3e1AosYBcu6h4",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "378086fbdb7c61cd"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.250",
+              "port": 80,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "abe3cb91-cf7e-468d-8c4e-6cbf61cab495"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "none",
+          "wsSettings": {
+            "headers": {
+              "Host": "top2019950683.mwscdn.ru"
+            },
+            "path": "/static"
+          }
+        },
+        "tag": "proxy-0"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.236.240.183",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "1f514e3e-54b3-4ec4-82bd-3f2137357604"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "pfbJB3DRXflwP8WwE8PqTJCdwn7RcXTgYxwkMH_dA34",
+            "serverName": "www.microsoft.com",
+            "shortId": "6f1573f9669b2e16"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-1"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.16.36.227",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "931729a8-3c20-4841-89a1-f18dc9ce0a6f"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "serverName": "cdn7-09.vk-cdnvideo.com"
+          }
+        },
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "85.208.85.91",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "931729a8-3c20-4841-89a1-f18dc9ce0a6f"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "serverName": "cdn7-09.vk-cdnvideo.com"
+          }
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.138.158",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "931729a8-3c20-4841-89a1-f18dc9ce0a6f"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls",
+          "tcpSettings": {},
+          "tlsSettings": {
+            "serverName": "cdn7-09.vk-cdnvideo.com"
+          }
+        },
+        "tag": "proxy-4"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.249",
+              "port": 80,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "abe3cb91-cf7e-468d-8c4e-6cbf61cab495"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "none",
+          "wsSettings": {
+            "headers": {
+              "Host": "top28521690.mwscdn.ru"
+            },
+            "path": "/static"
+          }
+        },
+        "tag": "proxy-5"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.249",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "882e17c8-b013-4e99-9774-36e26e5001ff"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "top3739667002.mwscdn.ru"
+          },
+          "xhttpSettings": {
+            "host": "top3739667002.mwscdn.ru",
+            "mode": "packet-up",
+            "path": "/livestreamcontent/"
+          }
+        },
+        "tag": "proxy-6"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.250",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "882e17c8-b013-4e99-9774-36e26e5001ff"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "top3739667002.mwscdn.ru"
+          },
+          "xhttpSettings": {
+            "host": "top3739667002.mwscdn.ru",
+            "mode": "packet-up",
+            "path": "/livestreamcontent/"
+          }
+        },
+        "tag": "proxy-7"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.249",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "top707762634.mwscdn.ru"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "top707762634.mwscdn.ru"
+            },
+            "path": "/livestreamcontent/"
+          }
+        },
+        "tag": "proxy-8"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.242.19.250",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "top3739667002.mwscdn.ru"
+          },
+          "xhttpSettings": {
+            "host": "top3739667002.mwscdn.ru",
+            "mode": "auto",
+            "path": "/livestreamcontent/"
+          }
+        },
+        "tag": "proxy-9"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.126.229.40",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "301d514e-4aa0-47b0-ba44-a0cb891cd52f"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
+            "serverName": "www.samsung.com",
+            "shortId": "a1b2c3d4"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-10"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.8.210.16",
+              "port": 10443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "9e1d737e-f3c1-4757-84b2-3dcf66a468ed"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "PSSON1yktUjcmg5bELmgoWr32y1VVlVXRyRV-opvhQk",
+            "serverName": "ads.x5.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-11"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.109.101.215",
+              "port": 8444,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "abe3cb91-cf7e-468d-8c4e-6cbf61cab495"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
+            "serverName": "ads.x5.ru",
+            "shortId": "7dbf7d3233971d5c"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-12"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "104.167.198.245",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "4405aeb6-84fc-49ba-a42b-948a3b1ed13c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "ep8sjqX2t_F-tn5SElD9RkuRimExyi9h1MA-F5ESa30",
+            "serverName": "us.healthy-connected.com",
+            "shortId": "30e570274c0c72cc"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-13"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "104.167.198.248",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "4405aeb6-84fc-49ba-a42b-948a3b1ed13c"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "ep8sjqX2t_F-tn5SElD9RkuRimExyi9h1MA-F5ESa30",
+            "serverName": "us.healthy-connected.com",
+            "shortId": "30e570274c0c72cc"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-14"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.91.52.67",
+              "port": 3443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "223aca2d-4358-4852-84ca-83dcb3eabf3a"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "grpcSettings": {
+            "authority": "",
+            "multiMode": false,
+            "serviceName": "grpc-vk"
+          },
+          "network": "grpc",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+            "serverName": "ads.x5.ru",
+            "shortId": "844352756c1fabba"
+          },
+          "security": "reality"
+        },
+        "tag": "proxy-15"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "5.188.140.160",
+              "port": 5443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7d876627-abf5-4865-8ff4-03f37d49de5d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-16"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "141.193.213.11",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "@a_amr79"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "unnes.ac.id.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "unnes.ac.id.cyylr.eu.cc"
+            },
+            "path": "/my-wbv"
+          }
+        },
+        "tag": "proxy-17"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "216.24.57.1",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "19804f6b-3661-4eca-b294-ba37196dab5b"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "http/1.1"
+            ],
+            "serverName": "graph.instagram.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "graph.instagram.com.cyylr.eu.cc"
+            },
+            "path": "/id-tksi"
+          }
+        },
+        "tag": "proxy-18"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "216.24.57.1",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "http/1.1"
+            ],
+            "serverName": "support.zoom.us.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "support.zoom.us.cyylr.eu.cc"
+            },
+            "path": "/id-pusat"
+          }
+        },
+        "tag": "proxy-19"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "216.24.57.1",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "565b50d4-604d-4a60-9fc2-d9d3dac0aec6"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "http/1.1"
+            ],
+            "serverName": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+            },
+            "path": "/id-pusat"
+          }
+        },
+        "tag": "proxy-20"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "216.24.57.1",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "6e593426-1a8e-4226-984f-0ea174e218c7"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "http/1.1"
+            ],
+            "serverName": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+            },
+            "path": "/id-pusat"
+          }
+        },
+        "tag": "proxy-21"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "141.193.213.11",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "97f7a022-9519-4f54-b9a9-1e0947f7f6ae"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "investors.spotify.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "investors.spotify.com.cyylr.eu.cc"
+            },
+            "path": "/id-pusat"
+          }
+        },
+        "tag": "proxy-22"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "216.24.57.1",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "5dbfed06-dd62-48c0-8e39-b4835defcdb0"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "http/1.1"
+            ],
+            "serverName": "investors.spotify.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "investors.spotify.com.cyylr.eu.cc"
+            },
+            "path": "/sg-amz"
+          }
+        },
+        "tag": "proxy-23"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "141.193.213.11",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "9232a847-8f7d-4548-a23a-a8b3550e0f15"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "grabacademyportal.grab.com.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "grabacademyportal.grab.com.cyylr.eu.cc"
+            },
+            "path": "/id-tksi"
+          }
+        },
+        "tag": "proxy-24"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "141.193.213.11",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "9558d281-6fb7-5dec-b9e4-7e7498cec94b"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "unnes.ac.id.cyylr.eu.cc"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "unnes.ac.id.cyylr.eu.cc"
+            },
+            "path": "/my-wbv"
+          }
+        },
+        "tag": "proxy-25"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "81.200.152.178",
+              "port": 5443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "7d876627-abf5-4865-8ff4-03f37d49de5d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+            "serverName": "google.com"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-26"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "109.120.138.95",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "c2b6a323-19ec-4e4f-a95c-8b0e99aa7660"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-27"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.208.208.92",
+              "port": 9443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "alpn": [
+              "http%2F1.1"
+            ],
+            "fingerprint": "chrome",
+            "publicKey": "aVu6XB9_RKR1xLtusyQ1_YOWCs4Ofi9GEJd6oERNH2Q",
+            "serverName": "loadtest.dev.urent.ru",
+            "shortId": "689def22fcb54e86"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-28"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.103.104",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-29"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.104.246",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-30"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.106.87",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-31"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.24.222",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-32"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.24.232",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-33"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "51.250.97.18",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "239c0b08-00af-4fd6-b911-fefa3f133874"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "safari",
+            "publicKey": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+            "serverName": "cdp.x5.ru",
+            "shortId": "8ec792bfd725be8a"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-34"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "EU Ð ÐµÐ·ÐµÑÐ² 2",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "proxy-0",
+          "selector": [
+            "proxy"
+          ],
+          "strategy": {
+            "type": "leastLoad"
+          },
+          "tag": "auto_balancer"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        },
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "auto_balancer",
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "network": "tcp,udp",
           "type": "field"
         }
       ]
