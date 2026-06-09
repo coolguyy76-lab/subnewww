@@ -105,6 +105,14 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Info"
+    },
+    "meta": {
+      "serverDescription": "✅ Работает на LTE и WI-FI"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -820,7 +828,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "ð·ðº ÐÐ±ÑÐ¾Ð´",
+    "remarks": "🇷🇺 Обход",
     "routing": {
       "balancers": [
         {
@@ -1952,6 +1960,14 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Info"
+    },
+    "meta": {
+      "serverDescription": "✅ Работает на LTE и WI-FI"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -2285,7 +2301,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "ð·ðº ÐÐ±ÑÐ¾Ð´ (Ð ÐµÐ·ÐµÑÐ² 1)",
+    "remarks": "🇷🇺 Обход (Резерв 1)",
     "routing": {
       "balancers": [
         {
@@ -3361,6 +3377,14 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Info"
+    },
+    "meta": {
+      "serverDescription": "⚠️ Работает только на WI-FI"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -3409,7 +3433,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "ð¸ðª Ð¨Ð²ÐµÑÐ¸Ñ",
+    "remarks": "🇸🇪 Швеция",
     "routing": {
       "balancers": [
         {
@@ -4017,6 +4041,14 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Info"
+    },
+    "meta": {
+      "serverDescription": "⚠️ Работает только на WI-FI"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -4065,7 +4097,7 @@
         "statsOutboundUplink": true
       }
     },
-    "remarks": "ð³ð± ÐÐ¸Ð´ÐµÑÐ»Ð°Ð½Ð´Ñ",
+    "remarks": "🇳🇱 Нидерланды",
     "routing": {
       "balancers": [
         {
@@ -4645,6 +4677,11 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -4685,7 +4722,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "ðºð¸ Ð¡Ð¨Ð",
+    "remarks": "🇺🇸 США",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -4746,6 +4783,11 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
     "observatory": {
       "enableConcurrency": true,
       "probeInterval": "5m",
@@ -5433,7 +5475,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "ðªðº Ð¾Ð±ÑÐ¾Ð´ ÑÐµÐ·ÐµÑÐ² 2Â«EUÂ»",
+    "remarks": "🇪🇺 обход резерв 2«EU»",
     "routing": {
       "balancers": [
         {
@@ -5522,6 +5564,11 @@
         "tag": "http"
       }
     ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
     "observatory": {
       "enableConcurrency": true,
       "probeInterval": "5m",
@@ -7109,7 +7156,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "ðªðº Ð¾Ð±ÑÐ¾Ð´ ÑÐµÐ·ÐµÑÐ² 3 Â«EUÂ»",
+    "remarks": "🇪🇺 обход резерв 3 «EU»",
     "routing": {
       "balancers": [
         {
