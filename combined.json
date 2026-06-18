@@ -1015,7 +1015,7 @@
     },
     "remarks": "🇪🇺 обход без пинга",
     "meta": {
-    "serverDescription": "Happ the best"
+    "serverDescription": "        ℹ️ Сервер может не отображать пинг, но он работает"
   },
     "routing": {
       "balancers": [
