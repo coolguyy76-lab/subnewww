@@ -1,6 +1,5 @@
 [
 {
-  "remarks": "🇪🇺 автообход",
   "burstObservatory": {
     "pingConfig": {
       "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
@@ -118,10 +117,6 @@
         "routeOnly": true
       },
       "tag": "http"
-    },
-    {
-      "protocol": "loopback",
-      "tag": "balancer-loop-1-in"
     }
   ],
   "outbounds": [
@@ -1370,13 +1365,6 @@
       "tag": "proxy-40"
     },
     {
-      "protocol": "loopback",
-      "settings": {
-        "inboundTag": "balancer-loop-1-in"
-      },
-      "tag": "balancer-loop-1-out"
-    },
-    {
       "protocol": "freedom",
       "tag": "direct"
     },
@@ -1393,8 +1381,8 @@
       "statsOutboundUplink": true
     }
   },
+  "remarks": "🇪🇺 автообход",
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
     "balancers": [
       {
         "fallbackTag": "balancer-loop-1-out",
@@ -1444,26 +1432,10 @@
           "type": "leastPing"
         },
         "tag": "proxy_balancer_priority"
-      },
-      {
-        "selector": [
-          "proxy-13",
-          "proxy-14"
-        ],
-        "strategy": {
-          "type": "leastPing"
-        },
-        "tag": "proxy_balancer_1"
       }
     ],
+    "domainStrategy": "IPIfNonMatch",
     "rules": [
-      {
-        "balancerTag": "proxy_balancer_1",
-        "inboundTag": [
-          "balancer-loop-1-in"
-        ],
-        "type": "field"
-      },
       {
         "outboundTag": "direct",
         "protocol": [
@@ -1472,7 +1444,6 @@
         "type": "field"
       },
       {
-        "outboundTag": "direct",
         "ip": [
           "0.0.0.0/8",
           "10.0.0.0/8",
@@ -1493,14 +1464,15 @@
           "fe80::/10",
           "ff00::/8"
         ],
+        "outboundTag": "direct",
         "type": "field"
       },
       {
-        "outboundTag": "direct",
         "domain": [
           "geosite:category-ru",
           "geosite:private"
         ],
+        "outboundTag": "direct",
         "type": "field"
       },
       {
