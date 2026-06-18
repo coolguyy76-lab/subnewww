@@ -1014,6 +1014,9 @@
       }
     },
     "remarks": "🇪🇺 обход без пинга",
+    "meta": {
+    "serverDescription": "Happ the best"
+  },
     "routing": {
       "balancers": [
         {
