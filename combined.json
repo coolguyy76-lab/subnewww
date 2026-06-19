@@ -133,7 +133,7 @@
         },
         "tlsSettings": {
           "enableSessionResumption": true,
-          "fingerprint": "safari",
+          "fingerprint": "firefox",
           "serverName": "cluster-usa.zmeet.video"
         }
       },
@@ -195,10 +195,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "firefox",
+          "fingerprint": "edge",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "1a4a1b5e34808893"
+          "shortId": "d78674aac58fe1f7"
         },
         "security": "reality",
         "sockopt": {
@@ -237,7 +237,7 @@
         },
         "tlsSettings": {
           "enableSessionResumption": true,
-          "fingerprint": "firefox",
+          "fingerprint": "edge",
           "serverName": "cluster-usa.zmeet.video"
         }
       },
@@ -305,10 +305,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "firefox",
+          "fingerprint": "edge",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "river-5-528.rtbcdn.ru",
-          "shortId": "925f1d08f2f7cfbc"
+          "shortId": "98126688db807e09"
         },
         "security": "reality",
         "sockopt": {
@@ -345,7 +345,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "98126688db807e09"
+          "shortId": "2e7d1b83b4235977"
         },
         "security": "reality",
         "sockopt": {
@@ -379,10 +379,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "safari",
+          "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "d78674aac58fe1f7"
+          "shortId": "1a4a1b5e34808893"
         },
         "security": "reality",
         "sockopt": {
@@ -416,10 +416,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "safari",
+          "fingerprint": "edge",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "api.ok.ru",
-          "shortId": "e54d9bba025708e4"
+          "shortId": "98126688db807e09"
         },
         "security": "reality",
         "sockopt": {
@@ -456,7 +456,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "celular.vk.com",
-          "shortId": "e54d9bba025708e4"
+          "shortId": "2e7d1b83b4235977"
         },
         "security": "reality",
         "sockopt": {
@@ -493,7 +493,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "2e7d1b83b4235977"
+          "shortId": "1a4a1b5e34808893"
         },
         "security": "reality",
         "sockopt": {
@@ -530,7 +530,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "1a4a1b5e34808893"
+          "shortId": "4b16bcdde653ab45"
         },
         "security": "reality",
         "sockopt": {
@@ -567,7 +567,7 @@
           "fingerprint": "safari",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "max.ru",
-          "shortId": "4b16bcdde653ab45"
+          "shortId": "e54d9bba025708e4"
         },
         "security": "reality",
         "sockopt": {
@@ -604,7 +604,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "eh.vk.com",
-          "shortId": "1a4a1b5e34808893"
+          "shortId": "2a053925f5858344"
         },
         "security": "reality",
         "sockopt": {
@@ -638,10 +638,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "safari",
+          "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "eh.vk.com",
-          "shortId": "1a4a1b5e34808893"
+          "shortId": "d78674aac58fe1f7"
         },
         "security": "reality",
         "sockopt": {
@@ -675,10 +675,10 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "firefox",
+          "fingerprint": "safari",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "api-maps.yandex.ru",
-          "shortId": "1a4a1b5e34808893"
+          "shortId": "2e7d1b83b4235977"
         },
         "security": "reality",
         "sockopt": {
@@ -725,7 +725,7 @@
         },
         "tlsSettings": {
           "enableSessionResumption": true,
-          "fingerprint": "safari",
+          "fingerprint": "firefox",
           "serverName": "cdn.tracker.yandex.net"
         }
       },
@@ -759,7 +759,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "5post-gate.x5.ru",
-          "shortId": "d78674aac58fe1f7"
+          "shortId": "925f1d08f2f7cfbc"
         },
         "security": "reality",
         "sockopt": {
@@ -793,7 +793,7 @@
       "streamSettings": {
         "network": "raw",
         "realitySettings": {
-          "fingerprint": "safari",
+          "fingerprint": "edge",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "5post-gate.x5.ru",
           "shortId": "d78674aac58fe1f7"
@@ -833,7 +833,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "api-maps.yandex.ru",
-          "shortId": "98126688db807e09"
+          "shortId": "2e7d1b83b4235977"
         },
         "security": "reality",
         "sockopt": {
@@ -865,7 +865,7 @@
           "fingerprint": "firefox",
           "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
           "serverName": "5post-gate.x5.ru",
-          "shortId": "d78674aac58fe1f7"
+          "shortId": "2a053925f5858344"
         },
         "security": "reality",
         "sockopt": {
@@ -948,7 +948,7 @@
         },
         "tlsSettings": {
           "enableSessionResumption": true,
-          "fingerprint": "firefox",
+          "fingerprint": "edge",
           "serverName": "s79808.cdn.ngenix.net"
         }
       },
@@ -1012,7 +1012,7 @@
       }
     }
   },
-  "remarks": "🇪🇺 обход",
+  "remarks": "🇪🇺 Обход",
   "routing": {
     "balancers": [
       {
