@@ -1,1080 +1,1080 @@
 {
-  "burstObservatory": {
-    "pingConfig": {
-      "connectivity": "https://gu-st.ru/portal-st/favicon.svg",
-      "destination": "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js",
-      "httpMethod": "GET",
-      "interval": "8h",
-      "sampling": 3,
-      "timeout": "3s"
+  "burstObservatory" : {
+    "pingConfig" : {
+      "connectivity" : "https:\/\/gu-st.ru\/portal-st\/favicon.svg",
+      "destination" : "https:\/\/ajax.googleapis.com\/ajax\/libs\/angularjs\/1.8.2\/angular.min.js",
+      "httpMethod" : "GET",
+      "interval" : "8h",
+      "sampling" : 3,
+      "timeout" : "3s"
     },
-    "subjectSelector": [
+    "subjectSelector" : [
       "tp_BRIDGE",
       "tp_DIRECT",
       "ENTRY-PROXY"
     ]
   },
-  "dns": {
-    "hosts": {
-      "ntc.party": [
+  "dns" : {
+    "hosts" : {
+      "ntc.party" : [
         "130.255.77.28"
       ]
     },
-    "queryStrategy": "UseIPv4",
-    "servers": [
+    "queryStrategy" : "UseIPv4",
+    "servers" : [
       {
-        "address": "1.1.1.1",
-        "domains": [
+        "address" : "1.1.1.1",
+        "domains" : [
           "geosite:0x0",
           "geosite:youtube"
         ],
-        "tag": "tp_DNS.rl_REROUTE.grp_REMOTE",
-        "unexpectedIPs": [
+        "tag" : "tp_DNS.rl_REROUTE.grp_REMOTE",
+        "unexpectedIPs" : [
           "geoip:ru"
         ]
       },
       {
-        "address": "77.88.8.8",
-        "domains": [
+        "address" : "77.88.8.8",
+        "domains" : [
           "geosite:category-ru"
         ],
-        "tag": "tp_DNS.rl_REROUTE.grp_LOCAL-1",
-        "timeoutMs": 600,
-        "unexpectedIPs": [
+        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-1",
+        "timeoutMs" : 600,
+        "unexpectedIPs" : [
           "geoip:private"
         ]
       },
       {
-        "address": "8.8.8.8",
-        "domains": [
+        "address" : "8.8.8.8",
+        "domains" : [
           "geosite:category-ru"
         ],
-        "tag": "tp_DNS.rl_REROUTE.grp_LOCAL-2",
-        "timeoutMs": 600,
-        "unexpectedIPs": [
+        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-2",
+        "timeoutMs" : 600,
+        "unexpectedIPs" : [
           "geoip:private"
         ]
       },
       {
-        "address": "localhost",
-        "domains": [
+        "address" : "localhost",
+        "domains" : [
           "geosite:category-ru",
           "geosite:private"
         ],
-        "tag": "tp_DNS.rl_REROUTE.grp_LOCAL-3"
+        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-3"
       }
     ],
-    "useSystemHosts": false
+    "useSystemHosts" : false
   },
-  "fakedns": [
+  "fakedns" : [
     {
-      "ipPool": "198.18.0.0/24",
-      "poolSize": 255
+      "ipPool" : "198.18.0.0\/24",
+      "poolSize" : 255
     }
   ],
-  "inbounds": [
+  "inbounds" : [
     {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "udp": true,
-        "userLevel": 1
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "udp" : true,
+        "userLevel" : 1
       },
-      "sniffing": {
-        "destOverride": [
+      "sniffing" : {
+        "destOverride" : [
           "http",
           "tls",
           "quic"
         ],
-        "enabled": true,
-        "routeOnly": true
+        "enabled" : true,
+        "routeOnly" : true
       },
-      "tag": "tp_SOCKS.rl_CAPTURE"
+      "tag" : "tp_SOCKS.rl_CAPTURE"
     },
     {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 1
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "userLevel" : 1
       },
-      "tag": "tp_HTTP.rl_CAPTURE"
+      "tag" : "tp_HTTP.rl_CAPTURE"
     }
   ],
-  "outbounds": [
+  "outbounds" : [
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "cluster-usa.zmeet.video",
-            "port": 443,
-            "users": [
+            "address" : "cluster-usa.zmeet.video",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "security": "tls",
-        "sockopt": {
-          "tcpMptcp": true
+      "streamSettings" : {
+        "network" : "raw",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpMptcp" : true
         },
-        "tlsSettings": {
-          "enableSessionResumption": true,
-          "fingerprint": "firefox",
-          "serverName": "cluster-usa.zmeet.video"
+        "tlsSettings" : {
+          "enableSessionResumption" : true,
+          "fingerprint" : "firefox",
+          "serverName" : "cluster-usa.zmeet.video"
         }
       },
-      "tag": "ENTRY-PROXY"
+      "tag" : "ENTRY-PROXY"
     },
     {
-      "mux": {
-        "concurrency": 6,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 6,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "pg-slaves.meetvideo.ru",
-            "port": 5432,
-            "users": [
+            "address" : "pg-slaves.meetvideo.ru",
+            "port" : 5432,
+            "users" : [
               {
-                "encryption": "mlkem768x25519plus.xorpub.0rtt.qWKQZhVDK9xymxB91IpTYGeyR2hEtnElhiMFbwLK2-wsK-sEdllGSVyxSuQpgCgkvSg8-tBIF1XFSJKOlydf1TEdZDFWO0RJ0cJja6es3lmW-kcrJwNbbGu9DXR-_rxmmunDRRRrrKXJhdVAGeGyLNXLMVC7JXlDPsxSddrOrSK1tFRdcalhmhWFopMa9oLMKlhGxTKJ-ttySxrAxjSLAZlqlhg3DSVuTXtDeMy0g8xcKCBlsFUxUndZCmAN0gOxXIh3ZmGnepkHohgut8OOQGsM72YWncExpoisE8V7xIQTjAlGAzuUnrpFpAsScGcriJWYkQPEh6Of_iCtQDIJoTWzPkJPBli-kjGMRkp-3VlLloZ215t7CPanHGpq-bjICyZI4Zx-9LRYC7USR3dv-6ZAp8c5eBAxLXOPnBUA1NdwLxZ8fsqcHnWIxvDBQSxe9qVF6RaxheCCgKVoVKGX-0cV6pm497tCzxx1sMbO7TERm2pFGSyKSNAcKUNVQTRsQGUK9FpCK4AyOHNaViUyzuwt0GUtXuoGI8ZG7NU5-JwuqvRqPwuzxrAjChnNTZxzlcUISkLLgvWx4sbP15JyJvJKt6M3XkBd9EAJwnIRPeZmnsU23iKyHKZbN2o15VihJcEkSNgjPCWjQ-NsU7OOxmCoPJa3I9ULzJNRUOwXEScXp7e4LSBAFSg1dHjNMxQua7hGSoQ9RbSdvpcIVCKEtJmJWCI25GcyL0utwSSNJHKvq0cVQBIM7XXBh-pRIrsQb9FFU0MUcbNpMUrM2Hs8feWPVCxdynYcvYpPaDV0C1AZuOwxrWkg42WMECgdM0tORbU2-2ALFpAcYNd1amGYDHIjpITA92l-ckfL8Po6fKvHkkRUWPwm6rOsnepzqXtU7vVVguMoqEU7d6QUx5VXwSdSwyo6Hshm_cCcFhtaohZsg5tqQrQeMkmqcHgb9tAA81AEO3EWchJ2toEXhyAaSTNyZsS9WGcurWCuDtondVqZPdh0wtICLuilPkecUSae5YiODWhpoDV_7NtIrwmUCSJZJeo_aso-GggeZCNSMkRrB4HEHSaivUBgQBPH7mtwFJu1xWgv_zJ1-MSTpNEpvyRyu_sHx7QQalk3fpuz8_kI-zBoighwV-ur2Lq_inNfVFN9D5lWDkoTAOUKa0K7IrOH4uE4MnvE9BhyS5QhrZdrPom9tKbGVMAs0WOB0gV9BnVXpBRIYwvFluOkioSKoKEK9LmI9NZWvXN4-vO9L5sitUGa8WhfkqGr5TifcBCB7bRnNrBmDjIAQRekxNqBpHSnGdAZ-zkr9GaGbRGq18cLgkt4dbFQoARCcpYlVvpjQ7cPFaTIwqAS_UUh2HQFBooy8TYiazmfHWda9GPL-sOb4KU1cdYUGuwe8kinvigTQjqM8CJJVpsfl0fDATNKDwNfbVJMbnVoKHetfqoxxjDKrDQGTnqRwZph6XIwwBoI9FIWFJURZWq_W-it8IFa8LMUaqBrk9hAtqyn9iyEUolVdeSakFSbiWwnmYGyDkBEe_ZqF9y0-TCc7cH8yOh4CzrBAdmsgZJPhB46Shc9c9Y",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "mlkem768x25519plus.xorpub.0rtt.qWKQZhVDK9xymxB91IpTYGeyR2hEtnElhiMFbwLK2-wsK-sEdllGSVyxSuQpgCgkvSg8-tBIF1XFSJKOlydf1TEdZDFWO0RJ0cJja6es3lmW-kcrJwNbbGu9DXR-_rxmmunDRRRrrKXJhdVAGeGyLNXLMVC7JXlDPsxSddrOrSK1tFRdcalhmhWFopMa9oLMKlhGxTKJ-ttySxrAxjSLAZlqlhg3DSVuTXtDeMy0g8xcKCBlsFUxUndZCmAN0gOxXIh3ZmGnepkHohgut8OOQGsM72YWncExpoisE8V7xIQTjAlGAzuUnrpFpAsScGcriJWYkQPEh6Of_iCtQDIJoTWzPkJPBli-kjGMRkp-3VlLloZ215t7CPanHGpq-bjICyZI4Zx-9LRYC7USR3dv-6ZAp8c5eBAxLXOPnBUA1NdwLxZ8fsqcHnWIxvDBQSxe9qVF6RaxheCCgKVoVKGX-0cV6pm497tCzxx1sMbO7TERm2pFGSyKSNAcKUNVQTRsQGUK9FpCK4AyOHNaViUyzuwt0GUtXuoGI8ZG7NU5-JwuqvRqPwuzxrAjChnNTZxzlcUISkLLgvWx4sbP15JyJvJKt6M3XkBd9EAJwnIRPeZmnsU23iKyHKZbN2o15VihJcEkSNgjPCWjQ-NsU7OOxmCoPJa3I9ULzJNRUOwXEScXp7e4LSBAFSg1dHjNMxQua7hGSoQ9RbSdvpcIVCKEtJmJWCI25GcyL0utwSSNJHKvq0cVQBIM7XXBh-pRIrsQb9FFU0MUcbNpMUrM2Hs8feWPVCxdynYcvYpPaDV0C1AZuOwxrWkg42WMECgdM0tORbU2-2ALFpAcYNd1amGYDHIjpITA92l-ckfL8Po6fKvHkkRUWPwm6rOsnepzqXtU7vVVguMoqEU7d6QUx5VXwSdSwyo6Hshm_cCcFhtaohZsg5tqQrQeMkmqcHgb9tAA81AEO3EWchJ2toEXhyAaSTNyZsS9WGcurWCuDtondVqZPdh0wtICLuilPkecUSae5YiODWhpoDV_7NtIrwmUCSJZJeo_aso-GggeZCNSMkRrB4HEHSaivUBgQBPH7mtwFJu1xWgv_zJ1-MSTpNEpvyRyu_sHx7QQalk3fpuz8_kI-zBoighwV-ur2Lq_inNfVFN9D5lWDkoTAOUKa0K7IrOH4uE4MnvE9BhyS5QhrZdrPom9tKbGVMAs0WOB0gV9BnVXpBRIYwvFluOkioSKoKEK9LmI9NZWvXN4-vO9L5sitUGa8WhfkqGr5TifcBCB7bRnNrBmDjIAQRekxNqBpHSnGdAZ-zkr9GaGbRGq18cLgkt4dbFQoARCcpYlVvpjQ7cPFaTIwqAS_UUh2HQFBooy8TYiazmfHWda9GPL-sOb4KU1cdYUGuwe8kinvigTQjqM8CJJVpsfl0fDATNKDwNfbVJMbnVoKHetfqoxxjDKrDQGTnqRwZph6XIwwBoI9FIWFJURZWq_W-it8IFa8LMUaqBrk9hAtqyn9iyEUolVdeSakFSbiWwnmYGyDkBEe_ZqF9y0-TCc7cH8yOh4CzrBAdmsgZJPhB46Shc9c9Y",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "security": "none",
-        "sockopt": {
-          "tcpMptcp": true
+      "streamSettings" : {
+        "network" : "raw",
+        "security" : "none",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_CRYPT.grp_VK.rgn_RU"
+      "tag" : "tp_BRIDGE.rl_CRYPT.grp_VK.rgn_RU"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "slave-cs.converzio.app",
-            "port": 443,
-            "users": [
+            "address" : "slave-cs.converzio.app",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "edge",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "d78674aac58fe1f7"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "2e7d1b83b4235977"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_1"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_1"
     },
     {
-      "mux": {
-        "concurrency": 6,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 6,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "mysql.meetvideo.ru",
-            "port": 443,
-            "users": [
+            "address" : "mysql.meetvideo.ru",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "security": "tls",
-        "sockopt": {
-          "tcpMptcp": true
+      "streamSettings" : {
+        "network" : "raw",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpMptcp" : true
         },
-        "tlsSettings": {
-          "enableSessionResumption": true,
-          "fingerprint": "edge",
-          "serverName": "cluster-usa.zmeet.video"
+        "tlsSettings" : {
+          "enableSessionResumption" : true,
+          "fingerprint" : "firefox",
+          "serverName" : "cluster-usa.zmeet.video"
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_2"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_2"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "slave-cs.converzio.app",
-            "port": 443,
-            "users": [
+            "address" : "slave-cs.converzio.app",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "river-5-528.rtbcdn.ru",
-          "shortId": "4b16bcdde653ab45"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "river-5-528.rtbcdn.ru",
+          "shortId" : "4b16bcdde653ab45"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_3"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_3"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "master-cs.converzio.app",
-            "port": 443,
-            "users": [
+            "address" : "master-cs.converzio.app",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "edge",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "river-5-528.rtbcdn.ru",
-          "shortId": "98126688db807e09"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "river-5-528.rtbcdn.ru",
+          "shortId" : "2e7d1b83b4235977"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_4"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_4"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "5.200.61.10",
-            "port": 443,
-            "users": [
+            "address" : "5.200.61.10",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "2e7d1b83b4235977"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "925f1d08f2f7cfbc"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_1"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_1"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "212.116.120.26",
-            "port": 443,
-            "users": [
+            "address" : "212.116.120.26",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "1a4a1b5e34808893"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "e54d9bba025708e4"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_2"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_2"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "176.122.21.242",
-            "port": 443,
-            "users": [
+            "address" : "176.122.21.242",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "edge",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "api.ok.ru",
-          "shortId": "98126688db807e09"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "api.ok.ru",
+          "shortId" : "925f1d08f2f7cfbc"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_3"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_3"
     },
     {
-      "mux": {
-        "concurrency": 6,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 6,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "212.116.120.26",
-            "port": 443,
-            "users": [
+            "address" : "212.116.120.26",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "celular.vk.com",
-          "shortId": "2e7d1b83b4235977"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "celular.vk.com",
+          "shortId" : "925f1d08f2f7cfbc"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_4"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_4"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "5.101.76.186",
-            "port": 443,
-            "users": [
+            "address" : "5.101.76.186",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "1a4a1b5e34808893"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "e54d9bba025708e4"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_5"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_5"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "188.227.74.7",
-            "port": 443,
-            "users": [
+            "address" : "188.227.74.7",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "4b16bcdde653ab45"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "2e7d1b83b4235977"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_6"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_6"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "78.140.222.234",
-            "port": 443,
-            "users": [
+            "address" : "78.140.222.234",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "safari",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "max.ru",
-          "shortId": "e54d9bba025708e4"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "max.ru",
+          "shortId" : "d78674aac58fe1f7"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_7"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_7"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "89.108.78.215",
-            "port": 443,
-            "users": [
+            "address" : "89.108.78.215",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "eh.vk.com",
-          "shortId": "2a053925f5858344"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "eh.vk.com",
+          "shortId" : "e54d9bba025708e4"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_8"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_8"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "79.174.78.53",
-            "port": 443,
-            "users": [
+            "address" : "79.174.78.53",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "eh.vk.com",
-          "shortId": "d78674aac58fe1f7"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "eh.vk.com",
+          "shortId" : "925f1d08f2f7cfbc"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_9"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_9"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "176.108.255.250",
-            "port": 443,
-            "users": [
+            "address" : "176.108.255.250",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "safari",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "api-maps.yandex.ru",
-          "shortId": "2e7d1b83b4235977"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "api-maps.yandex.ru",
+          "shortId" : "2a053925f5858344"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_SK.rgn_RU_3"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_SK.rgn_RU_3"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "cdn.tracker.yandex.net",
-            "port": 443,
-            "users": [
+            "address" : "cdn.tracker.yandex.net",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "httpupgradeSettings": {
-          "host": "static2.gizamoff.trade",
-          "path": "/xmpp-websocket/room=LQblZz9/Bo4Q6incMZ1xdg"
+      "streamSettings" : {
+        "httpupgradeSettings" : {
+          "host" : "static2.gizamoff.trade",
+          "path" : "\/xmpp-websocket\/room=LQblZz9\/Bo4Q6incMZ1xdg"
         },
-        "network": "httpupgrade",
-        "security": "tls",
-        "sockopt": {
-          "happyEyeballs": {
-            "interleave": 1,
-            "maxConcurrentTry": 4,
-            "tryDelayMs": 250
+        "network" : "httpupgrade",
+        "security" : "tls",
+        "sockopt" : {
+          "happyEyeballs" : {
+            "interleave" : 1,
+            "maxConcurrentTry" : 4,
+            "tryDelayMs" : 250
           }
         },
-        "tlsSettings": {
-          "enableSessionResumption": true,
-          "fingerprint": "firefox",
-          "serverName": "cdn.tracker.yandex.net"
+        "tlsSettings" : {
+          "enableSessionResumption" : true,
+          "fingerprint" : "firefox",
+          "serverName" : "cdn.tracker.yandex.net"
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_1"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_1"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "51.250.6.211",
-            "port": 443,
-            "users": [
+            "address" : "51.250.6.211",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "5post-gate.x5.ru",
-          "shortId": "925f1d08f2f7cfbc"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "5post-gate.x5.ru",
+          "shortId" : "98126688db807e09"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_2"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_2"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "84.252.128.69",
-            "port": 443,
-            "users": [
+            "address" : "84.252.128.69",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "edge",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "5post-gate.x5.ru",
-          "shortId": "d78674aac58fe1f7"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "edge",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "5post-gate.x5.ru",
+          "shortId" : "98126688db807e09"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_3"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_3"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "158.160.239.156",
-            "port": 443,
-            "users": [
+            "address" : "158.160.239.156",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "api-maps.yandex.ru",
-          "shortId": "2e7d1b83b4235977"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "api-maps.yandex.ru",
+          "shortId" : "1a4a1b5e34808893"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_4"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_4"
     },
     {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "gizamoff.trade",
-            "port": 443,
-            "users": [
+            "address" : "gizamoff.trade",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "password": "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName": "5post-gate.x5.ru",
-          "shortId": "2a053925f5858344"
+      "streamSettings" : {
+        "network" : "raw",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
+          "serverName" : "5post-gate.x5.ru",
+          "shortId" : "4b16bcdde653ab45"
         },
-        "security": "reality",
-        "sockopt": {
-          "tcpMptcp": true
+        "security" : "reality",
+        "sockopt" : {
+          "tcpMptcp" : true
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_5"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_5"
     },
     {
-      "mux": {
-        "concurrency": 22,
-        "enabled": true,
-        "xudpConcurrency": 18
+      "mux" : {
+        "concurrency" : 22,
+        "enabled" : true,
+        "xudpConcurrency" : 18
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "ru-slaves.meetvideo.ru",
-            "port": 10443,
-            "users": [
+            "address" : "ru-slaves.meetvideo.ru",
+            "port" : 10443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "network": "raw",
-        "security": "tls",
-        "sockopt": {
-          "tcpMptcp": true
+      "streamSettings" : {
+        "network" : "raw",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpMptcp" : true
         },
-        "tlsSettings": {
-          "enableSessionResumption": true,
-          "fingerprint": "firefox",
-          "serverName": "cluster-usa.zmeet.video"
+        "tlsSettings" : {
+          "enableSessionResumption" : true,
+          "fingerprint" : "firefox",
+          "serverName" : "cluster-usa.zmeet.video"
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_6"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_6"
     },
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 4
+      "mux" : {
+        "concurrency" : 8,
+        "enabled" : true,
+        "xudpConcurrency" : 4
       },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
           {
-            "address": "s79808.cdn.ngenix.net",
-            "port": 443,
-            "users": [
+            "address" : "s79808.cdn.ngenix.net",
+            "port" : 443,
+            "users" : [
               {
-                "encryption": "none",
-                "id": "54d14c8b-2689-4763-969a-4859b0e382b4",
-                "level": 2
+                "encryption" : "none",
+                "id" : "54d14c8b-2689-4763-969a-4859b0e382b4",
+                "level" : 2
               }
             ]
           }
         ]
       },
-      "streamSettings": {
-        "httpupgradeSettings": {
-          "path": "/xmpp-websocket/room=LQblZz9/Bo4Q6incMZ1xdg?ed=2560"
+      "streamSettings" : {
+        "httpupgradeSettings" : {
+          "path" : "\/xmpp-websocket\/room=LQblZz9\/Bo4Q6incMZ1xdg?ed=2560"
         },
-        "network": "httpupgrade",
-        "security": "tls",
-        "sockopt": {
-          "happyEyeballs": {
-            "interleave": 1,
-            "maxConcurrentTry": 2,
-            "tryDelayMs": 200
+        "network" : "httpupgrade",
+        "security" : "tls",
+        "sockopt" : {
+          "happyEyeballs" : {
+            "interleave" : 1,
+            "maxConcurrentTry" : 2,
+            "tryDelayMs" : 200
           },
-          "tcpMptcp": true
+          "tcpMptcp" : true
         },
-        "tlsSettings": {
-          "enableSessionResumption": true,
-          "fingerprint": "edge",
-          "serverName": "s79808.cdn.ngenix.net"
+        "tlsSettings" : {
+          "enableSessionResumption" : true,
+          "fingerprint" : "firefox",
+          "serverName" : "s79808.cdn.ngenix.net"
         }
       },
-      "tag": "tp_BRIDGE.rl_SNI-R.grp_NG.rgn_RU"
+      "tag" : "tp_BRIDGE.rl_SNI-R.grp_NG.rgn_RU"
     },
     {
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIPv4",
-        "userLevel": 2
+      "protocol" : "freedom",
+      "settings" : {
+        "domainStrategy" : "UseIPv4",
+        "userLevel" : 2
       },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": true
+      "streamSettings" : {
+        "sockopt" : {
+          "tcpFastOpen" : true
         }
       },
-      "tag": "tp_DIRECT"
+      "tag" : "tp_DIRECT"
     },
     {
-      "protocol": "dns",
-      "settings": {
-        "blockTypes": [
+      "protocol" : "dns",
+      "settings" : {
+        "blockTypes" : [
           28
         ],
-        "userLevel": 1
+        "userLevel" : 1
       },
-      "tag": "tp_DNS.rl_CAPTURE"
+      "tag" : "tp_DNS.rl_CAPTURE"
     },
     {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
+      "protocol" : "blackhole",
+      "settings" : {
+        "response" : {
+          "type" : "http"
         }
       },
-      "tag": "tp_BLOCK"
+      "tag" : "tp_BLOCK"
     },
     {
-      "protocol": "loopback",
-      "settings": {
-        "inboundTag": "tp_REROUTE.rl_BRIDGE"
+      "protocol" : "loopback",
+      "settings" : {
+        "inboundTag" : "tp_REROUTE.rl_BRIDGE"
       },
-      "tag": "tp_LOOP.rl_BRIDGE"
+      "tag" : "tp_LOOP.rl_BRIDGE"
     }
   ],
-  "policy": {
-    "levels": {
-      "1": {
-        "bufferSize": 16,
-        "connIdle": 300,
-        "downlinkOnly": 2,
-        "handshake": 2,
-        "uplinkOnly": 1
+  "policy" : {
+    "levels" : {
+      "1" : {
+        "bufferSize" : 16,
+        "connIdle" : 300,
+        "downlinkOnly" : 2,
+        "handshake" : 2,
+        "uplinkOnly" : 1
       },
-      "2": {
-        "bufferSize": 32,
-        "connIdle": 300,
-        "downlinkOnly": 2,
-        "handshake": 4,
-        "uplinkOnly": 2
+      "2" : {
+        "bufferSize" : 32,
+        "connIdle" : 300,
+        "downlinkOnly" : 2,
+        "handshake" : 4,
+        "uplinkOnly" : 2
       }
     }
   },
-  "remarks": "🇪🇺 Обход",
-  "routing": {
-    "balancers": [
+  "remarks" : "🇪🇺 авто",
+  "routing" : {
+    "balancers" : [
       {
-        "fallbackTag": "tp_LOOP.rl_BRIDGE",
-        "selector": [
+        "fallbackTag" : "tp_LOOP.rl_BRIDGE",
+        "selector" : [
           "tp_DIRECT"
         ],
-        "tag": "tp_BALANCER.rl_DIR"
+        "tag" : "tp_BALANCER.rl_DIR"
       },
       {
-        "fallbackTag": "tp_LOOP.rl_BRIDGE",
-        "selector": [
+        "fallbackTag" : "tp_LOOP.rl_BRIDGE",
+        "selector" : [
           "ENTRY-PROXY"
         ],
-        "tag": "tp_BALANCER.rl_ENTRY-DIR"
+        "tag" : "tp_BALANCER.rl_ENTRY-DIR"
       },
       {
-        "fallbackTag": "tp_BLOCK",
-        "selector": [
+        "fallbackTag" : "tp_BLOCK",
+        "selector" : [
           "tp_BRIDGE.rl_SNI-R"
         ],
-        "strategy": {
-          "settings": {
-            "costs": [
+        "strategy" : {
+          "settings" : {
+            "costs" : [
               {
-                "match": "tp_BRIDGE.rl_SNI-R.grp_OC",
-                "value": 1000
+                "match" : "tp_BRIDGE.rl_SNI-R.grp_OC",
+                "value" : 1000
               },
               {
-                "match": "tp_BRIDGE.rl_SNI-R.grp_SK",
-                "value": 1500
+                "match" : "tp_BRIDGE.rl_SNI-R.grp_SK",
+                "value" : 1500
               },
               {
-                "match": "tp_BRIDGE.rl_SNI-R.grp_CV",
-                "value": 2000
+                "match" : "tp_BRIDGE.rl_SNI-R.grp_CV",
+                "value" : 2000
               },
               {
-                "match": "tp_BRIDGE.rl_SNI-R.grp_YC",
-                "value": 2500
+                "match" : "tp_BRIDGE.rl_SNI-R.grp_YC",
+                "value" : 2500
               },
               {
-                "match": "tp_BRIDGE.rl_SNI-R.grp_NG",
-                "value": 3000
+                "match" : "tp_BRIDGE.rl_SNI-R.grp_NG",
+                "value" : 3000
               }
             ]
           },
-          "type": "leastLoad"
+          "type" : "leastLoad"
         },
-        "tag": "tp_BALANCER.rl_BRIDGE"
+        "tag" : "tp_BALANCER.rl_BRIDGE"
       }
     ],
-    "domainStrategy": "AsIs",
-    "rules": [
+    "domainStrategy" : "AsIs",
+    "rules" : [
       {
-        "inboundTag": [
+        "inboundTag" : [
           "tp_DNS.rl_REROUTE.grp_LOCAL-1",
           "tp_DNS.rl_REROUTE.grp_LOCAL-2"
         ],
-        "outboundTag": "tp_DIRECT"
+        "outboundTag" : "tp_DIRECT"
       },
       {
-        "domain": [
+        "domain" : [
           "domain:ad.mail.ru",
           "domain:alt-ad.mail.ru",
           "domain:analytics.adjust.com",
@@ -1085,60 +1085,60 @@
           "domain:ios.perfsight.wetest.net",
           "domain:qos.hk.gcloudcs.com"
         ],
-        "outboundTag": "tp_BLOCK"
+        "outboundTag" : "tp_BLOCK"
       },
       {
-        "inboundTag": [
+        "inboundTag" : [
           "tp_SOCKS.rl_CAPTURE"
         ],
-        "ip": [
+        "ip" : [
           "geoip:tor"
         ],
-        "outboundTag": "tp_DNS.rl_CAPTURE"
+        "outboundTag" : "tp_DNS.rl_CAPTURE"
       },
       {
-        "ip": [
+        "ip" : [
           "geoip:private"
         ],
-        "outboundTag": "tp_DIRECT"
+        "outboundTag" : "tp_DIRECT"
       },
       {
-        "domain": [
+        "domain" : [
           "geosite:private"
         ],
-        "outboundTag": "tp_DIRECT"
+        "outboundTag" : "tp_DIRECT"
       },
       {
-        "outboundTag": "tp_BLOCK",
-        "protocol": [
+        "outboundTag" : "tp_BLOCK",
+        "protocol" : [
           "bittorrent"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_BRIDGE",
-        "domain": [
+        "balancerTag" : "tp_BALANCER.rl_BRIDGE",
+        "domain" : [
           "full:www.gstatic.com"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_BRIDGE",
-        "inboundTag": [
+        "balancerTag" : "tp_BALANCER.rl_BRIDGE",
+        "inboundTag" : [
           "tp_REROUTE.rl_BRIDGE"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_DIR",
-        "port": "25,69,111,123,323,465,587,2049,3306,3389,5432,5900,6379,27017"
+        "balancerTag" : "tp_BALANCER.rl_DIR",
+        "port" : "25,69,111,123,323,465,587,2049,3306,3389,5432,5900,6379,27017"
       },
       {
-        "balancerTag": "tp_BALANCER.rl_ENTRY-DIR",
-        "ip": [
+        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
+        "ip" : [
           "geoip:cc"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_ENTRY-DIR",
-        "domain": [
+        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
+        "domain" : [
           "geosite:0x0",
           "geosite:youtube",
           "domain:yandexwebcache.org",
@@ -1146,20 +1146,20 @@
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_DIR",
-        "domain": [
+        "balancerTag" : "tp_BALANCER.rl_DIR",
+        "domain" : [
           "geosite:category-ru"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_DIR",
-        "ip": [
+        "balancerTag" : "tp_BALANCER.rl_DIR",
+        "ip" : [
           "geoip:ru"
         ]
       },
       {
-        "balancerTag": "tp_BALANCER.rl_ENTRY-DIR",
-        "network": "tcp,udp"
+        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
+        "network" : "tcp,udp"
       }
     ]
   }
