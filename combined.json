@@ -39,12 +39,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -147,12 +142,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -262,12 +252,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -364,12 +349,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -479,12 +459,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+    "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -581,12 +556,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+    "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -671,12 +641,7 @@
       "tag" : "socks"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
+   "meta" : {
     "serverDescription" : ""
   },
   "outbounds" : [
@@ -743,12 +708,7 @@
       "tag" : "http"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "protocol" : "vless",
       "settings" : {
@@ -937,12 +897,7 @@
       "tag" : "tp_HTTP.rl_CAPTURE"
     }
   ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "None"
-  },
-  "outbounds" : [
+   "outbounds" : [
     {
       "mux" : {
         "concurrency" : 8,
