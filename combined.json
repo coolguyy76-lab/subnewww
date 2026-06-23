@@ -1958,5 +1958,1301 @@
       }
     ]
   }
+},
+{
+  "burstObservatory" : {
+    "pingConfig" : {
+      "destination" : "https:\/\/www.gstatic.com\/generate_204",
+      "httpMethod" : "GET",
+      "interval" : "3m",
+      "sampling" : 3,
+      "timeout" : "2s"
+    },
+    "subjectSelector" : [
+      "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 11 | Мобильный Интернет",
+      "🇩🇪 Германия 12 | Мобильный Интернет",
+      "🇩🇪 Германия 13 | Мобильный Интернет",
+      "🇩🇪 Германия 14 | Мобильный Интернет",
+      "🇩🇪 Германия 15 | Мобильный Интернет",
+      "🇩🇪 Германия 16 | Мобильный Интернет",
+      "🇩🇪 Германия 17 | Мобильный Интернет",
+      "🇩🇪 Германия 18 | Мобильный Интернет",
+      "🇩🇪 Германия 19 | Мобильный Интернет",
+      "🇩🇪 Германия 20 | Мобильный Интернет",
+      "🇩🇪 Германия 21 | Мобильный Интернет",
+      "🇩🇪 Германия 22 | Мобильный Интернет",
+      "🇩🇪 Германия 23 | Мобильный Интернет",
+      "🇩🇪 Германия 41 | Мобильный Интернет",
+      "🇩🇪 Германия 42 | Мобильный Интернет"
+    ]
+  },
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "46.8.210.129",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "max.ru",
+          "shortId" : "6ba85179e30d4fc2"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "46.8.210.143",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "max.ru",
+          "shortId" : "6ba85179e30d4fc2"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks2.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks2.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks2.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks3.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks3.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks3.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks4.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks4.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks4.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks5.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks5.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks5.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks6.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "qq",
+          "serverName" : "vks6.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks6.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks7.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks7.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks7.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks8.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "qq",
+          "serverName" : "vks8.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks8.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks9.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks9.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks9.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks10.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks10.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks10.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 11 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks11.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "vks11.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks11.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 12 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks12.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "vks12.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks12.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 13 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks13.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "qq",
+          "serverName" : "vks13.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks13.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 14 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks14.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks14.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks14.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 15 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks15.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "vks15.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks15.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 16 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks16.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "vks16.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks16.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 17 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks17.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks17.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks17.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 18 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "vks18.yandexdns.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "vks18.yandexdns.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "vks18.yandexdns.ru",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 19 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "top3045832793.mwscdn.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "top3045832793.mwscdn.ru"
+        },
+        "xhttpSettings" : {
+          "host" : "top3045832793.mwscdn.ru",
+          "mode" : "auto",
+          "path" : "\/usercontent"
+        }
+      },
+      "tag" : "🇩🇪 Германия 20 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "top3986308220.mwscdn.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "top3986308220.mwscdn.ru"
+        },
+        "xhttpSettings" : {
+          "host" : "top3986308220.mwscdn.ru",
+          "mode" : "auto",
+          "path" : "\/usercontent"
+        }
+      },
+      "tag" : "🇩🇪 Германия 21 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "top2900050754.mwscdn.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "qq",
+          "serverName" : "top2900050754.mwscdn.ru"
+        },
+        "xhttpSettings" : {
+          "host" : "top2900050754.mwscdn.ru",
+          "mode" : "auto",
+          "path" : "\/usercontent"
+        }
+      },
+      "tag" : "🇩🇪 Германия 22 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "top1032164794.mwscdn.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "qq",
+          "serverName" : "top1032164794.mwscdn.ru"
+        },
+        "xhttpSettings" : {
+          "host" : "top1032164794.mwscdn.ru",
+          "mode" : "auto",
+          "path" : "\/usercontent"
+        }
+      },
+      "tag" : "🇩🇪 Германия 23 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "5.188.114.102",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "max.ru"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 41 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "188.68.218.197",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "ads.x5.ru",
+          "shortId" : "6ba85179e30d4fc2"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 42 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "⚡ Обход — автовыбор",
+  "routing" : {
+    "balancers" : [
+      {
+        "selector" : [
+          "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 11 | Мобильный Интернет",
+          "🇩🇪 Германия 12 | Мобильный Интернет",
+          "🇩🇪 Германия 13 | Мобильный Интернет",
+          "🇩🇪 Германия 14 | Мобильный Интернет",
+          "🇩🇪 Германия 15 | Мобильный Интернет",
+          "🇩🇪 Германия 16 | Мобильный Интернет",
+          "🇩🇪 Германия 17 | Мобильный Интернет",
+          "🇩🇪 Германия 18 | Мобильный Интернет",
+          "🇩🇪 Германия 19 | Мобильный Интернет",
+          "🇩🇪 Германия 20 | Мобильный Интернет",
+          "🇩🇪 Германия 21 | Мобильный Интернет",
+          "🇩🇪 Германия 22 | Мобильный Интернет",
+          "🇩🇪 Германия 23 | Мобильный Интернет",
+          "🇩🇪 Германия 41 | Мобильный Интернет",
+          "🇩🇪 Германия 42 | Мобильный Интернет"
+        ],
+        "strategy" : {
+          "settings" : {
+            "baselines" : [
+              "1s"
+            ],
+            "expected" : 1,
+            "tolerance" : 0.80000000000000004
+          },
+          "type" : "leastLoad"
+        },
+        "tag" : "_-balancer"
+      }
+    ],
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "network" : "udp",
+        "outboundTag" : "block",
+        "port" : "443",
+        "type" : "field"
+      },
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "localhost",
+          "localhost.localdomain",
+          "local",
+          "*.local",
+          "*.localdomain",
+          "*.lan",
+          "*.internal"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "127.0.0.0\/8",
+          "10.0.0.0\/8",
+          "172.16.0.0\/12",
+          "192.168.0.0\/16",
+          "169.254.0.0\/16",
+          "::1\/128",
+          "fc00::\/7",
+          "fe80::\/10"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "_-balancer",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
 }
 ]
