@@ -3161,7 +3161,7 @@
       "tag" : "block"
     }
   ],
-  "remarks" : "⚡ Обход — автовыбор",
+  "remarks" : "Обход — автовыбор",
   "routing" : {
     "balancers" : [
       {
