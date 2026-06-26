@@ -1,3258 +1,3413 @@
 [
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "https://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 4,
+        "timeout": "1.5s"
       },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-   "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "5.199.168.33",
-            "port" : 8443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-003c-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "WXXY_6QScoc8ACXhbcn8cY_brbqR8f9vrvxKc7e3b2Y",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "d51572bc98a1a86c"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇳🇱 Нидерланды",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-   "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "151.247.197.44",
-            "port" : 8443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-001f-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "d6dd892320a9be71"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇫🇷 Франция",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-   "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "151.243.196.64",
-            "port" : 8443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "c665ad67a21b57d2"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇵🇱 Польша",
-  "routing" : {
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-   "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "5.199.168.33",
-            "port" : 8443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-001e-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "WXXY_6QScoc8ACXhbcn8cY_brbqR8f9vrvxKc7e3b2Y",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "d51572bc98a1a86c"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇱🇹 Литва",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-    "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "151.245.139.31",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "tTcJLAjkJIDQzdxLi6f6ZGvo4Wsv_Ho92TrWeV_HKUQ",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "31a35a595020592e"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇫🇮 Финляндия",
-  "routing" : {
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-    "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "151.247.197.44",
-            "port" : 8443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "d2ca00da-c718-003d-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "d6dd892320a9be71"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇺🇸 США",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    }
-  ],
-   "meta" : {
-    "serverDescription" : ""
-  },
-  "outbounds" : [
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "НИЖЕ ОБХОДЫ🔽🔽🔽🔽🔽🔽",
-  "routing" : {
-    "rules" : [
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "block",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-   "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "cdn-node.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "cdn-node.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "seqKey" : "page",
-            "seqPlacement" : "query",
-            "sessionKey" : "X-Auth-Token",
-            "sessionPlacement" : "header",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxLifetimeMs" : 0,
-              "cMaxReuseTimes" : 0,
-              "maxConcurrency" : 2,
-              "maxConnections" : 0
-            },
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "cdn-node.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/uploadFile\/"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇳🇱 Обход | Нидерланды",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "burstObservatory" : {
-    "pingConfig" : {
-      "connectivity" : "https:\/\/gu-st.ru\/portal-st\/favicon.svg",
-      "destination" : "https:\/\/ajax.googleapis.com\/ajax\/libs\/angularjs\/1.8.2\/angular.min.js",
-      "httpMethod" : "GET",
-      "interval" : "8h",
-      "sampling" : 3,
-      "timeout" : "3s"
-    },
-    "subjectSelector" : [
-      "tp_BRIDGE",
-      "tp_DIRECT",
-      "ENTRY-PROXY"
-    ]
-  },
-  "dns" : {
-    "hosts" : {
-      "ntc.party" : [
-        "130.255.77.28"
+      "subjectSelector": [
+        "proxy"
       ]
     },
-    "queryStrategy" : "UseIPv4",
-    "servers" : [
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "8.8.8.8",
+        "8.8.4.4"
+      ]
+    },
+    "inbounds": [
       {
-        "address" : "1.1.1.1",
-        "domains" : [
-          "geosite:0x0",
-          "geosite:youtube"
-        ],
-        "tag" : "tp_DNS.rl_REROUTE.grp_REMOTE",
-        "unexpectedIPs" : [
-          "geoip:ru"
-        ]
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
       },
       {
-        "address" : "77.88.8.8",
-        "domains" : [
-          "geosite:category-ru"
-        ],
-        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-1",
-        "timeoutMs" : 600,
-        "unexpectedIPs" : [
-          "geoip:private"
-        ]
-      },
-      {
-        "address" : "8.8.8.8",
-        "domains" : [
-          "geosite:category-ru"
-        ],
-        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-2",
-        "timeoutMs" : 600,
-        "unexpectedIPs" : [
-          "geoip:private"
-        ]
-      },
-      {
-        "address" : "localhost",
-        "domains" : [
-          "geosite:category-ru",
-          "geosite:private"
-        ],
-        "tag" : "tp_DNS.rl_REROUTE.grp_LOCAL-3"
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
       }
     ],
-    "useSystemHosts" : false
-  },
-  "fakedns" : [
-    {
-      "ipPool" : "198.18.0.0\/24",
-      "poolSize" : 255
-    }
-  ],
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "udp" : true,
-        "userLevel" : 1
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : true
-      },
-      "tag" : "tp_SOCKS.rl_CAPTURE"
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
     },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "userLevel" : 1
-      },
-      "tag" : "tp_HTTP.rl_CAPTURE"
-    }
-  ],
-   "outbounds" : [
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "cluster-usa.zmeet.video",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "security" : "tls",
-        "sockopt" : {
-          "tcpMptcp" : true
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.243.196.64",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-003c-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
         },
-        "tlsSettings" : {
-          "enableSessionResumption" : true,
-          "fingerprint" : "firefox",
-          "serverName" : "cluster-usa.zmeet.video"
-        }
-      },
-      "tag" : "ENTRY-PROXY"
-    },
-    {
-      "mux" : {
-        "concurrency" : 6,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "pg-slaves.meetvideo.ru",
-            "port" : 5432,
-            "users" : [
-              {
-                "encryption" : "mlkem768x25519plus.xorpub.0rtt.qWKQZhVDK9xymxB91IpTYGeyR2hEtnElhiMFbwLK2-wsK-sEdllGSVyxSuQpgCgkvSg8-tBIF1XFSJKOlydf1TEdZDFWO0RJ0cJja6es3lmW-kcrJwNbbGu9DXR-_rxmmunDRRRrrKXJhdVAGeGyLNXLMVC7JXlDPsxSddrOrSK1tFRdcalhmhWFopMa9oLMKlhGxTKJ-ttySxrAxjSLAZlqlhg3DSVuTXtDeMy0g8xcKCBlsFUxUndZCmAN0gOxXIh3ZmGnepkHohgut8OOQGsM72YWncExpoisE8V7xIQTjAlGAzuUnrpFpAsScGcriJWYkQPEh6Of_iCtQDIJoTWzPkJPBli-kjGMRkp-3VlLloZ215t7CPanHGpq-bjICyZI4Zx-9LRYC7USR3dv-6ZAp8c5eBAxLXOPnBUA1NdwLxZ8fsqcHnWIxvDBQSxe9qVF6RaxheCCgKVoVKGX-0cV6pm497tCzxx1sMbO7TERm2pFGSyKSNAcKUNVQTRsQGUK9FpCK4AyOHNaViUyzuwt0GUtXuoGI8ZG7NU5-JwuqvRqPwuzxrAjChnNTZxzlcUISkLLgvWx4sbP15JyJvJKt6M3XkBd9EAJwnIRPeZmnsU23iKyHKZbN2o15VihJcEkSNgjPCWjQ-NsU7OOxmCoPJa3I9ULzJNRUOwXEScXp7e4LSBAFSg1dHjNMxQua7hGSoQ9RbSdvpcIVCKEtJmJWCI25GcyL0utwSSNJHKvq0cVQBIM7XXBh-pRIrsQb9FFU0MUcbNpMUrM2Hs8feWPVCxdynYcvYpPaDV0C1AZuOwxrWkg42WMECgdM0tORbU2-2ALFpAcYNd1amGYDHIjpITA92l-ckfL8Po6fKvHkkRUWPwm6rOsnepzqXtU7vVVguMoqEU7d6QUx5VXwSdSwyo6Hshm_cCcFhtaohZsg5tqQrQeMkmqcHgb9tAA81AEO3EWchJ2toEXhyAaSTNyZsS9WGcurWCuDtondVqZPdh0wtICLuilPkecUSae5YiODWhpoDV_7NtIrwmUCSJZJeo_aso-GggeZCNSMkRrB4HEHSaivUBgQBPH7mtwFJu1xWgv_zJ1-MSTpNEpvyRyu_sHx7QQalk3fpuz8_kI-zBoighwV-ur2Lq_inNfVFN9D5lWDkoTAOUKa0K7IrOH4uE4MnvE9BhyS5QhrZdrPom9tKbGVMAs0WOB0gV9BnVXpBRIYwvFluOkioSKoKEK9LmI9NZWvXN4-vO9L5sitUGa8WhfkqGr5TifcBCB7bRnNrBmDjIAQRekxNqBpHSnGdAZ-zkr9GaGbRGq18cLgkt4dbFQoARCcpYlVvpjQ7cPFaTIwqAS_UUh2HQFBooy8TYiazmfHWda9GPL-sOb4KU1cdYUGuwe8kinvigTQjqM8CJJVpsfl0fDATNKDwNfbVJMbnVoKHetfqoxxjDKrDQGTnqRwZph6XIwwBoI9FIWFJURZWq_W-it8IFa8LMUaqBrk9hAtqyn9iyEUolVdeSakFSbiWwnmYGyDkBEe_ZqF9y0-TCc7cH8yOh4CzrBAdmsgZJPhB46Shc9c9Y",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "security" : "none",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_CRYPT.grp_VK.rgn_RU"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "slave-cs.converzio.app",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "safari",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "e54d9bba025708e4"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_1"
-    },
-    {
-      "mux" : {
-        "concurrency" : 6,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "mysql.meetvideo.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "security" : "tls",
-        "sockopt" : {
-          "tcpMptcp" : true
-        },
-        "tlsSettings" : {
-          "enableSessionResumption" : true,
-          "fingerprint" : "edge",
-          "serverName" : "cluster-usa.zmeet.video"
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_2"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "slave-cs.converzio.app",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "edge",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "river-5-528.rtbcdn.ru",
-          "shortId" : "925f1d08f2f7cfbc"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_3"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "master-cs.converzio.app",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "river-5-528.rtbcdn.ru",
-          "shortId" : "925f1d08f2f7cfbc"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_CV.rgn_RU_4"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "5.200.61.10",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "edge",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "925f1d08f2f7cfbc"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_1"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "212.116.120.26",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "2e7d1b83b4235977"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_2"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "176.122.21.250",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "api.ok.ru",
-          "shortId" : "e54d9bba025708e4"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_3"
-    },
-    {
-      "mux" : {
-        "concurrency" : 6,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "212.116.120.26",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "celular.vk.com",
-          "shortId" : "98126688db807e09"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_4"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "5.101.76.186",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "e54d9bba025708e4"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_5"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "188.227.74.7",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "edge",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "e54d9bba025708e4"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_6"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "78.140.222.234",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "safari",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "max.ru",
-          "shortId" : "1a4a1b5e34808893"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_7"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "89.108.78.215",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "edge",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "eh.vk.com",
-          "shortId" : "98126688db807e09"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_8"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "79.174.78.53",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "eh.vk.com",
-          "shortId" : "4b16bcdde653ab45"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_OC.rgn_RU_9"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "176.108.255.250",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "safari",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "2a053925f5858344"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_SK.rgn_RU_3"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "cdn.tracker.yandex.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "httpupgradeSettings" : {
-          "host" : "static2.gizamoff.trade",
-          "path" : "\/xmpp-websocket\/room=LQblZz9\/Bo4Q6incMZ1xdg"
-        },
-        "network" : "httpupgrade",
-        "security" : "tls",
-        "sockopt" : {
-          "happyEyeballs" : {
-            "interleave" : 1,
-            "maxConcurrentTry" : 4,
-            "tryDelayMs" : 250
-          }
-        },
-        "tlsSettings" : {
-          "enableSessionResumption" : true,
-          "fingerprint" : "firefox",
-          "serverName" : "cdn.tracker.yandex.net"
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_1"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "51.250.6.211",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "safari",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "5post-gate.x5.ru",
-          "shortId" : "d78674aac58fe1f7"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_2"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "84.252.128.69",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "5post-gate.x5.ru",
-          "shortId" : "98126688db807e09"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_3"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "158.160.239.156",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "safari",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "api-maps.yandex.ru",
-          "shortId" : "2a053925f5858344"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_4"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "gizamoff.trade",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "realitySettings" : {
-          "fingerprint" : "firefox",
-          "password" : "xcCAAKIFUi0PpMZUA7Jllxcxouavwz2YVXWJwdNZmgY",
-          "serverName" : "5post-gate.x5.ru",
-          "shortId" : "2e7d1b83b4235977"
-        },
-        "security" : "reality",
-        "sockopt" : {
-          "tcpMptcp" : true
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_5"
-    },
-    {
-      "mux" : {
-        "concurrency" : 22,
-        "enabled" : true,
-        "xudpConcurrency" : 18
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "ru-slaves.meetvideo.ru",
-            "port" : 10443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "raw",
-        "security" : "tls",
-        "sockopt" : {
-          "tcpMptcp" : true
-        },
-        "tlsSettings" : {
-          "enableSessionResumption" : true,
-          "fingerprint" : "firefox",
-          "serverName" : "cluster-usa.zmeet.video"
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_YC.rgn_RU_6"
-    },
-    {
-      "mux" : {
-        "concurrency" : 8,
-        "enabled" : true,
-        "xudpConcurrency" : 4
-      },
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "s79808.cdn.ngenix.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "id" : "af5657fa-4c6d-4d49-87fb-5a0892e6ae19",
-                "level" : 2
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "httpupgradeSettings" : {
-          "path" : "\/xmpp-websocket\/room=LQblZz9\/Bo4Q6incMZ1xdg?ed=2560"
-        },
-        "network" : "httpupgrade",
-        "security" : "tls",
-        "sockopt" : {
-          "happyEyeballs" : {
-            "interleave" : 1,
-            "maxConcurrentTry" : 2,
-            "tryDelayMs" : 200
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "c665ad67a21b57d2"
           },
-          "tcpMptcp" : true
+          "security": "reality",
+          "tcpSettings": {}
         },
-        "tlsSettings" : {
-          "enableSessionResumption" : true,
-          "fingerprint" : "firefox",
-          "serverName" : "s79808.cdn.ngenix.net"
-        }
-      },
-      "tag" : "tp_BRIDGE.rl_SNI-R.grp_NG.rgn_RU"
-    },
-    {
-      "protocol" : "freedom",
-      "settings" : {
-        "domainStrategy" : "UseIPv4",
-        "userLevel" : 2
-      },
-      "streamSettings" : {
-        "sockopt" : {
-          "tcpFastOpen" : true
-        }
-      },
-      "tag" : "tp_DIRECT"
-    },
-    {
-      "protocol" : "dns",
-      "settings" : {
-        "blockTypes" : [
-          28
-        ],
-        "userLevel" : 1
-      },
-      "tag" : "tp_DNS.rl_CAPTURE"
-    },
-    {
-      "protocol" : "blackhole",
-      "settings" : {
-        "response" : {
-          "type" : "http"
-        }
-      },
-      "tag" : "tp_BLOCK"
-    },
-    {
-      "protocol" : "loopback",
-      "settings" : {
-        "inboundTag" : "tp_REROUTE.rl_BRIDGE"
-      },
-      "tag" : "tp_LOOP.rl_BRIDGE"
-    }
-  ],
-  "policy" : {
-    "levels" : {
-      "1" : {
-        "bufferSize" : 16,
-        "connIdle" : 300,
-        "downlinkOnly" : 2,
-        "handshake" : 2,
-        "uplinkOnly" : 1
-      },
-      "2" : {
-        "bufferSize" : 32,
-        "connIdle" : 300,
-        "downlinkOnly" : 2,
-        "handshake" : 4,
-        "uplinkOnly" : 2
-      }
-    }
-  },
-  "remarks" : "🇪🇺SMART",
-  "routing" : {
-    "balancers" : [
-      {
-        "fallbackTag" : "tp_LOOP.rl_BRIDGE",
-        "selector" : [
-          "tp_DIRECT"
-        ],
-        "tag" : "tp_BALANCER.rl_DIR"
+        "tag": "proxy"
       },
       {
-        "fallbackTag" : "tp_LOOP.rl_BRIDGE",
-        "selector" : [
-          "ENTRY-PROXY"
-        ],
-        "tag" : "tp_BALANCER.rl_ENTRY-DIR"
-      },
-      {
-        "fallbackTag" : "tp_BLOCK",
-        "selector" : [
-          "tp_BRIDGE.rl_SNI-R"
-        ],
-        "strategy" : {
-          "settings" : {
-            "costs" : [
-              {
-                "match" : "tp_BRIDGE.rl_SNI-R.grp_OC",
-                "value" : 1000
-              },
-              {
-                "match" : "tp_BRIDGE.rl_SNI-R.grp_SK",
-                "value" : 1500
-              },
-              {
-                "match" : "tp_BRIDGE.rl_SNI-R.grp_CV",
-                "value" : 2000
-              },
-              {
-                "match" : "tp_BRIDGE.rl_SNI-R.grp_YC",
-                "value" : 2500
-              },
-              {
-                "match" : "tp_BRIDGE.rl_SNI-R.grp_NG",
-                "value" : 3000
-              }
-            ]
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.243.196.64",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "c665ad67a21b57d2"
           },
-          "type" : "leastLoad"
+          "security": "reality",
+          "tcpSettings": {}
         },
-        "tag" : "tp_BALANCER.rl_BRIDGE"
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.27.248.103",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "3f1ea141cb14f640"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.26.7.179",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "JgTwF_xRILPV9awG-CTP0ipUDpzJp4_65MYStOrMfUs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "18a1485d66f770a8"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-4"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.247.197.44",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-001f-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "d6dd892320a9be71"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-5"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.247.197.44",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-003d-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "d6dd892320a9be71"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy-6"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
       }
     ],
-    "domainStrategy" : "AsIs",
-    "rules" : [
+    "remarks": "🇪🇺 Авто | Обычные сервера",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "block",
+          "selector": [
+            "proxy"
+          ],
+          "strategy": {
+            "settings": {
+              "baselines": [
+                "80ms",
+                "150ms",
+                "300ms"
+              ],
+              "expected": 6,
+              "maxRTT": "1s",
+              "tolerance": 0.080000000000000002
+            },
+            "type": "leastLoad"
+          },
+          "tag": "Super_Balancer"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "Super_Balancer",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "https://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 4,
+        "timeout": "1.5s"
+      },
+      "subjectSelector": [
+        "proxy"
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "8.8.8.8",
+        "8.8.4.4"
+      ]
+    },
+    "inbounds": [
       {
-        "inboundTag" : [
-          "tp_DNS.rl_REROUTE.grp_LOCAL-1",
-          "tp_DNS.rl_REROUTE.grp_LOCAL-2"
-        ],
-        "outboundTag" : "tp_DIRECT"
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
       },
       {
-        "domain" : [
-          "domain:ad.mail.ru",
-          "domain:alt-ad.mail.ru",
-          "domain:analytics.adjust.com",
-          "domain:analytics.adjust.io",
-          "domain:app-measurement.com",
-          "domain:sg.tdatamaster.com",
-          "domain:ios.crashsight.wetest.net",
-          "domain:ios.perfsight.wetest.net",
-          "domain:qos.hk.gcloudcs.com"
-        ],
-        "outboundTag" : "tp_BLOCK"
-      },
-      {
-        "inboundTag" : [
-          "tp_SOCKS.rl_CAPTURE"
-        ],
-        "ip" : [
-          "geoip:tor"
-        ],
-        "outboundTag" : "tp_DNS.rl_CAPTURE"
-      },
-      {
-        "ip" : [
-          "geoip:private"
-        ],
-        "outboundTag" : "tp_DIRECT"
-      },
-      {
-        "domain" : [
-          "geosite:private"
-        ],
-        "outboundTag" : "tp_DIRECT"
-      },
-      {
-        "outboundTag" : "tp_BLOCK",
-        "protocol" : [
-          "bittorrent"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_BRIDGE",
-        "domain" : [
-          "full:www.gstatic.com"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_BRIDGE",
-        "inboundTag" : [
-          "tp_REROUTE.rl_BRIDGE"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_DIR",
-        "port" : "25,69,111,123,323,465,587,2049,3306,3389,5432,5900,6379,27017"
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
-        "ip" : [
-          "geoip:cc"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
-        "domain" : [
-          "geosite:0x0",
-          "geosite:youtube",
-          "domain:yandexwebcache.org",
-          "domain:arpozanbank.com"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_DIR",
-        "domain" : [
-          "geosite:category-ru"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_DIR",
-        "ip" : [
-          "geoip:ru"
-        ]
-      },
-      {
-        "balancerTag" : "tp_BALANCER.rl_ENTRY-DIR",
-        "network" : "tcp,udp"
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
       }
-    ]
-  }
-},
-{
-  "burstObservatory" : {
-    "pingConfig" : {
-      "destination" : "https:\/\/www.gstatic.com\/generate_204",
-      "httpMethod" : "GET",
-      "interval" : "3m",
-      "sampling" : 3,
-      "timeout" : "2s"
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
     },
-    "subjectSelector" : [
-      "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
-      "🇩🇪 Германия 11 | Мобильный Интернет",
-      "🇩🇪 Германия 12 | Мобильный Интернет",
-      "🇩🇪 Германия 13 | Мобильный Интернет",
-      "🇩🇪 Германия 14 | Мобильный Интернет",
-      "🇩🇪 Германия 15 | Мобильный Интернет",
-      "🇩🇪 Германия 16 | Мобильный Интернет",
-      "🇩🇪 Германия 17 | Мобильный Интернет",
-      "🇩🇪 Германия 18 | Мобильный Интернет",
-      "🇩🇪 Германия 19 | Мобильный Интернет",
-      "🇩🇪 Германия 20 | Мобильный Интернет",
-      "🇩🇪 Германия 21 | Мобильный Интернет",
-      "🇩🇪 Германия 22 | Мобильный Интернет",
-      "🇩🇪 Германия 23 | Мобильный Интернет",
-      "🇩🇪 Германия 41 | Мобильный Интернет",
-      "🇩🇪 Германия 42 | Мобильный Интернет"
-    ]
-  },
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "46.8.210.129",
-            "port" : 5555,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "qq",
-          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "serverName" : "max.ru",
-          "shortId" : "6ba85179e30d4fc2"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "46.8.210.143",
-            "port" : 5555,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "qq",
-          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "serverName" : "max.ru",
-          "shortId" : "6ba85179e30d4fc2"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks2.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks2.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks2.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks3.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks3.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks3.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks4.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks4.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks4.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks5.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks5.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks5.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks6.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "qq",
-          "serverName" : "vks6.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks6.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks7.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks7.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks7.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks8.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "qq",
-          "serverName" : "vks8.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks8.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks9.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks9.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks9.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks10.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks10.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks10.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 11 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks11.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "vks11.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks11.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 12 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks12.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "vks12.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks12.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 13 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks13.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "qq",
-          "serverName" : "vks13.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks13.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 14 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks14.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks14.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks14.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 15 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks15.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "vks15.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks15.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 16 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks16.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "vks16.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks16.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 17 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks17.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks17.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks17.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 18 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "vks18.yandexdns.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "vks18.yandexdns.ru"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "mode" : "packet-up",
-            "path" : "\/api\/v1\/sync",
-            "scMaxConcurrentPosts" : 1,
-            "scMaxEachPostBytes" : 524288,
-            "scMinPostsIntervalMs" : 150,
-            "uplinkHTTPMethod" : "GET",
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "vks18.yandexdns.ru",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/sync"
-        }
-      },
-      "tag" : "🇩🇪 Германия 19 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "top3045832793.mwscdn.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "top3045832793.mwscdn.ru"
-        },
-        "xhttpSettings" : {
-          "host" : "top3045832793.mwscdn.ru",
-          "mode" : "auto",
-          "path" : "\/usercontent"
-        }
-      },
-      "tag" : "🇩🇪 Германия 20 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "top3986308220.mwscdn.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "firefox",
-          "serverName" : "top3986308220.mwscdn.ru"
-        },
-        "xhttpSettings" : {
-          "host" : "top3986308220.mwscdn.ru",
-          "mode" : "auto",
-          "path" : "\/usercontent"
-        }
-      },
-      "tag" : "🇩🇪 Германия 21 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "top2900050754.mwscdn.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "qq",
-          "serverName" : "top2900050754.mwscdn.ru"
-        },
-        "xhttpSettings" : {
-          "host" : "top2900050754.mwscdn.ru",
-          "mode" : "auto",
-          "path" : "\/usercontent"
-        }
-      },
-      "tag" : "🇩🇪 Германия 22 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "top1032164794.mwscdn.ru",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "qq",
-          "serverName" : "top1032164794.mwscdn.ru"
-        },
-        "xhttpSettings" : {
-          "host" : "top1032164794.mwscdn.ru",
-          "mode" : "auto",
-          "path" : "\/usercontent"
-        }
-      },
-      "tag" : "🇩🇪 Германия 23 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "5.188.114.102",
-            "port" : 5555,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "qq",
-          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "serverName" : "max.ru"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "🇩🇪 Германия 41 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "188.68.218.197",
-            "port" : 5555,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "qq",
-          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "serverName" : "ads.x5.ru",
-          "shortId" : "6ba85179e30d4fc2"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
-        }
-      },
-      "tag" : "🇩🇪 Германия 42 | Мобильный Интернет"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "Обход — автовыбор",
-  "routing" : {
-    "balancers" : [
+    "outbounds": [
       {
-        "selector" : [
-          "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
-          "🇩🇪 Германия 11 | Мобильный Интернет",
-          "🇩🇪 Германия 12 | Мобильный Интернет",
-          "🇩🇪 Германия 13 | Мобильный Интернет",
-          "🇩🇪 Германия 14 | Мобильный Интернет",
-          "🇩🇪 Германия 15 | Мобильный Интернет",
-          "🇩🇪 Германия 16 | Мобильный Интернет",
-          "🇩🇪 Германия 17 | Мобильный Интернет",
-          "🇩🇪 Германия 18 | Мобильный Интернет",
-          "🇩🇪 Германия 19 | Мобильный Интернет",
-          "🇩🇪 Германия 20 | Мобильный Интернет",
-          "🇩🇪 Германия 21 | Мобильный Интернет",
-          "🇩🇪 Германия 22 | Мобильный Интернет",
-          "🇩🇪 Германия 23 | Мобильный Интернет",
-          "🇩🇪 Германия 41 | Мобильный Интернет",
-          "🇩🇪 Германия 42 | Мобильный Интернет"
-        ],
-        "strategy" : {
-          "settings" : {
-            "baselines" : [
-              "1s"
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "sw.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
             ],
-            "expected" : 1,
-            "tolerance" : 0.80000000000000004
+            "fingerprint": "random",
+            "serverName": "sw.whit3.net"
           },
-          "type" : "leastLoad"
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "sw.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
         },
-        "tag" : "_-balancer"
+        "tag": "proxy"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-lt-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-lt-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769eqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-lt-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn-node.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "cdn-node.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdn-node.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
       }
     ],
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
+    "remarks": "🇪🇺 Авто | Обход",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "block",
+          "selector": [
+            "proxy"
+          ],
+          "strategy": {
+            "costs": [
+              {
+                "match": "🇳🇱 Обход глушилок | Нидерланды",
+                "regexp": false,
+                "value": 4
+              }
+            ],
+            "settings": {
+              "baselines": [
+                "80ms",
+                "150ms",
+                "300ms"
+              ],
+              "expected": 9,
+              "maxRTT": "1s",
+              "tolerance": 0.080000000000000002
+            },
+            "type": "leastLoad"
+          },
+          "tag": "Super_Balancer"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "Super_Balancer",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
       {
-        "network" : "udp",
-        "outboundTag" : "block",
-        "port" : "443",
-        "type" : "field"
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
       },
       {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "domain" : [
-          "localhost",
-          "localhost.localdomain",
-          "local",
-          "*.local",
-          "*.localdomain",
-          "*.lan",
-          "*.internal"
-        ],
-        "outboundTag" : "direct",
-        "type" : "field"
-      },
-      {
-        "ip" : [
-          "127.0.0.0\/8",
-          "10.0.0.0\/8",
-          "172.16.0.0\/12",
-          "192.168.0.0\/16",
-          "169.254.0.0\/16",
-          "::1\/128",
-          "fc00::\/7",
-          "fe80::\/10"
-        ],
-        "outboundTag" : "direct",
-        "type" : "field"
-      },
-      {
-        "balancerTag" : "_-balancer",
-        "network" : "tcp,udp",
-        "type" : "field"
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
       }
-    ]
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.243.196.64",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "c665ad67a21b57d2"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇵🇱 Польша",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.27.248.103",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "3f1ea141cb14f640"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇩🇪 Германия",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.27.248.103",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "3f1ea141cb14f640"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇩🇪 Германия",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.26.7.179",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "JgTwF_xRILPV9awG-CTP0ipUDpzJp4_65MYStOrMfUs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "18a1485d66f770a8"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇸🇪 Швеция",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "Telegram | Игры | YouTube"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "95.85.240.139",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "B2OBJQ6_f7kiCxbee7rY4zjFOHzL3iuTY_1SmjxkqQM",
+            "serverName": "max.ru",
+            "shortId": "344e46a2216874c3"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇷🇺 Россия",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.247.197.44",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-001f-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "d6dd892320a9be71"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇷 Франция",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndfl1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "ndfl1.whit3.net"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇮 Финляндия",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.247.197.44",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-003d-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "d6dd892320a9be71"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇺🇸 США",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "151.243.196.64",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "d2ca00da-c718-003c-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
+            "serverName": "api-maps.yandex.ru",
+            "shortId": "c665ad67a21b57d2"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇳🇱  Нидерланды",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "🔽🔽🔽🔽🔽🔽"
+    },
+    "outbounds": [
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "НИЖЕ ОБХОДЫ 🔽🔽🔽🔽🔽🔽",
+    "routing": {
+      "rules": [
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn-node.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "cdn-node.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdn-node.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇳🇱 Обход | Нидерланды",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "sw.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "sw.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "sw.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇸🇪 Обход | Швеция",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-lt-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-lt-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769eqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-lt-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇱🇹 Обход| Литва",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "destination": "https://www.gstatic.com/generate_204",
+        "httpMethod": "GET",
+        "interval": "3m",
+        "sampling": 3,
+        "timeout": "2s"
+      },
+      "subjectSelector": [
+        "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
+        "🇩🇪 Германия 11 | Мобильный Интернет",
+        "🇩🇪 Германия 12 | Мобильный Интернет",
+        "🇩🇪 Германия 13 | Мобильный Интернет",
+        "🇩🇪 Германия 14 | Мобильный Интернет",
+        "🇩🇪 Германия 15 | Мобильный Интернет",
+        "🇩🇪 Германия 16 | Мобильный Интернет",
+        "🇩🇪 Германия 17 | Мобильный Интернет",
+        "🇩🇪 Германия 18 | Мобильный Интернет",
+        "🇩🇪 Германия 19 | Мобильный Интернет",
+        "🇩🇪 Германия 20 | Мобильный Интернет",
+        "🇩🇪 Германия 21 | Мобильный Интернет",
+        "🇩🇪 Германия 22 | Мобильный Интернет",
+        "🇩🇪 Германия 23 | Мобильный Интернет",
+        " 🇩🇪 Германия 24 | Мобильный Интернет",
+        "🇩🇪 Германия 41 | Мобильный Интернет",
+        "🇩🇪 Германия 42 | Мобильный Интернет"
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.8.210.129",
+              "port": 5555,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "serverName": "max.ru",
+            "shortId": "6ba85179e30d4fc2"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.8.210.143",
+              "port": 5555,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks2.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks2.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks2.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks3.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks3.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks3.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks4.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks4.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks4.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks5.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks5.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks5.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks6.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "qq",
+            "serverName": "vks6.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks6.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks7.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks7.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks7.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks8.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "qq",
+            "serverName": "vks8.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks8.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks9.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks9.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks9.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks10.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks10.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks10.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 11 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks11.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "firefox",
+            "serverName": "vks11.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks11.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 12 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks12.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "firefox",
+            "serverName": "vks12.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks12.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 13 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks13.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "qq",
+            "serverName": "vks13.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks13.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 14 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks14.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks14.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks14.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 15 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks15.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "firefox",
+            "serverName": "vks15.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks15.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 16 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks16.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "firefox",
+            "serverName": "vks16.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks16.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 17 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks17.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks17.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks17.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 18 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "vks18.yandexdns.ru",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "vks18.yandexdns.ru"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "vks18.yandexdns.ru",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 19 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdnyas1.halyava.cc",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "firefox",
+            "serverName": "cdnyas1.halyava.cc"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdnyas1.halyava.cc",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 20 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdnyas2.halyava.cc",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "qq",
+            "serverName": "cdnyas2.halyava.cc"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdnyas2.halyava.cc",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 21 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdnyas3.halyava.cc",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "qq",
+            "serverName": "cdnyas3.halyava.cc"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdnyas3.halyava.cc",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 22 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdnyas4.halyava.cc",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "cdnyas4.halyava.cc"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdnyas4.halyava.cc",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": "🇩🇪 Германия 23 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdnyas5.halyava.cc",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "cdnyas5.halyava.cc"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "mode": "packet-up",
+              "path": "/api/v1/sync",
+              "scMaxConcurrentPosts": 1,
+              "scMaxEachPostBytes": 524288,
+              "scMinPostsIntervalMs": 150,
+              "uplinkHTTPMethod": "GET",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdnyas5.halyava.cc",
+            "mode": "packet-up",
+            "path": "/api/v1/sync"
+          }
+        },
+        "tag": " 🇩🇪 Германия 24 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "5.188.114.102",
+              "port": 5555,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "serverName": "max.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "🇩🇪 Германия 41 | Мобильный Интернет"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.68.218.197",
+              "port": 5555,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "qq",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "serverName": "ads.x5.ru"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "🇩🇪 Германия 42 | Мобильный Интернет"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "Обход — автовыбор",
+    "routing": {
+      "balancers": [
+        {
+          "selector": [
+            "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
+            "🇩🇪 Германия 11 | Мобильный Интернет",
+            "🇩🇪 Германия 12 | Мобильный Интернет",
+            "🇩🇪 Германия 13 | Мобильный Интернет",
+            "🇩🇪 Германия 14 | Мобильный Интернет",
+            "🇩🇪 Германия 15 | Мобильный Интернет",
+            "🇩🇪 Германия 16 | Мобильный Интернет",
+            "🇩🇪 Германия 17 | Мобильный Интернет",
+            "🇩🇪 Германия 18 | Мобильный Интернет",
+            "🇩🇪 Германия 19 | Мобильный Интернет",
+            "🇩🇪 Германия 20 | Мобильный Интернет",
+            "🇩🇪 Германия 21 | Мобильный Интернет",
+            "🇩🇪 Германия 22 | Мобильный Интернет",
+            "🇩🇪 Германия 23 | Мобильный Интернет",
+            " 🇩🇪 Германия 24 | Мобильный Интернет",
+            "🇩🇪 Германия 41 | Мобильный Интернет",
+            "🇩🇪 Германия 42 | Мобильный Интернет"
+          ],
+          "strategy": {
+            "settings": {
+              "baselines": [
+                "1s"
+              ],
+              "expected": 1,
+              "tolerance": 0.80000000000000004
+            },
+            "type": "leastLoad"
+          },
+          "tag": "_-balancer"
+        }
+      ],
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "network": "udp",
+          "outboundTag": "block",
+          "port": "443",
+          "type": "field"
+        },
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "domain": [
+            "localhost",
+            "localhost.localdomain",
+            "local",
+            "*.local",
+            "*.localdomain",
+            "*.lan",
+            "*.internal"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "127.0.0.0/8",
+            "10.0.0.0/8",
+            "172.16.0.0/12",
+            "192.168.0.0/16",
+            "169.254.0.0/16",
+            "::1/128",
+            "fc00::/7",
+            "fe80::/10"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "balancerTag": "_-balancer",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ]
+    }
   }
-}
 ]
