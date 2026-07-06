@@ -1,1574 +1,1571 @@
 [
-{
-  "burstObservatory" : {
-    "pingConfig" : {
-      "connectivity" : "",
-      "destination" : "https:\/\/www.gstatic.com\/generate_204",
-      "interval" : "1m",
-      "sampling" : 10,
-      "timeout" : "4s"
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "https://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 10,
+        "timeout": "4s"
+      },
+      "subjectSelector": [
+        "proxy"
+      ]
     },
-    "subjectSelector" : [
-      "proxy"
-    ]
-  },
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1",
-      "8.8.8.8",
-      "8.8.4.4"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "8.8.8.8",
+        "8.8.4.4"
+      ]
     },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndpl1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "ndpl1.whit3.net"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndge1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "ndge1.whit3.net"
-        }
-      },
-      "tag" : "proxy-2"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndsw1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "ndsw1.whit3.net"
-        }
-      },
-      "tag" : "proxy-3"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndfr1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "ndfr1.whit3.net"
-        }
-      },
-      "tag" : "proxy-4"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndfl1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "ndfl1.whit3.net"
-        }
-      },
-      "tag" : "proxy-5"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndnl1.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "ndnl1.whit3.net"
-        }
-      },
-      "tag" : "proxy-6"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndnl2.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "ndnl2.whit3.net"
-        }
-      },
-      "tag" : "proxy-7"
-    },
-    {
-      "protocol" : "hysteria",
-      "settings" : {
-        "address" : "ndus2.whit3.net",
-        "port" : 443,
-        "version" : 2
-      },
-      "streamSettings" : {
-        "finalmask" : {
-          "quicParams" : {
-            "congestion" : "bbr",
-            "debug" : false
-          }
-        },
-        "hysteriaSettings" : {
-          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
-          "version" : 2
-        },
-        "network" : "hysteria",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h3"
-          ],
-          "fingerprint" : "chrome",
-          "serverName" : "ndus2.whit3.net"
-        }
-      },
-      "tag" : "proxy-8"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇪🇺 Авто | Обычные сервера",
-  "routing" : {
-    "balancers" : [
+    "inbounds": [
       {
-        "fallbackTag" : "block",
-        "selector" : [
-          "proxy"
-        ],
-        "strategy" : {
-          "settings" : {
-            "baselines" : [
-              "80ms",
-              "150ms",
-              "300ms"
-            ],
-            "expected" : 9,
-            "maxRTT" : "1s",
-            "tolerance" : 0.080000000000000002
-          },
-          "type" : "leastLoad"
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
         },
-        "tag" : "Super_Balancer"
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
       }
     ],
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
       {
-        "outboundTag" : "block",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "balancerTag" : "Super_Balancer",
-        "network" : "tcp,udp",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "burstObservatory" : {
-    "pingConfig" : {
-      "connectivity" : "",
-      "destination" : "https:\/\/www.gstatic.com\/generate_204",
-      "interval" : "1m",
-      "sampling" : 4,
-      "timeout" : "1.5s"
-    },
-    "subjectSelector" : [
-      "proxy"
-    ]
-  },
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1",
-      "8.8.8.8",
-      "8.8.4.4"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "sw.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "sw.whit3.net"
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndpl1.whit3.net",
+          "port": 443,
+          "version": 2
         },
-        "xhttpSettings" : {
-          "extra" : {
-            "seqKey" : "page",
-            "seqPlacement" : "query",
-            "sessionKey" : "X-Auth-Token",
-            "sessionPlacement" : "header",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxLifetimeMs" : 0,
-              "cMaxReuseTimes" : 0,
-              "maxConcurrency" : 2,
-              "maxConnections" : 0
-            },
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "sw.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/uploadFile\/"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "yc-lt-1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "yc-lt-1.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "headers" : {
-              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
-              "X-Code" : "daadf769eqadf"
-            },
-            "noSSEHeader" : true,
-            "scStreamUpServerSecs" : "20-80",
-            "seqKey" : "id",
-            "seqPlacement" : "query",
-            "sessionIDLength" : "20",
-            "sessionKey" : "auth",
-            "sessionPlacement" : "path",
-            "sessionTable" : "alphabet",
-            "uplinkChunkSize" : 280,
-            "uplinkDataKey" : "X-Ver",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 0,
-              "hMaxRequestTimes" : "600-900",
-              "hMaxReusableSecs" : "1800-3000",
-              "maxConcurrency" : "8-16"
-            },
-            "xPaddingBytes" : "100-1000",
-            "xPaddingHeader" : "api_v1",
-            "xPaddingKey" : "xss",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "query"
-          },
-          "host" : "yc-lt-1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/"
-        }
-      },
-      "tag" : "proxy-2"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "cdn-node.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "cdn-node.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "seqKey" : "page",
-            "seqPlacement" : "query",
-            "sessionKey" : "X-Auth-Token",
-            "sessionPlacement" : "header",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxLifetimeMs" : 0,
-              "cMaxReuseTimes" : 0,
-              "maxConcurrency" : 2,
-              "maxConnections" : 0
-            },
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "cdn-node.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/uploadFile\/"
-        }
-      },
-      "tag" : "proxy-3"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "yc-fl-1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "yc-fl-1.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "headers" : {
-              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
-              "X-Code" : "daadf769fqadf"
-            },
-            "noSSEHeader" : true,
-            "scStreamUpServerSecs" : "20-80",
-            "seqKey" : "id",
-            "seqPlacement" : "query",
-            "sessionIDLength" : "20",
-            "sessionKey" : "auth",
-            "sessionPlacement" : "path",
-            "sessionTable" : "alphabet",
-            "uplinkChunkSize" : 280,
-            "uplinkDataKey" : "X-Ver",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 0,
-              "hMaxRequestTimes" : "600-900",
-              "hMaxReusableSecs" : "1800-3000",
-              "maxConcurrency" : "8-16"
-            },
-            "xPaddingBytes" : "100-1000",
-            "xPaddingHeader" : "api_v1",
-            "xPaddingKey" : "xss",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "query"
-          },
-          "host" : "yc-fl-1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/"
-        }
-      },
-      "tag" : "proxy-4"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇪🇺 Авто | Обход глушилок",
-  "routing" : {
-    "balancers" : [
-      {
-        "fallbackTag" : "block",
-        "selector" : [
-          "proxy"
-        ],
-        "strategy" : {
-          "costs" : [
-            {
-              "match" : "🇳🇱 Обход глушилок | Нидерланды",
-              "regexp" : false,
-              "value" : 4
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
             }
-          ],
-          "settings" : {
-            "baselines" : [
-              "80ms",
-              "150ms",
-              "300ms"
-            ],
-            "expected" : 5,
-            "maxRTT" : "1s",
-            "tolerance" : 0.080000000000000002
           },
-          "type" : "leastLoad"
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndpl1.whit3.net"
+          }
         },
-        "tag" : "Super_Balancer"
+        "tag": "proxy"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndge1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndge1.whit3.net"
+          }
+        },
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndsw1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndsw1.whit3.net"
+          }
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndfr1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "ndfr1.whit3.net"
+          }
+        },
+        "tag": "proxy-4"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndfl1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "ndfl1.whit3.net"
+          }
+        },
+        "tag": "proxy-5"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndnl1.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndnl1.whit3.net"
+          }
+        },
+        "tag": "proxy-6"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndnl2.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndnl2.whit3.net"
+          }
+        },
+        "tag": "proxy-7"
+      },
+      {
+        "protocol": "hysteria",
+        "settings": {
+          "address": "ndus2.whit3.net",
+          "port": 443,
+          "version": 2
+        },
+        "streamSettings": {
+          "finalmask": {
+            "quicParams": {
+              "congestion": "bbr",
+              "debug": false
+            }
+          },
+          "hysteriaSettings": {
+            "auth": "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+            "version": 2
+          },
+          "network": "hysteria",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h3"
+            ],
+            "fingerprint": "chrome",
+            "serverName": "ndus2.whit3.net"
+          }
+        },
+        "tag": "proxy-8"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
       }
     ],
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
-      {
-        "outboundTag" : "block",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "balancerTag" : "Super_Balancer",
-        "network" : "tcp,udp",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
-    "serverDescription" : "========================="
-  },
-  "outbounds" : [
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "ОБХОДЫ 🔽🔽🔽🔽🔽🔽",
-  "routing" : {
-    "rules" : [
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "block",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
-    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "yc-lt-1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
+    "remarks": "🇪🇺 Авто | обычный впн",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "block",
+          "selector": [
+            "proxy"
           ],
-          "fingerprint" : "random",
-          "serverName" : "yc-lt-1.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "headers" : {
-              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
-              "X-Code" : "daadf769eqadf"
+          "strategy": {
+            "settings": {
+              "baselines": [
+                "80ms",
+                "150ms",
+                "300ms"
+              ],
+              "expected": 9,
+              "maxRTT": "1s",
+              "tolerance": 0.080000000000000002
             },
-            "noSSEHeader" : true,
-            "scStreamUpServerSecs" : "20-80",
-            "seqKey" : "id",
-            "seqPlacement" : "query",
-            "sessionIDLength" : "20",
-            "sessionKey" : "auth",
-            "sessionPlacement" : "path",
-            "sessionTable" : "alphabet",
-            "uplinkChunkSize" : 280,
-            "uplinkDataKey" : "X-Ver",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 0,
-              "hMaxRequestTimes" : "600-900",
-              "hMaxReusableSecs" : "1800-3000",
-              "maxConcurrency" : "8-16"
-            },
-            "xPaddingBytes" : "100-1000",
-            "xPaddingHeader" : "api_v1",
-            "xPaddingKey" : "xss",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "query"
+            "type": "leastLoad"
           },
-          "host" : "yc-lt-1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/"
+          "tag": "Super_Balancer"
         }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇱🇹 Обход глушилок | Литва",
-  "routing" : {
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
-    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "yc-fl-1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
           ],
-          "fingerprint" : "random",
-          "serverName" : "yc-fl-1.whit3.net"
+          "type": "field"
         },
-        "xhttpSettings" : {
-          "extra" : {
-            "headers" : {
-              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
-              "X-Code" : "daadf769fqadf"
-            },
-            "noSSEHeader" : true,
-            "scStreamUpServerSecs" : "20-80",
-            "seqKey" : "id",
-            "seqPlacement" : "query",
-            "sessionIDLength" : "20",
-            "sessionKey" : "auth",
-            "sessionPlacement" : "path",
-            "sessionTable" : "alphabet",
-            "uplinkChunkSize" : 280,
-            "uplinkDataKey" : "X-Ver",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 0,
-              "hMaxRequestTimes" : "600-900",
-              "hMaxReusableSecs" : "1800-3000",
-              "maxConcurrency" : "8-16"
-            },
-            "xPaddingBytes" : "100-1000",
-            "xPaddingHeader" : "api_v1",
-            "xPaddingKey" : "xss",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "query"
-          },
-          "host" : "yc-fl-1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/"
+        {
+          "balancerTag": "Super_Balancer",
+          "network": "tcp,udp",
+          "type": "field"
         }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
+      ]
     }
-  ],
-  "remarks" : "🇫🇮 Обходы глушилок | Финляндия",
-  "routing" : {
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
+  },
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "https://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 4,
+        "timeout": "1.5s"
+      },
+      "subjectSelector": [
+        "proxy"
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "8.8.8.8",
+        "8.8.4.4"
+      ]
+    },
+    "inbounds": [
       {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
-    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "sw.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
           ],
-          "fingerprint" : "random",
-          "serverName" : "sw.whit3.net"
+          "enabled": true,
+          "routeOnly": false
         },
-        "xhttpSettings" : {
-          "extra" : {
-            "seqKey" : "page",
-            "seqPlacement" : "query",
-            "sessionKey" : "X-Auth-Token",
-            "sessionPlacement" : "header",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxLifetimeMs" : 0,
-              "cMaxReuseTimes" : 0,
-              "maxConcurrency" : 2,
-              "maxConnections" : 0
-            },
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "sw.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/uploadFile\/"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇸🇪 Обход глушилок | Швеция",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
+        "tag": "socks"
       },
       {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "meta" : {
-    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "cdn-node.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
           ],
-          "fingerprint" : "random",
-          "serverName" : "cdn-node.whit3.net"
+          "enabled": true,
+          "routeOnly": false
         },
-        "xhttpSettings" : {
-          "extra" : {
-            "seqKey" : "page",
-            "seqPlacement" : "query",
-            "sessionKey" : "X-Auth-Token",
-            "sessionPlacement" : "header",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxLifetimeMs" : 0,
-              "cMaxReuseTimes" : 0,
-              "maxConcurrency" : 2,
-              "maxConnections" : 0
-            },
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "cdn-node.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/uploadFile\/"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇳🇱 Обход глушилок | Нидерланды",
-  "routing" : {
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      },
-      {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
+        "tag": "http"
       }
-    ]
-  }
-},
-{
-  "dns" : {
-    "queryStrategy" : "UseIP",
-    "servers" : [
-      "1.1.1.1",
-      "1.0.0.1"
-    ]
-  },
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
     },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "81.222.127.190",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
-              }
-            ]
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "sw.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "sw.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "sw.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
           }
-        ]
+        },
+        "tag": "proxy"
       },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-lt-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-lt-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769eqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-lt-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy-2"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn-node.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "cdn-node.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdn-node.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy-3"
+      },
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-fl-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-fl-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769fqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-fl-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy-4"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Авто | Обход",
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "block",
+          "selector": [
+            "proxy"
           ],
-          "fingerprint" : "random",
-          "serverName" : "ndru.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "noGRPCHeader" : true,
-            "noSSEHeader" : true,
-            "sessionIDKey" : "auth",
-            "uplinkDataKey" : "payload",
-            "uplinkDataPlacement" : "body",
-            "uplinkHTTPMethod" : "HEAD",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 30,
-              "hMaxRequestTimes" : "800-1200",
-              "hMaxReusableSecs" : "600-1000",
-              "maxConcurrency" : "2-4"
-            },
-            "xPaddingBytes" : "20-50",
-            "XPaddingKey" : "x_padding",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "cookie"
-          },
-          "host" : "ndru.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/hls\/stream.ts?type=hls"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
-    }
-  ],
-  "remarks" : "🇳🇱  Обход | Нидерланды [ ТЕСТ ]",
-  "routing" : {
-    "domainMatcher" : "hybrid",
-    "domainStrategy" : "IPIfNonMatch",
-    "rules" : [
-      {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
-      }
-    ]
-  }
-},
-{
-  "inbounds" : [
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10808,
-      "protocol" : "socks",
-      "settings" : {
-        "auth" : "noauth",
-        "udp" : true
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
-    }
-  ],
-  "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
-    "dnsLog" : true,
-    "loglevel" : "Warning"
-  },
-  "outbounds" : [
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "31.56.187.47",
-            "port" : 8443,
-            "users" : [
+          "strategy": {
+            "costs": [
               {
-                "encryption" : "none",
-                "flow" : "xtls-rprx-vision",
-                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                "match": "🇳🇱 Обход глушилок | Нидерланды",
+                "regexp": false,
+                "value": 4
               }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "tcp",
-        "realitySettings" : {
-          "fingerprint" : "random",
-          "publicKey" : "scNn8MoJJIeabN5MkjwxmOXE3DdOyl2HJqzct3RsLyY",
-          "serverName" : "ndee.whit3.net",
-          "shortId" : "1e85a6f4a565e7e7"
-        },
-        "security" : "reality",
-        "tcpSettings" : {
-
+            ],
+            "settings": {
+              "baselines": [
+                "80ms",
+                "150ms",
+                "300ms"
+              ],
+              "expected": 5,
+              "maxRTT": "1s",
+              "tolerance": 0.080000000000000002
+            },
+            "type": "leastLoad"
+          },
+          "tag": "Super_Balancer"
         }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "freedom",
-      "tag" : "direct"
-    },
-    {
-      "protocol" : "blackhole",
-      "tag" : "block"
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "Super_Balancer",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ]
     }
-  ],
-  "remarks" : "🇪🇪 Эстония",
-  "routing" : {
-    "rules" : [
+  },
+  {
+    "inbounds": [
       {
-        "outboundTag" : "direct",
-        "protocol" : [
-          "bittorrent"
-        ],
-        "type" : "field"
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "========================="
+    },
+    "outbounds": [
+      {
+        "protocol": "freedom",
+        "tag": "direct"
       },
       {
-        "inboundTag" : [
-          "socks",
-          "http"
-        ],
-        "outboundTag" : "proxy",
-        "type" : "field"
+        "protocol": "blackhole",
+        "tag": "block"
       }
-    ]
+    ],
+    "remarks": "ОБХОДЫ 🔽🔽🔽🔽🔽🔽",
+    "routing": {
+      "rules": [
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-lt-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-lt-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769eqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-lt-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇱🇹 Обход | Литва",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "yc-fl-1.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "yc-fl-1.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+                "X-Code": "daadf769fqadf"
+              },
+              "noSSEHeader": true,
+              "scStreamUpServerSecs": "20-80",
+              "seqKey": "id",
+              "seqPlacement": "query",
+              "sessionIDLength": "20",
+              "sessionKey": "auth",
+              "sessionPlacement": "path",
+              "sessionTable": "alphabet",
+              "uplinkChunkSize": 280,
+              "uplinkDataKey": "X-Ver",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "8-16"
+              },
+              "xPaddingBytes": "100-1000",
+              "xPaddingHeader": "api_v1",
+              "xPaddingKey": "xss",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query"
+            },
+            "host": "yc-fl-1.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/v1/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇮 Обход | Финляндия",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "sw.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "sw.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "sw.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇸🇪 Обход | Швеция",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "meta": {
+      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn-node.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "random",
+            "serverName": "cdn-node.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "seqKey": "page",
+              "seqPlacement": "query",
+              "sessionKey": "X-Auth-Token",
+              "sessionPlacement": "header",
+              "uplinkHTTPMethod": "GET",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": 0,
+                "maxConcurrency": 2,
+                "maxConnections": 0
+              },
+              "xPaddingHeader": "X-Cache",
+              "xPaddingKey": "_dc",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            },
+            "host": "cdn-node.whit3.net",
+            "mode": "packet-up",
+            "path": "/api/uploadFile/"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇳🇱 Обход | Нидерланды",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "81.222.127.190",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "alpn": [
+              "h2"
+            ],
+            "fingerprint": "random",
+            "serverName": "ndru.whit3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "noGRPCHeader": true,
+              "noSSEHeader": true,
+              "sessionIDKey": "auth",
+              "uplinkDataKey": "payload",
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "HEAD",
+              "xmux": {
+                "cMaxReuseTimes": 0,
+                "hKeepAlivePeriod": 30,
+                "hMaxRequestTimes": "800-1200",
+                "hMaxReusableSecs": "600-1000",
+                "maxConcurrency": "2-4"
+              },
+              "xPaddingBytes": "20-50",
+              "XPaddingKey": "x_padding",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "cookie"
+            },
+            "host": "ndru.whit3.net",
+            "mode": "packet-up",
+            "path": "/hls/stream.ts?type=hls"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇳🇱  Обход | Нидерланды [ ТЕСТ ]",
+    "routing": {
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true,
+          "routeOnly": false
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
+      "dnsLog": true,
+      "loglevel": "Warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "31.56.187.47",
+              "port": 8443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision",
+                  "id": "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "realitySettings": {
+            "fingerprint": "random",
+            "publicKey": "scNn8MoJJIeabN5MkjwxmOXE3DdOyl2HJqzct3RsLyY",
+            "serverName": "ndee.whit3.net",
+            "shortId": "1e85a6f4a565e7e7"
+          },
+          "security": "reality",
+          "tcpSettings": {}
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇪 Эстония",
+    "routing": {
+      "rules": [
+        {
+          "outboundTag": "direct",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    }
   }
-}
-
 ]
