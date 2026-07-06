@@ -1,3413 +1,1574 @@
 [
-  {
-    "burstObservatory": {
-      "pingConfig": {
-        "connectivity": "",
-        "destination": "https://www.gstatic.com/generate_204",
-        "interval": "1m",
-        "sampling": 4,
-        "timeout": "1.5s"
-      },
-      "subjectSelector": [
-        "proxy"
-      ]
+{
+  "burstObservatory" : {
+    "pingConfig" : {
+      "connectivity" : "",
+      "destination" : "https:\/\/www.gstatic.com\/generate_204",
+      "interval" : "1m",
+      "sampling" : 10,
+      "timeout" : "4s"
     },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "8.8.8.8",
-        "8.8.4.4"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.243.196.64",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-003c-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "c665ad67a21b57d2"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.243.196.64",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "c665ad67a21b57d2"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy-2"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "2.27.248.103",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "3f1ea141cb14f640"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy-3"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "2.26.7.179",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "JgTwF_xRILPV9awG-CTP0ipUDpzJp4_65MYStOrMfUs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "18a1485d66f770a8"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy-4"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.247.197.44",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-001f-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "d6dd892320a9be71"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy-5"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.247.197.44",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-003d-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "d6dd892320a9be71"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy-6"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇪🇺 Авто | Обычные сервера",
-    "routing": {
-      "balancers": [
-        {
-          "fallbackTag": "block",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "settings": {
-              "baselines": [
-                "80ms",
-                "150ms",
-                "300ms"
-              ],
-              "expected": 6,
-              "maxRTT": "1s",
-              "tolerance": 0.080000000000000002
-            },
-            "type": "leastLoad"
-          },
-          "tag": "Super_Balancer"
-        }
-      ],
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "block",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "balancerTag": "Super_Balancer",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ]
-    }
+    "subjectSelector" : [
+      "proxy"
+    ]
   },
-  {
-    "burstObservatory": {
-      "pingConfig": {
-        "connectivity": "",
-        "destination": "https://www.gstatic.com/generate_204",
-        "interval": "1m",
-        "sampling": 4,
-        "timeout": "1.5s"
-      },
-      "subjectSelector": [
-        "proxy"
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "8.8.8.8",
-        "8.8.4.4"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "sw.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "random",
-            "serverName": "sw.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "seqKey": "page",
-              "seqPlacement": "query",
-              "sessionKey": "X-Auth-Token",
-              "sessionPlacement": "header",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxLifetimeMs": 0,
-                "cMaxReuseTimes": 0,
-                "maxConcurrency": 2,
-                "maxConnections": 0
-              },
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "sw.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/uploadFile/"
-          }
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "yc-lt-1.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2"
-            ],
-            "fingerprint": "random",
-            "serverName": "yc-lt-1.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "headers": {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-                "X-Code": "daadf769eqadf"
-              },
-              "noSSEHeader": true,
-              "scStreamUpServerSecs": "20-80",
-              "seqKey": "id",
-              "seqPlacement": "query",
-              "sessionIDLength": "20",
-              "sessionKey": "auth",
-              "sessionPlacement": "path",
-              "sessionTable": "alphabet",
-              "uplinkChunkSize": 280,
-              "uplinkDataKey": "X-Ver",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxReuseTimes": 0,
-                "hKeepAlivePeriod": 0,
-                "hMaxRequestTimes": "600-900",
-                "hMaxReusableSecs": "1800-3000",
-                "maxConcurrency": "8-16"
-              },
-              "xPaddingBytes": "100-1000",
-              "xPaddingHeader": "api_v1",
-              "xPaddingKey": "xss",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "query"
-            },
-            "host": "yc-lt-1.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/v1/"
-          }
-        },
-        "tag": "proxy-2"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdn-node.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "random",
-            "serverName": "cdn-node.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "seqKey": "page",
-              "seqPlacement": "query",
-              "sessionKey": "X-Auth-Token",
-              "sessionPlacement": "header",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxLifetimeMs": 0,
-                "cMaxReuseTimes": 0,
-                "maxConcurrency": 2,
-                "maxConnections": 0
-              },
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdn-node.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/uploadFile/"
-          }
-        },
-        "tag": "proxy-3"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇪🇺 Авто | Обход",
-    "routing": {
-      "balancers": [
-        {
-          "fallbackTag": "block",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "costs": [
-              {
-                "match": "🇳🇱 Обход глушилок | Нидерланды",
-                "regexp": false,
-                "value": 4
-              }
-            ],
-            "settings": {
-              "baselines": [
-                "80ms",
-                "150ms",
-                "300ms"
-              ],
-              "expected": 9,
-              "maxRTT": "1s",
-              "tolerance": 0.080000000000000002
-            },
-            "type": "leastLoad"
-          },
-          "tag": "Super_Balancer"
-        }
-      ],
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "block",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "balancerTag": "Super_Balancer",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ]
-    }
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1",
+      "8.8.8.8",
+      "8.8.4.4"
+    ]
   },
-  {
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
     },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
       },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.243.196.64",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "c665ad67a21b57d2"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
       },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇵🇱 Польша",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
+      "tag" : "http"
     }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
   },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
+  "outbounds" : [
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndpl1.whit3.net",
+        "port" : 443,
+        "version" : 2
       },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
         },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
           ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "2.27.248.103",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "3f1ea141cb14f640"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇩🇪 Германия",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
+          "fingerprint" : "random",
+          "serverName" : "ndpl1.whit3.net"
         }
-      ]
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndge1.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "ndge1.whit3.net"
+        }
+      },
+      "tag" : "proxy-2"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndsw1.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "ndsw1.whit3.net"
+        }
+      },
+      "tag" : "proxy-3"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndfr1.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ndfr1.whit3.net"
+        }
+      },
+      "tag" : "proxy-4"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndfl1.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ndfl1.whit3.net"
+        }
+      },
+      "tag" : "proxy-5"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndnl1.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "ndnl1.whit3.net"
+        }
+      },
+      "tag" : "proxy-6"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndnl2.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "ndnl2.whit3.net"
+        }
+      },
+      "tag" : "proxy-7"
+    },
+    {
+      "protocol" : "hysteria",
+      "settings" : {
+        "address" : "ndus2.whit3.net",
+        "port" : 443,
+        "version" : 2
+      },
+      "streamSettings" : {
+        "finalmask" : {
+          "quicParams" : {
+            "congestion" : "bbr",
+            "debug" : false
+          }
+        },
+        "hysteriaSettings" : {
+          "auth" : "042dc14a-02aa-49b5-9cf5-ec57289c296d",
+          "version" : 2
+        },
+        "network" : "hysteria",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h3"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ndus2.whit3.net"
+        }
+      },
+      "tag" : "proxy-8"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
     }
-  },
-  {
-    "inbounds": [
+  ],
+  "remarks" : "🇪🇺 Авто | Обычные сервера",
+  "routing" : {
+    "balancers" : [
       {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
+        "fallbackTag" : "block",
+        "selector" : [
+          "proxy"
+        ],
+        "strategy" : {
+          "settings" : {
+            "baselines" : [
+              "80ms",
+              "150ms",
+              "300ms"
+            ],
+            "expected" : 9,
+            "maxRTT" : "1s",
+            "tolerance" : 0.080000000000000002
+          },
+          "type" : "leastLoad"
         },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
+        "tag" : "Super_Balancer"
       }
     ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
       {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "2.27.248.103",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "rIKqxc2RLMl8xLfiu3QxbOJbxJ5QTlVhB52mJ4N_PgM",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "3f1ea141cb14f640"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
+        "outboundTag" : "block",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
       },
       {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
+        "balancerTag" : "Super_Balancer",
+        "network" : "tcp,udp",
+        "type" : "field"
       }
-    ],
-    "remarks": "🇩🇪 Германия",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "2.26.7.179",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "JgTwF_xRILPV9awG-CTP0ipUDpzJp4_65MYStOrMfUs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "18a1485d66f770a8"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇸🇪 Швеция",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "meta": {
-      "serverDescription": "Telegram | Игры | YouTube"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "95.85.240.139",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "B2OBJQ6_f7kiCxbee7rY4zjFOHzL3iuTY_1SmjxkqQM",
-            "serverName": "max.ru",
-            "shortId": "344e46a2216874c3"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇷🇺 Россия",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.247.197.44",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-001f-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "d6dd892320a9be71"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇫🇷 Франция",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "hysteria",
-        "settings": {
-          "address": "ndfl1.whit3.net",
-          "port": 443,
-          "version": 2
-        },
-        "streamSettings": {
-          "finalmask": {
-            "quicParams": {
-              "congestion": "bbr",
-              "debug": false
-            }
-          },
-          "hysteriaSettings": {
-            "auth": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9",
-            "version": 2
-          },
-          "network": "hysteria",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h3"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "ndfl1.whit3.net"
-          }
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇫🇮 Финляндия",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.247.197.44",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-003d-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "k7XzGNzAgEfnEqR7McDFVzFcBJJnH11t55kZIYaK2xw",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "d6dd892320a9be71"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇺🇸 США",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "151.243.196.64",
-              "port": 8443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "d2ca00da-c718-003c-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "random",
-            "publicKey": "8G_805KyqBwEOf4rUyN_pPcql8I2t682kJtE9R4Z_Qs",
-            "serverName": "api-maps.yandex.ru",
-            "shortId": "c665ad67a21b57d2"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇳🇱  Нидерланды",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "meta": {
-      "serverDescription": "🔽🔽🔽🔽🔽🔽"
-    },
-    "outbounds": [
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "НИЖЕ ОБХОДЫ 🔽🔽🔽🔽🔽🔽",
-    "routing": {
-      "rules": [
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "block",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "meta": {
-      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdn-node.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "random",
-            "serverName": "cdn-node.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "seqKey": "page",
-              "seqPlacement": "query",
-              "sessionKey": "X-Auth-Token",
-              "sessionPlacement": "header",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxLifetimeMs": 0,
-                "cMaxReuseTimes": 0,
-                "maxConcurrency": 2,
-                "maxConnections": 0
-              },
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdn-node.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/uploadFile/"
-          }
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇳🇱 Обход | Нидерланды",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "meta": {
-      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "sw.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "random",
-            "serverName": "sw.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "seqKey": "page",
-              "seqPlacement": "query",
-              "sessionKey": "X-Auth-Token",
-              "sessionPlacement": "header",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxLifetimeMs": 0,
-                "cMaxReuseTimes": 0,
-                "maxConcurrency": 2,
-                "maxConnections": 0
-              },
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "sw.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/uploadFile/"
-          }
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇸🇪 Обход | Швеция",
-    "routing": {
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "socks",
-            "http"
-          ],
-          "outboundTag": "proxy",
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "meta": {
-      "serverDescription": "«☀️ При отключении LTE/4G ☀️»"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "yc-lt-1.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "d2ca00da-c718-4f2a-81ca-1b28c3f291b9"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2"
-            ],
-            "fingerprint": "random",
-            "serverName": "yc-lt-1.whit3.net"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "headers": {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-                "X-Code": "daadf769eqadf"
-              },
-              "noSSEHeader": true,
-              "scStreamUpServerSecs": "20-80",
-              "seqKey": "id",
-              "seqPlacement": "query",
-              "sessionIDLength": "20",
-              "sessionKey": "auth",
-              "sessionPlacement": "path",
-              "sessionTable": "alphabet",
-              "uplinkChunkSize": 280,
-              "uplinkDataKey": "X-Ver",
-              "uplinkHTTPMethod": "GET",
-              "xmux": {
-                "cMaxReuseTimes": 0,
-                "hKeepAlivePeriod": 0,
-                "hMaxRequestTimes": "600-900",
-                "hMaxReusableSecs": "1800-3000",
-                "maxConcurrency": "8-16"
-              },
-              "xPaddingBytes": "100-1000",
-              "xPaddingHeader": "api_v1",
-              "xPaddingKey": "xss",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "query"
-            },
-            "host": "yc-lt-1.whit3.net",
-            "mode": "packet-up",
-            "path": "/api/v1/"
-          }
-        },
-        "tag": "proxy"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇱🇹 Обход| Литва",
-    "routing": {
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        }
-      ]
-    }
-  },
-  {
-    "burstObservatory": {
-      "pingConfig": {
-        "destination": "https://www.gstatic.com/generate_204",
-        "httpMethod": "GET",
-        "interval": "3m",
-        "sampling": 3,
-        "timeout": "2s"
-      },
-      "subjectSelector": [
-        "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
-        "🇩🇪 Германия 11 | Мобильный Интернет",
-        "🇩🇪 Германия 12 | Мобильный Интернет",
-        "🇩🇪 Германия 13 | Мобильный Интернет",
-        "🇩🇪 Германия 14 | Мобильный Интернет",
-        "🇩🇪 Германия 15 | Мобильный Интернет",
-        "🇩🇪 Германия 16 | Мобильный Интернет",
-        "🇩🇪 Германия 17 | Мобильный Интернет",
-        "🇩🇪 Германия 18 | Мобильный Интернет",
-        "🇩🇪 Германия 19 | Мобильный Интернет",
-        "🇩🇪 Германия 20 | Мобильный Интернет",
-        "🇩🇪 Германия 21 | Мобильный Интернет",
-        "🇩🇪 Германия 22 | Мобильный Интернет",
-        "🇩🇪 Германия 23 | Мобильный Интернет",
-        " 🇩🇪 Германия 24 | Мобильный Интернет",
-        "🇩🇪 Германия 41 | Мобильный Интернет",
-        "🇩🇪 Германия 42 | Мобильный Интернет"
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "1.0.0.1"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "socks"
-      },
-      {
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "settings": {
-          "allowTransparent": false
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true,
-          "routeOnly": false
-        },
-        "tag": "http"
-      }
-    ],
-    "log": {
-      "access": "/private/var/mobile/Containers/Shared/AppGroup/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA/Library/Application Support/Xray/logs/access.log",
-      "dnsLog": true,
-      "loglevel": "Warning"
-    },
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "46.8.210.129",
-              "port": 5555,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-            "serverName": "max.ru",
-            "shortId": "6ba85179e30d4fc2"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "46.8.210.143",
-              "port": 5555,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-            "serverName": "max.ru"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks2.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks2.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks2.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks3.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks3.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks3.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks4.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks4.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks4.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks5.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks5.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks5.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks6.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "qq",
-            "serverName": "vks6.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks6.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks7.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks7.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks7.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks8.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "qq",
-            "serverName": "vks8.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks8.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks9.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks9.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks9.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks10.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks10.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks10.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 11 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks11.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "firefox",
-            "serverName": "vks11.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks11.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 12 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks12.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "firefox",
-            "serverName": "vks12.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks12.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 13 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks13.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "qq",
-            "serverName": "vks13.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks13.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 14 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks14.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks14.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks14.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 15 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks15.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "firefox",
-            "serverName": "vks15.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks15.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 16 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks16.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "firefox",
-            "serverName": "vks16.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks16.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 17 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks17.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks17.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks17.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 18 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "vks18.yandexdns.ru",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "vks18.yandexdns.ru"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "vks18.yandexdns.ru",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 19 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdnyas1.halyava.cc",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "firefox",
-            "serverName": "cdnyas1.halyava.cc"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdnyas1.halyava.cc",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 20 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdnyas2.halyava.cc",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "qq",
-            "serverName": "cdnyas2.halyava.cc"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdnyas2.halyava.cc",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 21 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdnyas3.halyava.cc",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "qq",
-            "serverName": "cdnyas3.halyava.cc"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdnyas3.halyava.cc",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 22 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdnyas4.halyava.cc",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "cdnyas4.halyava.cc"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdnyas4.halyava.cc",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": "🇩🇪 Германия 23 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cdnyas5.halyava.cc",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "serverName": "cdnyas5.halyava.cc"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "mode": "packet-up",
-              "path": "/api/v1/sync",
-              "scMaxConcurrentPosts": 1,
-              "scMaxEachPostBytes": 524288,
-              "scMinPostsIntervalMs": 150,
-              "uplinkHTTPMethod": "GET",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingKey": "_dc",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            },
-            "host": "cdnyas5.halyava.cc",
-            "mode": "packet-up",
-            "path": "/api/v1/sync"
-          }
-        },
-        "tag": " 🇩🇪 Германия 24 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "5.188.114.102",
-              "port": 5555,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-            "serverName": "max.ru"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "🇩🇪 Германия 41 | Мобильный Интернет"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "188.68.218.197",
-              "port": 5555,
-              "users": [
-                {
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision",
-                  "id": "eb44e2a9-f750-44cf-b0d1-cbc0b445ed28"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "realitySettings": {
-            "fingerprint": "qq",
-            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-            "serverName": "ads.x5.ru"
-          },
-          "security": "reality",
-          "tcpSettings": {}
-        },
-        "tag": "🇩🇪 Германия 42 | Мобильный Интернет"
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ],
-    "remarks": "Обход — автовыбор",
-    "routing": {
-      "balancers": [
-        {
-          "selector": [
-            "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 3 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 4 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 5 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 6 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 7 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 8 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 9 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 10 | Мобильный РЕЗЕРВ",
-            "🇩🇪 Германия 11 | Мобильный Интернет",
-            "🇩🇪 Германия 12 | Мобильный Интернет",
-            "🇩🇪 Германия 13 | Мобильный Интернет",
-            "🇩🇪 Германия 14 | Мобильный Интернет",
-            "🇩🇪 Германия 15 | Мобильный Интернет",
-            "🇩🇪 Германия 16 | Мобильный Интернет",
-            "🇩🇪 Германия 17 | Мобильный Интернет",
-            "🇩🇪 Германия 18 | Мобильный Интернет",
-            "🇩🇪 Германия 19 | Мобильный Интернет",
-            "🇩🇪 Германия 20 | Мобильный Интернет",
-            "🇩🇪 Германия 21 | Мобильный Интернет",
-            "🇩🇪 Германия 22 | Мобильный Интернет",
-            "🇩🇪 Германия 23 | Мобильный Интернет",
-            " 🇩🇪 Германия 24 | Мобильный Интернет",
-            "🇩🇪 Германия 41 | Мобильный Интернет",
-            "🇩🇪 Германия 42 | Мобильный Интернет"
-          ],
-          "strategy": {
-            "settings": {
-              "baselines": [
-                "1s"
-              ],
-              "expected": 1,
-              "tolerance": 0.80000000000000004
-            },
-            "type": "leastLoad"
-          },
-          "tag": "_-balancer"
-        }
-      ],
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "network": "udp",
-          "outboundTag": "block",
-          "port": "443",
-          "type": "field"
-        },
-        {
-          "outboundTag": "direct",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "domain": [
-            "localhost",
-            "localhost.localdomain",
-            "local",
-            "*.local",
-            "*.localdomain",
-            "*.lan",
-            "*.internal"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "127.0.0.0/8",
-            "10.0.0.0/8",
-            "172.16.0.0/12",
-            "192.168.0.0/16",
-            "169.254.0.0/16",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "balancerTag": "_-balancer",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ]
-    }
+    ]
   }
+},
+{
+  "burstObservatory" : {
+    "pingConfig" : {
+      "connectivity" : "",
+      "destination" : "https:\/\/www.gstatic.com\/generate_204",
+      "interval" : "1m",
+      "sampling" : 4,
+      "timeout" : "1.5s"
+    },
+    "subjectSelector" : [
+      "proxy"
+    ]
+  },
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1",
+      "8.8.8.8",
+      "8.8.4.4"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "sw.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "sw.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "seqKey" : "page",
+            "seqPlacement" : "query",
+            "sessionKey" : "X-Auth-Token",
+            "sessionPlacement" : "header",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxLifetimeMs" : 0,
+              "cMaxReuseTimes" : 0,
+              "maxConcurrency" : 2,
+              "maxConnections" : 0
+            },
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "sw.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/uploadFile\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "yc-lt-1.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "yc-lt-1.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "headers" : {
+              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
+              "X-Code" : "daadf769eqadf"
+            },
+            "noSSEHeader" : true,
+            "scStreamUpServerSecs" : "20-80",
+            "seqKey" : "id",
+            "seqPlacement" : "query",
+            "sessionIDLength" : "20",
+            "sessionKey" : "auth",
+            "sessionPlacement" : "path",
+            "sessionTable" : "alphabet",
+            "uplinkChunkSize" : 280,
+            "uplinkDataKey" : "X-Ver",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxReuseTimes" : 0,
+              "hKeepAlivePeriod" : 0,
+              "hMaxRequestTimes" : "600-900",
+              "hMaxReusableSecs" : "1800-3000",
+              "maxConcurrency" : "8-16"
+            },
+            "xPaddingBytes" : "100-1000",
+            "xPaddingHeader" : "api_v1",
+            "xPaddingKey" : "xss",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "query"
+          },
+          "host" : "yc-lt-1.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/"
+        }
+      },
+      "tag" : "proxy-2"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "cdn-node.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "cdn-node.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "seqKey" : "page",
+            "seqPlacement" : "query",
+            "sessionKey" : "X-Auth-Token",
+            "sessionPlacement" : "header",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxLifetimeMs" : 0,
+              "cMaxReuseTimes" : 0,
+              "maxConcurrency" : 2,
+              "maxConnections" : 0
+            },
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "cdn-node.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/uploadFile\/"
+        }
+      },
+      "tag" : "proxy-3"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "yc-fl-1.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "yc-fl-1.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "headers" : {
+              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
+              "X-Code" : "daadf769fqadf"
+            },
+            "noSSEHeader" : true,
+            "scStreamUpServerSecs" : "20-80",
+            "seqKey" : "id",
+            "seqPlacement" : "query",
+            "sessionIDLength" : "20",
+            "sessionKey" : "auth",
+            "sessionPlacement" : "path",
+            "sessionTable" : "alphabet",
+            "uplinkChunkSize" : 280,
+            "uplinkDataKey" : "X-Ver",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxReuseTimes" : 0,
+              "hKeepAlivePeriod" : 0,
+              "hMaxRequestTimes" : "600-900",
+              "hMaxReusableSecs" : "1800-3000",
+              "maxConcurrency" : "8-16"
+            },
+            "xPaddingBytes" : "100-1000",
+            "xPaddingHeader" : "api_v1",
+            "xPaddingKey" : "xss",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "query"
+          },
+          "host" : "yc-fl-1.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/"
+        }
+      },
+      "tag" : "proxy-4"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇪🇺 Авто | Обход глушилок",
+  "routing" : {
+    "balancers" : [
+      {
+        "fallbackTag" : "block",
+        "selector" : [
+          "proxy"
+        ],
+        "strategy" : {
+          "costs" : [
+            {
+              "match" : "🇳🇱 Обход глушилок | Нидерланды",
+              "regexp" : false,
+              "value" : 4
+            }
+          ],
+          "settings" : {
+            "baselines" : [
+              "80ms",
+              "150ms",
+              "300ms"
+            ],
+            "expected" : 5,
+            "maxRTT" : "1s",
+            "tolerance" : 0.080000000000000002
+          },
+          "type" : "leastLoad"
+        },
+        "tag" : "Super_Balancer"
+      }
+    ],
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "block",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "Super_Balancer",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "meta" : {
+    "serverDescription" : "========================="
+  },
+  "outbounds" : [
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "ОБХОДЫ 🔽🔽🔽🔽🔽🔽",
+  "routing" : {
+    "rules" : [
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "block",
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "meta" : {
+    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "yc-lt-1.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "yc-lt-1.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "headers" : {
+              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
+              "X-Code" : "daadf769eqadf"
+            },
+            "noSSEHeader" : true,
+            "scStreamUpServerSecs" : "20-80",
+            "seqKey" : "id",
+            "seqPlacement" : "query",
+            "sessionIDLength" : "20",
+            "sessionKey" : "auth",
+            "sessionPlacement" : "path",
+            "sessionTable" : "alphabet",
+            "uplinkChunkSize" : 280,
+            "uplinkDataKey" : "X-Ver",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxReuseTimes" : 0,
+              "hKeepAlivePeriod" : 0,
+              "hMaxRequestTimes" : "600-900",
+              "hMaxReusableSecs" : "1800-3000",
+              "maxConcurrency" : "8-16"
+            },
+            "xPaddingBytes" : "100-1000",
+            "xPaddingHeader" : "api_v1",
+            "xPaddingKey" : "xss",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "query"
+          },
+          "host" : "yc-lt-1.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇱🇹 Обход глушилок | Литва",
+  "routing" : {
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "meta" : {
+    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "yc-fl-1.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "yc-fl-1.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "headers" : {
+              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
+              "X-Code" : "daadf769fqadf"
+            },
+            "noSSEHeader" : true,
+            "scStreamUpServerSecs" : "20-80",
+            "seqKey" : "id",
+            "seqPlacement" : "query",
+            "sessionIDLength" : "20",
+            "sessionKey" : "auth",
+            "sessionPlacement" : "path",
+            "sessionTable" : "alphabet",
+            "uplinkChunkSize" : 280,
+            "uplinkDataKey" : "X-Ver",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxReuseTimes" : 0,
+              "hKeepAlivePeriod" : 0,
+              "hMaxRequestTimes" : "600-900",
+              "hMaxReusableSecs" : "1800-3000",
+              "maxConcurrency" : "8-16"
+            },
+            "xPaddingBytes" : "100-1000",
+            "xPaddingHeader" : "api_v1",
+            "xPaddingKey" : "xss",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "query"
+          },
+          "host" : "yc-fl-1.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇫🇮 Обходы глушилок | Финляндия",
+  "routing" : {
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "meta" : {
+    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "sw.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "sw.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "seqKey" : "page",
+            "seqPlacement" : "query",
+            "sessionKey" : "X-Auth-Token",
+            "sessionPlacement" : "header",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxLifetimeMs" : 0,
+              "cMaxReuseTimes" : 0,
+              "maxConcurrency" : 2,
+              "maxConnections" : 0
+            },
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "sw.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/uploadFile\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇸🇪 Обход глушилок | Швеция",
+  "routing" : {
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "proxy",
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "meta" : {
+    "serverDescription" : "«☀️ При отключении LTE\/4G ☀️»"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "cdn-node.whit3.net",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "cdn-node.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "seqKey" : "page",
+            "seqPlacement" : "query",
+            "sessionKey" : "X-Auth-Token",
+            "sessionPlacement" : "header",
+            "uplinkHTTPMethod" : "GET",
+            "xmux" : {
+              "cMaxLifetimeMs" : 0,
+              "cMaxReuseTimes" : 0,
+              "maxConcurrency" : 2,
+              "maxConnections" : 0
+            },
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "cdn-node.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/api\/uploadFile\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇳🇱 Обход глушилок | Нидерланды",
+  "routing" : {
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "proxy",
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "81.222.127.190",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "fingerprint" : "random",
+          "serverName" : "ndru.whit3.net"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "noGRPCHeader" : true,
+            "noSSEHeader" : true,
+            "sessionIDKey" : "auth",
+            "uplinkDataKey" : "payload",
+            "uplinkDataPlacement" : "body",
+            "uplinkHTTPMethod" : "HEAD",
+            "xmux" : {
+              "cMaxReuseTimes" : 0,
+              "hKeepAlivePeriod" : 30,
+              "hMaxRequestTimes" : "800-1200",
+              "hMaxReusableSecs" : "600-1000",
+              "maxConcurrency" : "2-4"
+            },
+            "xPaddingBytes" : "20-50",
+            "XPaddingKey" : "x_padding",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "cookie"
+          },
+          "host" : "ndru.whit3.net",
+          "mode" : "packet-up",
+          "path" : "\/hls\/stream.ts?type=hls"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇳🇱  Обход | Нидерланды [ ТЕСТ ]",
+  "routing" : {
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      }
+    ]
+  }
+},
+{
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/4FF01DB0-5EE0-4D47-97A7-9888C15D64CA\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "31.56.187.47",
+            "port" : 8443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "042dc14a-02aa-49b5-9cf5-ec57289c296d"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "random",
+          "publicKey" : "scNn8MoJJIeabN5MkjwxmOXE3DdOyl2HJqzct3RsLyY",
+          "serverName" : "ndee.whit3.net",
+          "shortId" : "1e85a6f4a565e7e7"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇪🇪 Эстония",
+  "routing" : {
+    "rules" : [
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "proxy",
+        "type" : "field"
+      }
+    ]
+  }
+}
+
 ]
