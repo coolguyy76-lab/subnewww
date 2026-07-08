@@ -1,4 +1,772 @@
-[
+[ {
+  "burstObservatory" : {
+    "pingConfig" : {
+      "destination" : "https:\/\/www.gstatic.com\/generate_204",
+      "httpMethod" : "GET",
+      "interval" : "3m",
+      "sampling" : 3,
+      "timeout" : "2s"
+    },
+    "subjectSelector" : [
+      "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+      "🇩🇪 Германия 3 | Мобильный Интернет",
+      " 🇩🇪 Германия 4 | Мобильный Интернет",
+      "🇩🇪 Германия 5 | Мобильный Интернет",
+      " 🇩🇪 Германия 6 | Мобильный Интернет",
+      "🇩🇪 Германия 7 | Мобильный Интернет",
+      " 🇩🇪 Германия 8 | Мобильный Интернет",
+      "🇩🇪 Германия 9 | Мобильный Интернет",
+      "🇩🇪 Германия 10 | Мобильный Интернет",
+      "🇩🇪 Германия 11 | Мобильный Интернет",
+      "🇩🇪 Германия 12 | Мобильный Интернет",
+      "🇩🇪 Германия 13 | Мобильный Интернет"
+    ]
+  },
+  "dns" : {
+    "queryStrategy" : "UseIP",
+    "servers" : [
+      "1.1.1.1",
+      "1.0.0.1"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "46.8.210.129",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "max.ru"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "46.8.210.143",
+            "port" : 5555,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "serverName" : "max.ru"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn1.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn1.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn1.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 3 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn22.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn22.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn22.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : " 🇩🇪 Германия 4 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn10.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn10.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn10.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 5 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn37.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn37.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn37.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : " 🇩🇪 Германия 6 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn18.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn18.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn18.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 7 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn19.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "ycdn19.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn19.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : " 🇩🇪 Германия 8 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn20.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "ycdn20.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn20.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 9 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdns38.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "safari",
+          "serverName" : "ycdns38.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdns38.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 10 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn39.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn39.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn39.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 11 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn40.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "firefox",
+          "serverName" : "ycdn40.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn40.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 12 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ycdn42.glushcdn.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "31a7e7fb-bf4f-4094-9513-6352af730aec"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "ycdn42.glushcdn.com"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "mode" : "packet-up",
+            "path" : "\/api\/v1\/sync",
+            "scMaxConcurrentPosts" : 1,
+            "scMaxEachPostBytes" : 524288,
+            "scMinPostsIntervalMs" : 150,
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "ycdn42.glushcdn.com",
+          "mode" : "packet-up",
+          "path" : "\/api\/v1\/sync"
+        }
+      },
+      "tag" : "🇩🇪 Германия 13 | Мобильный Интернет"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "⚡ Обход — автовыбор",
+  "routing" : {
+    "balancers" : [
+      {
+        "selector" : [
+          "🇩🇪 Германия 1 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 2 | Мобильный РЕЗЕРВ",
+          "🇩🇪 Германия 3 | Мобильный Интернет",
+          " 🇩🇪 Германия 4 | Мобильный Интернет",
+          "🇩🇪 Германия 5 | Мобильный Интернет",
+          " 🇩🇪 Германия 6 | Мобильный Интернет",
+          "🇩🇪 Германия 7 | Мобильный Интернет",
+          " 🇩🇪 Германия 8 | Мобильный Интернет",
+          "🇩🇪 Германия 9 | Мобильный Интернет",
+          "🇩🇪 Германия 10 | Мобильный Интернет",
+          "🇩🇪 Германия 11 | Мобильный Интернет",
+          "🇩🇪 Германия 12 | Мобильный Интернет",
+          "🇩🇪 Германия 13 | Мобильный Интернет"
+        ],
+        "strategy" : {
+          "settings" : {
+            "baselines" : [
+              "1s"
+            ],
+            "expected" : 1,
+            "tolerance" : 0.80000000000000004
+          },
+          "type" : "leastLoad"
+        },
+        "tag" : "_-balancer"
+      }
+    ],
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "network" : "udp",
+        "outboundTag" : "block",
+        "port" : "443",
+        "type" : "field"
+      },
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "localhost",
+          "localhost.localdomain",
+          "local",
+          "*.local",
+          "*.localdomain",
+          "*.lan",
+          "*.internal"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "127.0.0.0\/8",
+          "10.0.0.0\/8",
+          "172.16.0.0\/12",
+          "192.168.0.0\/16",
+          "169.254.0.0\/16",
+          "::1\/128",
+          "fc00::\/7",
+          "fe80::\/10"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "_-balancer",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+},
   {
     "burstObservatory": {
       "pingConfig": {
