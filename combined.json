@@ -47,7 +47,7 @@
     "inbounds": [
       {
         "protocol": "socks",
-        "port": 1080,
+        "port": 1081,
         "sniffing": {
           "destOverride": [
             "http",
@@ -141,7 +141,7 @@
       {
         "tag": "socks",
         "protocol": "socks",
-        "port": 1080,
+        "port": 1081,
         "sniffing": {
           "routeOnly": false,
           "destOverride": [
@@ -217,7 +217,7 @@
     },
     "inbounds": [
       {
-        "port": 1080,
+        "port": 1081,
         "listen": "[::1]",
         "settings": {
           "auth": "noauth",
@@ -257,7 +257,7 @@
       {
         "listen": "[::1]",
         "tag": "socks",
-        "port": 1080,
+        "port": 1081,
         "sniffing": {
           "enabled": true,
           "routeOnly": false,
@@ -380,7 +380,7 @@
           "udp": true,
           "auth": "noauth"
         },
-        "port": 1080,
+        "port": 1081,
         "sniffing": {
           "routeOnly": false,
           "enabled": true,
@@ -414,7 +414,7 @@
           ]
         },
         "listen": "[::1]",
-        "port": 1080,
+        "port": 1081,
         "settings": {
           "auth": "noauth",
           "udp": true
@@ -553,7 +553,7 @@
           "routeOnly": false
         },
         "protocol": "socks",
-        "port": 1080,
+        "port": 1081,
         "listen": "[::1]"
       }
     ]
@@ -812,7 +812,7 @@
           "udp": true
         },
         "tag": "socks",
-        "port": 1080,
+        "port": 1081,
         "listen": "[::1]"
       }
     ],
