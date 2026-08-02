@@ -1,4 +1,69 @@
-[
+[ 
+   {
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "udp" : true
+      },
+      "tag" : "local-socks"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "edge-vpn.subghg.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "3434dcdc-4639-440e-b2e9-9f3000c9a5c6"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "allowInsecure" : false,
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "edge-vpn.subghg.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "edge-vpn.subghg.ru",
+          "mode" : "packet-up",
+          "path" : "\/xhttp-779a144df0d744061bbe69528c0bf6fc2383dd17ecbc43cf"
+        }
+      },
+      "tag" : "vpn"
+    }
+  ],
+  "remarks" : "Rezerv"
+},
   {
     "inbounds": [
       {
