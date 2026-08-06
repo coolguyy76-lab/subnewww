@@ -589,7 +589,7 @@
       "tag" : "block"
     }
   ],
-  "remarks" : "🇩🇪⚪Германия (БС-0) ☁️",
+  "remarks" : "🇩🇪 Обход 1",
   "routing" : {
     "balancers" : [
       {
@@ -928,7 +928,7 @@
       "tag" : "block"
     }
   ],
-  "remarks" : "🇩🇪⚪Германия (БС-1) ☁️",
+  "remarks" : "🇩🇪 Обход 2",
   "routing" : {
     "balancers" : [
       {
