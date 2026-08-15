@@ -1,4 +1,5 @@
-{
+[
+  {
   "burstObservatory" : {
     "pingConfig" : {
       "connectivity" : "",
@@ -323,3 +324,4 @@
     ]
   }
 }
+]
