@@ -1,5 +1,187 @@
 [
   {
+  "dns" : {
+    "servers" : [
+      "https:\/\/common.dot.dns.yandex.net\/dns-query",
+      "8.8.8.8",
+      "localhost"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "udp" : true
+      },
+      "tag" : "local-socks"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "edge-vpn.subghg.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "id" : "3434dcdc-4639-440e-b2e9-9f3000c9a5c6"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "tlsSettings" : {
+          "allowInsecure" : false,
+          "alpn" : [
+            "h2",
+            "http\/1.1"
+          ],
+          "fingerprint" : "chrome",
+          "serverName" : "edge-vpn.subghg.ru"
+        },
+        "xhttpSettings" : {
+          "extra" : {
+            "uplinkHTTPMethod" : "GET",
+            "xPaddingHeader" : "X-Cache",
+            "xPaddingKey" : "_dc",
+            "xPaddingMethod" : "tokenish",
+            "xPaddingObfsMode" : true,
+            "xPaddingPlacement" : "queryInHeader"
+          },
+          "host" : "edge-vpn.subghg.ru",
+          "mode" : "packet-up",
+          "path" : "\/xhttp-779a144df0d744061bbe69528c0bf6fc2383dd17ecbc43cf"
+        }
+      },
+      "tag" : "vpn"
+    },
+    {
+      "protocol" : "freedom",
+      "settings" : {
+
+      },
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "settings" : {
+
+      },
+      "tag" : "block"
+    }
+  ],
+  "routing" : {
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "domain" : [
+          "geosite:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "domain:ozon.ru",
+          "domain:ozon.com",
+          "domain:ozonru.online",
+          "domain:wildberries.ru",
+          "domain:wb.ru",
+          "domain:wbx-cache-on.wbbasket.ru",
+          "domain:wbbasket.ru",
+          "domain:yandex.ru",
+          "domain:yandex.net",
+          "domain:yandex.com",
+          "domain:ya.ru",
+          "domain:yandexcloud.net",
+          "domain:mail.ru",
+          "domain:vk.com",
+          "domain:vk.ru",
+          "domain:vkontakte.ru",
+          "domain:vkuseraudio.net",
+          "domain:vkuservideo.net",
+          "domain:sberbank.ru",
+          "domain:sber.ru",
+          "domain:sberbank-online.ru",
+          "domain:sbrf.ru",
+          "domain:vtb.ru",
+          "domain:alfabank.ru",
+          "domain:alfa-bank.ru",
+          "domain:tinkoff.ru",
+          "domain:tbank.ru",
+          "domain:raiffeisen.ru",
+          "domain:gazprombank.ru",
+          "domain:rshb.ru",
+          "domain:gosuslugi.ru",
+          "domain:pgu.mos.ru",
+          "domain:mos.ru",
+          "domain:nalog.ru",
+          "domain:nalog.gov.ru",
+          "domain:avito.ru",
+          "domain:avito.st",
+          "domain:2gis.ru",
+          "domain:2gis.com",
+          "domain:cian.ru",
+          "domain:dns-shop.ru",
+          "domain:mvideo.ru",
+          "domain:citilink.ru",
+          "domain:eldorado.ru",
+          "domain:lamoda.ru",
+          "domain:rutube.ru",
+          "domain:kinopoisk.ru",
+          "domain:ivi.ru",
+          "domain:okko.tv",
+          "domain:megafon.ru",
+          "domain:mts.ru",
+          "domain:beeline.ru",
+          "domain:tele2.ru",
+          "domain:rzd.ru",
+          "domain:aeroflot.ru",
+          "domain:s7.ru",
+          "domain:pochta.ru",
+          "domain:cdek.ru",
+          "domain:boxberry.ru",
+          "domain:hh.ru",
+          "domain:delivery-club.ru",
+          "domain:samokat.ru",
+          "domain:sbermarket.ru",
+          "domain:mvd.ru",
+          "domain:egrul.nalog.ru"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:ru",
+          "geoip:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "network" : "tcp,udp",
+        "outboundTag" : "vpn",
+        "type" : "field"
+      }
+    ]
+  }
+},
+  
+  {
     "inbounds": [
       {
         "listen": "127.0.0.1",
