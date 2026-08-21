@@ -1,24 +1,9 @@
-[
-  {
-  "burstObservatory" : {
-    "pingConfig" : {
-      "connectivity" : "",
-      "destination" : "https:\/\/www.gstatic.com\/generate_204",
-      "interval" : "1m",
-      "sampling" : 3,
-      "timeout" : "2s"
-    },
-    "subjectSelector" : [
-      "proxy"
-    ]
-  },
+{
   "dns" : {
-    "queryStrategy" : "UseIP",
     "servers" : [
-      "1.1.1.1",
-      "1.0.0.1",
+      "https:\/\/common.dot.dns.yandex.net\/dns-query",
       "8.8.8.8",
-      "8.8.4.4"
+      "localhost"
     ]
   },
   "inbounds" : [
@@ -27,37 +12,9 @@
       "port" : 10808,
       "protocol" : "socks",
       "settings" : {
-        "auth" : "noauth",
         "udp" : true
       },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "socks"
-    },
-    {
-      "listen" : "127.0.0.1",
-      "port" : 10809,
-      "protocol" : "http",
-      "settings" : {
-        "allowTransparent" : false
-      },
-      "sniffing" : {
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "enabled" : true,
-        "routeOnly" : false
-      },
-      "tag" : "http"
+      "tag" : "local-socks"
     }
   ],
   "log" : {
@@ -71,13 +28,12 @@
       "settings" : {
         "vnext" : [
           {
-            "address" : "simplecdn-route-fl.whit3.net",
+            "address" : "edge-vpn.subghg.ru",
             "port" : 443,
             "users" : [
               {
                 "encryption" : "none",
-                "flow" : "",
-                "id" : "ea599ad0-0e30-481e-8267-b7a1d5d7dcbe"
+                "id" : "3434dcdc-4639-440e-b2e9-9f3000c9a5c6"
               }
             ]
           }
@@ -87,241 +43,136 @@
         "network" : "xhttp",
         "security" : "tls",
         "tlsSettings" : {
+          "allowInsecure" : false,
           "alpn" : [
             "h2",
             "http\/1.1"
           ],
-          "fingerprint" : "edge",
-          "serverName" : "simplecdn-route-fl.whit3.net"
+          "fingerprint" : "chrome",
+          "serverName" : "edge-vpn.subghg.ru"
         },
         "xhttpSettings" : {
           "extra" : {
-            "path" : "\/api\/v7\/sync\/vids\/",
             "uplinkHTTPMethod" : "GET",
-            "xPadding0bfsMode" : true,
             "xPaddingHeader" : "X-Cache",
             "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "simplecdn-route-fl.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v7\/sync\/vids\/"
-        }
-      },
-      "tag" : "proxy"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "simplecdn-route-sw1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "ea599ad0-0e30-481e-8267-b7a1d5d7dcbe"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "edge",
-          "serverName" : "simplecdn-route-sw1.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "path" : "\/api\/v2\/sync\/png\/",
-            "uplinkHTTPMethod" : "GET",
-            "xPadding0bfsMode" : true,
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
-            "xPaddingPlacement" : "queryInHeader"
-          },
-          "host" : "simplecdn-route-sw1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v2\/sync\/png\/"
-        }
-      },
-      "tag" : "proxy-2"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "yc-nl-1.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "ea599ad0-0e30-481e-8267-b7a1d5d7dcbe"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2"
-          ],
-          "fingerprint" : "random",
-          "serverName" : "yc-nl-1.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "headers" : {
-              "User-Agent" : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/148.0.0.0 Safari\/537.36",
-              "X-Code" : "daadf769eqadf"
-            },
-            "noSSEHeader" : true,
-            "scStreamUpServerSecs" : "20-80",
-            "seqKey" : "id",
-            "seqPlacement" : "query",
-            "sessionIDLength" : "20",
-            "sessionKey" : "auth",
-            "sessionPlacement" : "path",
-            "sessionTable" : "alphabet",
-            "uplinkChunkSize" : 280,
-            "uplinkDataKey" : "X-Ver",
-            "uplinkHTTPMethod" : "GET",
-            "xmux" : {
-              "cMaxReuseTimes" : 0,
-              "hKeepAlivePeriod" : 15,
-              "hMaxRequestTimes" : "200-400",
-              "hMaxReusableSecs" : "300-600",
-              "maxConcurrency" : "4-8"
-            },
-            "xPaddingBytes" : "100-1000",
-            "xPaddingHeader" : "api_v1",
-            "xPaddingKey" : "xss",
             "xPaddingMethod" : "tokenish",
             "xPaddingObfsMode" : true,
-            "xPaddingPlacement" : "query"
-          },
-          "host" : "yc-nl-1.whit3.net",
-          "mode" : "packet-up",
-          "path" : "\/api\/v1\/"
-        }
-      },
-      "tag" : "proxy-3"
-    },
-    {
-      "protocol" : "vless",
-      "settings" : {
-        "vnext" : [
-          {
-            "address" : "simplecdn-route-ge.whit3.net",
-            "port" : 443,
-            "users" : [
-              {
-                "encryption" : "none",
-                "flow" : "",
-                "id" : "ea599ad0-0e30-481e-8267-b7a1d5d7dcbe"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings" : {
-        "network" : "xhttp",
-        "security" : "tls",
-        "tlsSettings" : {
-          "alpn" : [
-            "h2",
-            "http\/1.1"
-          ],
-          "fingerprint" : "edge",
-          "serverName" : "simplecdn-route-ge.whit3.net"
-        },
-        "xhttpSettings" : {
-          "extra" : {
-            "path" : "\/api\/v5\/sync\/vids\/",
-            "uplinkHTTPMethod" : "GET",
-            "xPadding0bfsMode" : true,
-            "xPaddingHeader" : "X-Cache",
-            "xPaddingKey" : "_dc",
-            "xPaddingMethod" : "tokenish",
             "xPaddingPlacement" : "queryInHeader"
           },
-          "host" : "simplecdn-route-ge.whit3.net",
+          "host" : "edge-vpn.subghg.ru",
           "mode" : "packet-up",
-          "path" : "\/api\/v5\/sync\/vids\/"
+          "path" : "\/xhttp-779a144df0d744061bbe69528c0bf6fc2383dd17ecbc43cf"
         }
       },
-      "tag" : "proxy-4"
+      "tag" : "vpn"
     },
     {
       "protocol" : "freedom",
+      "settings" : {
+
+      },
       "tag" : "direct"
     },
     {
       "protocol" : "blackhole",
+      "settings" : {
+
+      },
       "tag" : "block"
     }
   ],
-  "remarks" : "🇪🇺 Авто | Обход",
   "routing" : {
-    "balancers" : [
-      {
-        "fallbackTag" : "block",
-        "selector" : [
-          "proxy"
-        ],
-        "strategy" : {
-          "costs" : [
-            {
-              "match" : "YC-cdn-lt-1",
-              "regexp" : false,
-              "value" : 50
-            }
-          ],
-          "settings" : {
-            "baselines" : [
-              "80ms",
-              "150ms",
-              "300ms"
-            ],
-            "expected" : 8,
-            "maxRTT" : "1s",
-            "tolerance" : 0.080000000000000002
-          },
-          "type" : "leastLoad"
-        },
-        "tag" : "Super_Balancer"
-      }
-    ],
-    "domainMatcher" : "hybrid",
     "domainStrategy" : "IPIfNonMatch",
     "rules" : [
       {
-        "outboundTag" : "block",
-        "protocol" : [
-          "bittorrent"
+        "domain" : [
+          "geosite:private"
         ],
+        "outboundTag" : "direct",
         "type" : "field"
       },
       {
-        "balancerTag" : "Super_Balancer",
+        "domain" : [
+          "domain:ozon.ru",
+          "domain:ozon.com",
+          "domain:ozonru.online",
+          "domain:wildberries.ru",
+          "domain:wb.ru",
+          "domain:wbx-cache-on.wbbasket.ru",
+          "domain:wbbasket.ru",
+          "domain:yandex.ru",
+          "domain:yandex.net",
+          "domain:yandex.com",
+          "domain:ya.ru",
+          "domain:yandexcloud.net",
+          "domain:mail.ru",
+          "domain:vk.com",
+          "domain:vk.ru",
+          "domain:vkontakte.ru",
+          "domain:vkuseraudio.net",
+          "domain:vkuservideo.net",
+          "domain:sbrf.ru",
+          "domain:vtb.ru",
+          "domain:alfabank.ru",
+          "domain:alfa-bank.ru",
+          "domain:tinkoff.ru",
+          "domain:tbank.ru",
+          "domain:raiffeisen.ru",
+          "domain:gazprombank.ru",
+          "domain:rshb.ru",
+          "domain:gosuslugi.ru",
+          "domain:pgu.mos.ru",
+          "domain:mos.ru",
+          "domain:nalog.ru",
+          "domain:nalog.gov.ru",
+          "domain:avito.ru",
+          "domain:avito.st",
+          "domain:2gis.ru",
+          "domain:2gis.com",
+          "domain:cian.ru",
+          "domain:dns-shop.ru",
+          "domain:mvideo.ru",
+          "domain:citilink.ru",
+          "domain:eldorado.ru",
+          "domain:lamoda.ru",
+          "domain:rutube.ru",
+          "domain:kinopoisk.ru",
+          "domain:ivi.ru",
+          "domain:okko.tv",
+          "domain:megafon.ru",
+          "domain:mts.ru",
+          "domain:beeline.ru",
+          "domain:tele2.ru",
+          "domain:rzd.ru",
+          "domain:aeroflot.ru",
+          "domain:s7.ru",
+          "domain:pochta.ru",
+          "domain:cdek.ru",
+          "domain:boxberry.ru",
+          "domain:hh.ru",
+          "domain:delivery-club.ru",
+          "domain:samokat.ru",
+          "domain:sbermarket.ru",
+          "domain:mvd.ru",
+          "domain:egrul.nalog.ru"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:ru",
+          "geoip:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
         "network" : "tcp,udp",
+        "outboundTag" : "vpn",
         "type" : "field"
       }
     ]
   }
 }
-]
