@@ -1,7 +1,7 @@
 {
   "dns" : {
     "servers" : [
-      "https:\/\/common.dot.dns.yandex.net\/dns-query",
+      "https://common.dot.dns.yandex.net/dns-query",
       "8.8.8.8",
       "localhost"
     ]
@@ -18,7 +18,7 @@
     }
   ],
   "log" : {
-    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
+    "access" : "/private/var/mobile/Containers/Shared/AppGroup/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E/Library/Application Support/Xray/logs/access.log",
     "dnsLog" : true,
     "loglevel" : "Warning"
   },
@@ -46,7 +46,7 @@
           "allowInsecure" : false,
           "alpn" : [
             "h2",
-            "http\/1.1"
+            "http/1.1"
           ],
           "fingerprint" : "chrome",
           "serverName" : "edge-vpn.subghg.ru"
@@ -62,29 +62,32 @@
           },
           "host" : "edge-vpn.subghg.ru",
           "mode" : "packet-up",
-          "path" : "\/xhttp-779a144df0d744061bbe69528c0bf6fc2383dd17ecbc43cf"
+          "path" : "/xhttp-779a144df0d744061bbe69528c0bf6fc2383dd17ecbc43cf"
         }
       },
       "tag" : "vpn"
     },
     {
       "protocol" : "freedom",
-      "settings" : {
-
-      },
+      "settings" : {},
       "tag" : "direct"
     },
     {
       "protocol" : "blackhole",
-      "settings" : {
-
-      },
+      "settings" : {},
       "tag" : "block"
     }
   ],
   "routing" : {
     "domainStrategy" : "IPIfNonMatch",
     "rules" : [
+      {
+        "domain" : [
+          "geosite:tiktok"
+        ],
+        "outboundTag" : "vpn",
+        "type" : "field"
+      },
       {
         "domain" : [
           "geosite:private"
