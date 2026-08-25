@@ -1,4 +1,572 @@
-[
+[ 
+  {
+  "dns" : {
+    "queryStrategy" : "UseIPv4",
+    "servers" : [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "tag" : "dns-in"
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/F8405F64-DDB8-4AE4-AB1A-6DE03B246C8E\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "observatory" : {
+    "enableConcurrency" : true,
+    "probeInterval" : "2m",
+    "probeUrl" : "http:\/\/www.gstatic.com\/generate_204",
+    "subjectSelector" : [
+      "proxy"
+    ]
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "node-be.minesixcraft.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "OeVbdmOTftDu-poYjqW4JhMrcvfIFNrvdFaIloP0fW0",
+          "serverName" : "node-be.minesixcraft.com",
+          "shortId" : "926e368e41469426",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ital.sixsubstore.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "uUUJjba7gp8DCOe2ZlhcLMqBuWi24YtPb_ybt61D2lc",
+          "serverName" : "ital.sixsubstore.ru",
+          "shortId" : "7e7c80dac03b3229",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-2"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "almc.minesixcraft.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "tX8IJ9hdirpsfoErQhkdkrp1S2-nRGOdPzBohHpSnQk",
+          "serverName" : "almc.minesixcraft.com",
+          "shortId" : "998c0c471726b172",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-3"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "swa.sixsubstore.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "chrome",
+          "publicKey" : "L1EGdKVvFj53u1TZ58iTAVIbKIYmj36SNoWUShbjkiA",
+          "serverName" : "swa.sixsubstore.ru",
+          "shortId" : "e5c1546d115ef02f",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-4"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "usmax.sixsubstore.ru",
+            "port" : 40443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "qq",
+          "publicKey" : "V0e8Rp_FrsxsNxbUzKJzdNzhgHugs_grb06L7Q5ax3k",
+          "serverName" : "deepl.com",
+          "shortId" : "dea8dcf86aaf8d89",
+          "spiderX" : "\/"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-5"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "ded.sixsubstore.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "oXFvmNMkhudkuWiYZ8GFOx2aqMhnfI4szZkYnoxbpmY",
+          "serverName" : "ded.sixsubstore.ru",
+          "shortId" : "1df92c98dce4edd8",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-6"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "maxriga.sixsubstore.ru",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "publicKey" : "l5W--I3QPQFTIvBQU14WR8QtIaS8HIDZarzq6W0lO20",
+          "serverName" : "maxriga.sixsubstore.ru",
+          "shortId" : "02f1960985e88c0f",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-7"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "mcnl.minesixcraft.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "safari",
+          "publicKey" : "cqEEVykyh-rpVW9gSWboF53ABeV2rxbzgnyt9Gt5KiQ",
+          "serverName" : "mcnl.minesixcraft.com",
+          "shortId" : "dca21a7ecefde03d",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-8"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "mcpl.minesixcraft.com",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "xtls-rprx-vision",
+                "id" : "7a5430ac-66fb-4e07-8c14-923dbaf116b2"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "tcp",
+        "realitySettings" : {
+          "fingerprint" : "firefox",
+          "publicKey" : "n0nWsCd6oXCnTWVIt1pb2e90GP8BVbSEQkAOVz9hBFw",
+          "serverName" : "mcpl.minesixcraft.com",
+          "shortId" : "58e6ce0fb66c28ea",
+          "spiderX" : "\/cdn"
+        },
+        "security" : "reality",
+        "tcpSettings" : {
+
+        }
+      },
+      "tag" : "proxy-9"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "remarks" : "🇪🇺 EU-Авто",
+  "routing" : {
+    "balancers" : [
+      {
+        "fallbackTag" : "direct",
+        "selector" : [
+          "proxy"
+        ],
+        "strategy" : {
+          "settings" : {
+            "expected" : 1,
+            "maxRTT" : "2s"
+          },
+          "type" : "leastLoad"
+        },
+        "tag" : "main_balancer"
+      }
+    ],
+    "domainMatcher" : "hybrid",
+    "domainStrategy" : "IPIfNonMatch",
+    "rules" : [
+      {
+        "outboundTag" : "block",
+        "port" : "7680",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "main_balancer",
+        "network" : "tcp",
+        "port" : "853",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "main_balancer",
+        "network" : "udp",
+        "port" : "53",
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "domain:do.dsp.mp.microsoft.com",
+          "domain:delivery.mp.microsoft.com",
+          "domain:wns.windows.com"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "geosite:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "outboundTag" : "direct",
+        "protocol" : [
+          "bittorrent"
+        ],
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "main_balancer",
+        "domain" : [
+          "domain:2ip.ru",
+          "domain:2ip.io"
+        ],
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "regexp:.*\\.ru$",
+          "regexp:.*\\.su$",
+          "regexp:.*\\.by$",
+          "regexp:.*\\.xn--p1ai$",
+          "regexp:^(.+\\.)?yandex\\.(aero|az|cloud|co\\.il|com(\\.am|\\.ge|\\.tr|\\.ua)?|de|ee|eu|fi|fr|jobs|kg|kz|lt|lv|md|net|org|pl|st|sx|tj|tm|tr|ua|uz)$",
+          "regexp:^alfa(-?[a-z]+)?\\.(com|biz|st)$",
+          "regexp:^vtb(-?[a-z0-9]+)?\\.(com|in|digital|site|bank\\.in|promo)$",
+          "domain:1cfresh.com",
+          "domain:1internet.tv",
+          "domain:2gis.ae",
+          "domain:2gis.am",
+          "domain:2gis.az",
+          "domain:2gis.com",
+          "domain:2gis.com.cy",
+          "domain:2gis.cz",
+          "domain:2gis.ge",
+          "domain:2gis.kg",
+          "domain:2gis.kz",
+          "domain:2gis.tj",
+          "domain:2gis.ua",
+          "domain:2gis.uz",
+          "domain:4meeting.me",
+          "domain:5post.market",
+          "domain:adhigh.net",
+          "domain:alformacap.com",
+          "domain:alformacapital.com",
+          "domain:avito.st",
+          "domain:banka-ui.dev",
+          "domain:beta-bank.com",
+          "domain:boosty.to",
+          "domain:bronevik.com",
+          "domain:chizhik.club",
+          "domain:clstorage.net",
+          "domain:d5de4k0ri8jba7ucdbt6.apigw.yandexcloud.net",
+          "domain:dbo-dengi.online",
+          "domain:donationalerts.com",
+          "domain:edadeal.io",
+          "domain:fb-cdn.premier.one",
+          "domain:fix-price.com",
+          "domain:flocktory.com",
+          "domain:gazprombank.tech",
+          "domain:investalfabank.com",
+          "domain:jivochat.com",
+          "domain:jivosite.com",
+          "domain:jsons.injector.3ebra.net",
+          "domain:kaspersky.com",
+          "domain:lenta.com",
+          "domain:lmru.tech",
+          "domain:magnit-ru.injector.3ebra.net",
+          "domain:magnit.com",
+          "domain:megamarket.tech",
+          "domain:memealerts.com",
+          "domain:miya-news.online",
+          "domain:moex.com",
+          "domain:mycdn.me",
+          "domain:netmonet.co",
+          "domain:okko.sport",
+          "domain:okko.tv",
+          "domain:okolo.app",
+          "domain:oversecure.org",
+          "domain:ozon.com",
+          "domain:ozon.com.kz",
+          "domain:ozon.kz",
+          "domain:ozon.tm",
+          "domain:ozonru.me",
+          "domain:ozonusercontent.com",
+          "domain:paywb.com",
+          "domain:russiacalling.com",
+          "domain:sistema-capital.com",
+          "domain:skcrtxr.com",
+          "domain:stats.vk-portal.net",
+          "domain:svoy.academy",
+          "domain:tamtam.chat",
+          "domain:targetads.io",
+          "domain:taxsee.com",
+          "domain:tbank-online.com",
+          "domain:timeweb.cloud",
+          "domain:timeweb.com",
+          "domain:tips.tips",
+          "domain:tochka-tech.com",
+          "domain:tochka.com",
+          "domain:trbcdn.net",
+          "domain:tsx.x5static.net",
+          "domain:userapi.com",
+          "domain:vk.com",
+          "domain:vulpine.email",
+          "domain:whoosh.bike",
+          "domain:windsurf.com",
+          "domain:x5.tech",
+          "domain:xn--90aifd0aza.site",
+          "domain:yastatic.net",
+          "domain:youla.io",
+          "domain:zentotem.net"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "geosite:category-ru",
+          "geosite:category-gov-ru"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:ru",
+          "geoip:private"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "main_balancer",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+},
+
   {
   "burstObservatory" : {
     "pingConfig" : {
